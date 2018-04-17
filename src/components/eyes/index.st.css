@@ -1,0 +1,17 @@
+:import {
+  -st-from: "./eye/index.st.css";
+  -st-default: Eye;
+}
+
+.root {
+}
+
+.eye {
+  -st-extends: Eye;
+}
+
+.eye:role(left) {
+}
+
+.eye:role(right) {
+}

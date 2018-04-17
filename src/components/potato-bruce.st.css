@@ -1,0 +1,47 @@
+:import {
+  -st-from: "./eyes/index.st.css";
+  -st-default: Eyes;
+}
+
+:import {
+  -st-from: "./nose/index.st.css";
+  -st-default: Nose;
+}
+
+.root {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  font-size: large;
+  background-color: rgb(60, 158, 158);
+}
+
+.eyes {
+  -st-extends: Eyes;
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  top: 100px;
+  left: 200px;
+}
+
+.eyes::eye:role(left) {
+  width: 50px;
+  height: 100%;
+  margin-right: 100px;
+}
+
+.eyes::eye:role(right) {
+  width: 50px;
+  height: 100%;
+}
+
+.nose {
+  -st-extends: Nose;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 200px;
+  left: 265px;
+}

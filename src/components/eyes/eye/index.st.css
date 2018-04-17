@@ -1,0 +1,5 @@
+.root {
+  -st-states: role( enum(left, right) );
+  display: inline-block;
+  background-color: blue;  
+}
