@@ -8,7 +8,7 @@ export interface EyesProps {
 
 export const Eyes: React.SFC<EyesProps & { className?: string }> = (props: EyesProps) => (
     <div {...style('root', {}, props)} >
-        <Eye {...style('eye')} role="left" />
-        <Eye {...style('eye')} role="right" />
+        <Eye {...style('eye')} />
+        <Eye {...style('eye')} />
     </div>
 );

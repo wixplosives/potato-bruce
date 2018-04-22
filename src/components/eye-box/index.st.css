@@ -4,14 +4,11 @@
 }
 
 .root {
+  text-align: center;
 }
 
 .eye {
   -st-extends: Eye;
-}
-
-.eye:role(left) {
-}
-
-.eye:role(right) {
+  display: inline-block;
+  margin: 0 20px;
 }
