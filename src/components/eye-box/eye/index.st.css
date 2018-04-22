@@ -5,10 +5,16 @@
   pupilSize: value(retinaSize) / 2;
   lidPositionHappy: 25px;
   lidPositionSad: 75px;
-
 }
 
 .root {
+}
+
+.brow {
+  -st-states: mood( enum(happy, sad) );
+}
+
+.socket {
   position: relative;
   box-shadow: 0 0 0 2px white;
   border-radius: 50%;
@@ -30,6 +36,7 @@
   display: block;
   text-align: center;
   font-size: calc(value(pupilSize));
+  transition: all 225ms ease-in;    
 }
 
 .pupil:mood(sad) {
@@ -44,6 +51,7 @@
   background: darksalmon;
   width: value(retinaSize);
   height: value(retinaSize);
+  transition: all 125ms ease-in-out;  
 }
 
 .lid:mood(happy) {

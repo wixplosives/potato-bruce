@@ -11,8 +11,8 @@ interface PotatoBruceProps {
 export const PotatoBruce: React.SFC<PotatoBruceProps & { className?: string }> = (props: PotatoBruceProps) => (
     <div {...style('root', {}, props)}>
         <div {...style('body')}>
-            <EyeBox className={style.eyeBox} mood={props.mood}/>
-            <Nose className={style.nose} />
+            <EyeBox className={style.eyeBox} mood={props.mood} />
+            <Nose className={style.noseBox} mood={props.mood} />
         </div>
     </div>
 );

@@ -37,20 +37,33 @@
 
 .eyeBox {
   -st-extends: Eyes;
-  position: absolute;
   display: inline-block;
   width: 100%;
-  height: value(retinaSize);
-  top: 0;
-  left: 0;
   border: 1px solid red;
 }
 
-.nose {
+.noseBox {
   -st-extends: Nose;
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  top: 200px;
-  left: 265px;
+  border: 1px solid red;
+}
+
+.noseBox::nose {
+  transition: all 125ms ease-in-out;
+}
+
+.noseBox::nose:mood(happy) {
+  border-bottom-left-radius: 80% 210%;
+  border-bottom-right-radius: 80% 210%;
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  background-color: magenta;
+}
+
+.noseBox::nose:mood(sad) {
+  border-bottom-left-radius: 80% 100%;
+  border-bottom-right-radius: 80% 100%;
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  background-color: blueviolet;
+  
 }
