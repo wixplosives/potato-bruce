@@ -14,15 +14,25 @@
 }
 
 .root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+}
+
+
+.body {
+  position: relative;
   flex: 1;
-  position: absolute;
-  width: 600px;
+
   height: 700px;
+  margin: 0 100px;
   background-color: rgb(221, 224, 224);
   border-bottom-left-radius: 80% 100%;
   border-bottom-right-radius: 80% 100%;
   border-top-left-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
+  background-color: rgb(228, 228, 228);
 }
 
 .eyeBox {
@@ -33,7 +43,7 @@
   height: value(retinaSize);
   top: 0;
   left: 0;
-  border: 1px solid red
+  border: 1px solid red;
 }
 
 .nose {

@@ -4,11 +4,12 @@ import style from './index.st.css';
 import { Eye } from './eye';
 
 export interface EyesProps {
+    mood: 'happy' | 'sad';
 }
 
-export const Eyes: React.SFC<EyesProps & { className?: string }> = (props: EyesProps) => (
-    <div {...style('root', {}, props)} >
-        <Eye {...style('eye')} />
-        <Eye {...style('eye')} />
+export const EyeBox: React.SFC<EyesProps & { className?: string }> = (props: EyesProps) => {
+    return <div {...style('root', {}, props)} >
+        <Eye {...style('eye')} mood={props.mood}/>
+        <Eye {...style('eye')} mood={props.mood}/>
     </div>
-);
+};

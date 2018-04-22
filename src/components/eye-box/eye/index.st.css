@@ -3,9 +3,8 @@
   negativeRetinaSize: -100px;
   lidResetPosition: value(retinaSize) * -1;
   pupilSize: value(retinaSize) / 2;
-  lidPosition1: 25px;
-  lidPosition2: 50px;
-  lidPosition3: 75px;
+  lidPositionHappy: 25px;
+  lidPositionSad: 75px;
 
 }
 
@@ -22,7 +21,7 @@
 
 .pupil {
   -st-states: direction( enum(up, down, right, left, center) ), 
-              openess( number( min(0), max(100) ));
+              mood( enum(happy, sad) ));
   color: darkblue;
 }
 
@@ -33,8 +32,12 @@
   font-size: calc(value(pupilSize));
 }
 
+.pupil:mood(sad) {
+  line-height: calc(value(lidPositionSad) * 2);
+}
+
 .lid {
-  -st-states: openess( number( min(0), max(100) ));
+  -st-states: mood( enum(happy, sad) );
   position: absolute;
   border-bottom: 1px solid darksalmon;
   top: value(negativeRetinaSize);
@@ -43,13 +46,11 @@
   height: value(retinaSize);
 }
 
-.lid:openess(25) {
-  top: calc(value(negativeRetinaSize) + value(lidPosition1));
+.lid:mood(happy) {
+  top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
 }
-.lid:openess(50) {
-  top: calc(value(negativeRetinaSize) + value(lidPosition2));
-}
-.lid:openess(75) {
-  top: calc(value(negativeRetinaSize) + value(lidPosition3));
+
+.lid:mood(sad) {
+  top: calc(value(negativeRetinaSize) + value(lidPositionSad));
 }
 
