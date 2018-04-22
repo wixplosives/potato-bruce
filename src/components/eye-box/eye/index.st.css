@@ -21,7 +21,7 @@
 
 .pupil {
   -st-states: direction( enum(up, down, right, left, center) ), 
-              mood( enum(happy, sad) ));
+              mood( enum(happy, sad) );
   color: darkblue;
 }
 
