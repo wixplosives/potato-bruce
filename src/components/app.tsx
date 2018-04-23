@@ -26,10 +26,8 @@ export class App extends React.Component<{}, AppState> {
     public render() {
         return <div {...style('root')}>
             <div {...style('nav')}>
-                <select value={this.state.mood} onChange={this.handleChange}>
-                    <option value="happy">Happy</option>
-                    <option value="sad">Sad</option>
-                </select>
+                <button value="happy" onClick={this.handleChange}>Happy</button>
+                <button value="sad" onClick={this.handleChange}>Sad</button>
             </div>
 
             <PotatoBruce {...style('potatoWorld')}  mood={this.state.mood} />

@@ -15,7 +15,7 @@ export const PotatoBruce: React.SFC<PotatoBruceProps> = (props: PotatoBruceProps
     <div {...style('root', {}, props)}>
         <div {...style('body')}>
             <EyeBox className={style.eyeBox} mood={props.mood} />
-            <Nose className={style.noseBox} mood={props.mood} />
+            {/* <Nose className={style.noseBox} mood={props.mood} /> */}
             <Mouth className={style.mouthBox} mood={props.mood} />
         </div>
     </div>

@@ -1,6 +1,6 @@
 :import {
   -st-from: "./colors.st.css";
-  -st-named: color4, color5;
+  -st-named: color4, color5, dark;
 }
 
 :import {
@@ -36,7 +36,7 @@
   border-bottom-right-radius: 80% 100%;
   border-top-left-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
-  border: 5px solid #000;
+  /* border: 5px solid #000; */
 }
 
 .eyeBox {
@@ -59,7 +59,7 @@
   border-bottom-right-radius: 80% 210%;
   border-top-left-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
-  background-color: value(color4);
+  background-color: value(dark);
 }
 
 .noseBox::nose:mood(sad) {
@@ -67,7 +67,7 @@
   border-bottom-right-radius: 80% 100%;
   border-top-left-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
-  background-color: value(color5);
+  background-color: value(dark);
 }
 
 .mouthBox {

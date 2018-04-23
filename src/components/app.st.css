@@ -14,4 +14,6 @@
 
 .potatoWorld {
   margin: 0 auto;
+  background: url(https://i.imgur.com/U0vzsfo.jpg) no-repeat center;
+  background-size: contain;
 }

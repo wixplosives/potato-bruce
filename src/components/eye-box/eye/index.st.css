@@ -29,7 +29,7 @@
   height: value(retinaSize);
   line-height: value(retinaSize);
   overflow: hidden;
-  background-color: value(color1);
+  /* background-color: value(color1); */
 }
 
 .pupil {
@@ -41,22 +41,26 @@
 .pupil::after {
   content: '\25cf';
   display: block;
+  font-size: 200px!important;
   text-align: center;
   font-size: calc(value(pupilSize));
-  transition: all 225ms ease-in;
+  transition: all 325ms ease-in;
   text-shadow: 0px 0px 100px value(color2);
 }
 
 .pupil:mood(sad) {
   line-height: calc(value(lidPositionSad) * 2);
+  font-size: 50px!important;
 }
 
 .lid {
   -st-states: mood( enum(happy, sad) );
   position: absolute;
-  border-bottom: 1px solid value(color4);
+  border-top: 3px solid red;
+  /* border-bottom: 3px solid value(color4); */
   top: value(negativeRetinaSize);
-  background: value(color3);
+  /* background: value(color3); */
+  /* border: 5px solid red; */
   width: value(retinaSize);
   height: value(retinaSize);
   transition: all 125ms ease-in-out;  
