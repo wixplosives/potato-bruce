@@ -1,3 +1,8 @@
+:import {
+  -st-from: "../colors.st.css";
+  -st-named: dark;
+}
+
 :vars {
   lipHeight: 2px;
 }
@@ -19,16 +24,16 @@
 }
 
 .lip {
-  /* border: 1px solid #000; */
-  background: #808080;
+  background: value(dark);
   height: value(lipHeight);
   width: 100%;
   transition: 225ms ease-in;
-  margin-bottom: 1px;
+  /* margin-bottom: 1px; */
 }
 
 .upperLip {
   -st-extends: lip;
+  -st-states: mood( enum(happy, sad) );
 }
 
 .lowerLip {
@@ -36,6 +41,31 @@
   -st-states: mood( enum(happy, sad) );
 }
 
+.upperLip:mood(happy)  {
+  opacity: 0;  
+}
+
 .lowerLip:mood(happy) {
-  top: 35px;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.lowerLip:mood(happy)::after {
+  content: 'x';
+  height: 50px;
+  width: 100px;
+  margin: 0 auto;
+  background: red;
+  position: absolute;
+  bottom: 0;
+  right: -100px;
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 50%;
 }

@@ -23,13 +23,12 @@
 
 .socket {
   position: relative;
-  box-shadow: 0 0 0 2px white;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   width: value(retinaSize);
   height: value(retinaSize);
   line-height: value(retinaSize);
   overflow: hidden;
-  /* background-color: value(color1); */
 }
 
 .pupil {
@@ -39,13 +38,14 @@
 }
 
 .pupil::after {
+  background: rgba(255, 255, 255, 1);
   content: '\25cf';
   display: block;
   font-size: 200px!important;
   text-align: center;
   font-size: calc(value(pupilSize));
   transition: all 325ms ease-in;
-  text-shadow: 0px 0px 100px value(color2);
+  text-shadow: 0px 0px 10px value(color2);
 }
 
 .pupil:mood(sad) {
