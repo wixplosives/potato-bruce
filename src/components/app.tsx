@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { PotatoBruce } from './potato-bruce';
+import { Mood } from './types';
 import style from './app.st.css';
 
 interface AppState {
-    mood: 'happy' | 'sad';
+    mood: Mood;
 }
 
 export class App extends React.Component<{}, AppState> {

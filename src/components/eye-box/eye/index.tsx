@@ -1,11 +1,13 @@
 import * as React from 'react';
 import style from './index.st.css';
+import { Mood } from '../../types';
 
 export interface EyeProps {
-    mood: 'happy' | 'sad';
+    mood: Mood;
+    className?: string;
 }
 
-export const Eye: React.SFC<EyeProps & { className?: string }> = (props: EyeProps) => (
+export const Eye: React.SFC<EyeProps> = (props: EyeProps) => (
     <div {...style('root', {}, props)}>
         <div {...style('brow', { mood: props.mood })} />
         <div {...style('socket')}>
