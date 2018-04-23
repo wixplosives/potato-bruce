@@ -28,6 +28,8 @@ export class App extends React.Component<{}, AppState> {
             <div {...style('nav')}>
                 <button value="happy" onClick={this.handleChange}>Happy</button>
                 <button value="sad" onClick={this.handleChange}>Sad</button>
+                <button value="ecstatic" onClick={this.handleChange}>Ecstatic</button>
+                <button value="glasses" onClick={this.handleChange}>Glasses</button>
             </div>
 
             <PotatoBruce {...style('potatoWorld')}  mood={this.state.mood} />

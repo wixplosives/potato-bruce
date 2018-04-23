@@ -10,7 +10,7 @@ export interface EyesProps {
 }
 
 export const EyeBox: React.SFC<EyesProps> = (props: EyesProps) => {
-    return <div {...style('root', {}, props)} >
+    return <div {...style('root', { mood: props.mood }, props)} >
         <Eye {...style('eye')} mood={props.mood}/>
         <Eye {...style('eye')} mood={props.mood}/>
     </div>

@@ -1,1 +1,1 @@
-export type Mood = 'happy' | 'sad';
+export type Mood = 'happy' | 'sad' | 'ecstatic' | 'glasses';
