@@ -35,7 +35,8 @@
   border-bottom-right-radius: 80% 100%;
   border-top-left-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
-  background-color: value(bruceBodyColor);
+  /* background-color: value(bruceBodyColor); */
+  border: 5px solid #000;
   padding: 60px 0 0;
 }
 
