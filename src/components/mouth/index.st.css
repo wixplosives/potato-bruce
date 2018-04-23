@@ -2,6 +2,7 @@
   lipHeight: 2px;
   bruceBodyColor: rgb(228, 228, 228);
 }
+
 .root {
   position: relative;
 }
@@ -27,23 +28,9 @@
   margin-bottom: 1px;
 }
 
-
 .upperLip {
   -st-extends: lip;
 }
-
-/* .upperLip::before {
-  position: relative;
-  display: block;
-  text-align: center;
-  background: value(bruceBodyColor);
-  width: 40px;
-  height: value(lipsHeight);
-  border-radius: 40% 25% 45% 25%;
-  margin: 0 auto;
-  content: ' ';
-  top: -45px;
-} */
 
 .lowerLip {
   -st-extends: lip;
@@ -52,5 +39,4 @@
 
 .lowerLip:mood(happy) {
   top: 35px;
-  /* border: 5px solid rgba(255,25, 0, 0.8); */
 }
