@@ -1,16 +1,7 @@
-:import {
-  -st-from: "./../colors.st.css";
-  -st-named: color2, dark;
-}
 
 :import {
   -st-from: "./eye/index.st.css";
   -st-default: Eye;
-}
-
-:import {
-  -st-from: "./../colors.st.css";
-  -st-named: bodyColor;
 }
 
 .root {
@@ -19,47 +10,7 @@
 
 .eye {
   -st-extends: Eye;
+  -st-states: mood( enum(happy, sad));
   display: inline-block;
   margin: 0 20px;
-}
-
-.eye::brow {
-  height: 1px;
-  border: 10px solid value(dark);
-  border-top: 1px dashed value(bodyColor);
-  border-radius: 20%;
-  background-color: value(color2);
-  transition: all 125ms ease-in-out;
-}
-
-.eye:first-child::brow:mood(happy) {
-  transform: rotate(0deg);
-  top: -20px;
-}
-
-.eye:first-child::brow:mood(sad) {
-  transform: rotate(-15deg);
-  
-}
-
-.eye:last-child::brow:mood(happy) {
-  animation: eyeTwich 250ms infinite;
-  transform: rotate(0deg);
-  top: -20px;
-}
-
-.eye:last-child::brow:mood(sad) {
-  transform: rotate(15deg);
-}
-
-@keyframes eyeTwich {
-  5% {
-    left: -1px;
-  }
-  50% {
-    left: 4px;
-  }
-  95% {
-    left: 0;
-  }
 }
