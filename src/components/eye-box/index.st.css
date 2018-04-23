@@ -43,10 +43,23 @@
 }
 
 .eye:last-child::brow:mood(happy) {
+  animation: eyeTwich 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
 
 .eye:last-child::brow:mood(sad) {
   transform: rotate(15deg);
+}
+
+@keyframes eyeTwich {
+  5% {
+    left: -1px;
+  }
+  50% {
+    left: 4px;
+  }
+  95% {
+    left: 0;
+  }
 }
