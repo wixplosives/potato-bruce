@@ -1,0 +1,51 @@
+:vars {
+  lipHeight: 30px;
+  lipsHeight: 60px;
+  bruceBodyColor: rgb(228, 228, 228);
+}
+.root {
+  /* padding: 60px 0; */
+  position: relative;
+  margin: 40px 0;
+  /* border: 1px solid red; */
+}
+
+.mouthBox {
+  /* max-width: 150px; */
+  margin: 0 auto;
+  background: rgba(0, 0, 0, .25);
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.lip {
+  background-color: rgba(255, 0, 0, 0.5);
+  height: value(lipHeight);
+  /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);  */
+  transition: 125ms ease-in-out;
+}
+
+
+.upperLip {
+  -st-extends: lip;
+  margin-bottom: 2px;
+}
+
+.upperLip::before {
+  position: relative;
+  display: block;
+  text-align: center;
+  background: value(bruceBodyColor);
+  width: 40px;
+  height: value(lipsHeight);
+  border-radius: 40% 25% 45% 25%;
+  margin: 0 auto;
+  content: ' ';
+  top: -45px;
+}
+
+.lowerLip {
+  -st-extends: lip;
+  /* border-bottom: 1px solid darkred; */
+}

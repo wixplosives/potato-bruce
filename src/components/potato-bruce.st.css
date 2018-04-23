@@ -13,6 +13,10 @@
   -st-named: retinaSize;
 }
 
+:vars {
+  bruceBodyColor: rgb(228, 228, 228);
+}
+
 .root {
   display: flex;
   align-items: center;
@@ -27,12 +31,11 @@
 
   height: 700px;
   margin: 0 100px;
-  background-color: rgb(221, 224, 224);
   border-bottom-left-radius: 80% 100%;
   border-bottom-right-radius: 80% 100%;
   border-top-left-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
-  background-color: rgb(228, 228, 228);
+  background-color: value(bruceBodyColor);
 }
 
 .eyeBox {
