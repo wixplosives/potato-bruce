@@ -1,43 +1,38 @@
 :vars {
-  lipHeight: 30px;
-  lipsHeight: 60px;
+  lipHeight: 2px;
   bruceBodyColor: rgb(228, 228, 228);
 }
 .root {
-  /* padding: 60px 0; */
   position: relative;
-  margin: 40px 0;
-  /* border: 1px solid red; */
 }
 
 .mouthBox {
-  /* max-width: 150px; */
+  max-width: 50%;
   -st-states: mood( enum(happy, sad) );
   margin: 0 auto;
-  background: rgba(0, 0, 0, .25);
   padding: 0;
-  border-radius: 50%;
   overflow: hidden;
 }
 
 .mouthBox:mood(happy)::lip {
-  height: 60px;
+  height: 20px;
 }
 
 .lip {
-  background-color: rgba(255, 80, 0, 0.25);
+  /* border: 1px solid #000; */
+  background: #808080;
   height: value(lipHeight);
-  /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);  */
+  width: 100%;
   transition: 225ms ease-in;
+  margin-bottom: 1px;
 }
 
 
 .upperLip {
   -st-extends: lip;
-  margin-bottom: 2px;
 }
 
-.upperLip::before {
+/* .upperLip::before {
   position: relative;
   display: block;
   text-align: center;
@@ -48,16 +43,14 @@
   margin: 0 auto;
   content: ' ';
   top: -45px;
-}
+} */
 
 .lowerLip {
   -st-extends: lip;
   -st-states: mood( enum(happy, sad) );
-  position: relative;
-  /* border-bottom: 1px solid darkred; */
 }
 
 .lowerLip:mood(happy) {
   top: 35px;
-  border: 5px solid rgba(255,25, 0, 0.8);
+  /* border: 5px solid rgba(255,25, 0, 0.8); */
 }

@@ -24,13 +24,14 @@
   height: value(retinaSize);
   line-height: value(retinaSize);
   overflow: hidden;
-  background-color: bisque;
+  background-color: #d0d0d0;
 }
 
 .pupil {
   -st-states: direction( enum(up, down, right, left, center) ), 
               mood( enum(happy, sad) );
-  color: rgba(255, 255, 255, 0.4);
+  /* color: rgba(255, 255, 255, 0.4); */
+  color: #000;
 }
 
 
@@ -40,7 +41,8 @@
   text-align: center;
   font-size: calc(value(pupilSize));
   transition: all 225ms ease-in;
-  text-shadow: 0px 2px 8px rgba(0, 0, 139, 0.9);
+  text-shadow: 0px 0px 100px rgba(0, 0, 0, 0.8);
+  /* text-shadow: 0px 0px 100px rgba(0, 0, 0, 0.8); */
 }
 
 
@@ -51,9 +53,9 @@
 .lid {
   -st-states: mood( enum(happy, sad) );
   position: absolute;
-  border-bottom: 1px solid darksalmon;
+  border-bottom: 1px solid #808080;
   top: value(negativeRetinaSize);
-  background: darksalmon;
+  background: #a0a0a0;
   width: value(retinaSize);
   height: value(retinaSize);
   transition: all 125ms ease-in-out;  
