@@ -9,14 +9,19 @@
 }
 
 :import {
-  -st-from: "./nose/index.st.css";
-  -st-default: Nose;
-}
-
-:import {
   -st-from: "./eye-box/eye/index.st.css";
   -st-named: retinaSize;
 }
+
+:import {
+  -st-from: "./mouth/index.st.css";
+  -st-default: Mouth;
+}
+
+/* :import {
+  -st-from: "./nose/index.st.css";
+  -st-default: Nose;
+} */
 
 .root {
   overflow: hidden;
@@ -75,6 +80,41 @@
   transform: rotate(15deg);
 }
 
+.mouth {
+  -st-extends: Mouth;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.mouth::upperLip:mood(happy)  {
+  display: none;
+}
+
+.mouth::lowerLip:mood(happy) {
+  height: 180px;
+  width: 200px;
+  margin: 0 auto;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.mouth::lowerLip:mood(happy)::after {
+  content: 'x';
+  height: 50px;
+  width: 100px;
+  margin: 0 auto;
+  background: #c00;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 50%;
+}
+
 /* .noseBox {
   -st-extends: Nose;
 }
@@ -99,10 +139,6 @@
   background-color: value(dark);
 } */
 
-.mouthBox {
-  margin-top: 50px;
-  width: 100%;
-}
 
 
 @keyframes eyeTwich {
