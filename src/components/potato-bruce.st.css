@@ -20,21 +20,45 @@
 
 .root {
   overflow: hidden;
-  padding: 20px;
 }
 
-.body {
+.hero {
+  -st-states: mood( enum(happy, sad, ecstatic, glasses) );  
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: url(https://i.imgur.com/U0vzsfo.jpg) no-repeat center;
+  background: url(../media/potato-body.png) no-repeat center;
   background-size: cover;
   position: relative;
-  margin: 0 auto;
+  margin: 10px auto;
   overflow: hidden;
-  height: 700px;
-  max-width: 800px;
+  height: 70vh;
+  max-width: 80vh;
+}
+
+.hero:mood(happy) {}
+
+.hero:mood(sad) {}
+
+.hero:mood(ecstatic) {
+  animation: potatoBoogie 1750ms ease-in-out infinite;
+  transform: scale(0.4);
+  transition: all 120ms ease-in-out;
+}
+
+.hero:mood(glasses) {}
+
+@keyframes potatoBoogie {
+  0% {
+    transform: scale(0.4);
+  }
+  45% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0.4);
+  }
 }
 
 /* eye-box */

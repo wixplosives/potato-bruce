@@ -8,12 +8,12 @@ import { Mouth } from './mouth';
 
 interface PotatoBruceProps {
     mood: Mood;
-    className?: string
+    className?: string;
 }
 
 export const PotatoBruce: React.SFC<PotatoBruceProps> = (props: PotatoBruceProps) => (
     <div {...style('root', {}, props)}>
-        <div {...style('body')}>
+        <div {...style('hero', {mood: props.mood})}>
             <EyeBox className={style.eyeBox} mood={props.mood} />
             {/* <Nose className={style.noseBox} mood={props.mood} /> */}
             <Mouth className={style.mouth} mood={props.mood} />

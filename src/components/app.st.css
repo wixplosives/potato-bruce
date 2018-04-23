@@ -2,6 +2,11 @@
   -st-from: "./colors.st.css";
   -st-named: dark, navBg;
 }
+
+:import {
+  -st-from: "./potato-bruce.st.css";
+  -st-default: PotatoBruce;
+}
 .root {
   height: 100vh;
 }
@@ -10,6 +15,8 @@
   background-color: value(navBg);
   padding: 5px 0;
   text-align: center;
+  height: 60px;
+  line-height: 60px;
 }
 
 .nav button {
@@ -17,6 +24,28 @@
   outline: 0;
 }
 
-.potatoWorld {
-  margin: 0 auto;
+.backdrop {
+  -st-states: location( enum(paris, wixhq, aliens) );
+  position: fixed;
+  width: 100%;
+  height: calc(100% - 60px);
+  top: 60px;
+  left: 0;
 }
+
+.backdrop:location(paris) {
+  background: url(../media/paris.jpg) no-repeat center;
+
+}
+
+.backdrop:location(wixhq) {
+  background: url(../media/wixhq.webp) no-repeat center;
+}
+
+.backdrop:location(aliens) {
+  background: url(../media/saucer.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.potatoWorld {}
+
