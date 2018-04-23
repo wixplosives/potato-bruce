@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 
@@ -36,18 +36,19 @@
   border-top-left-radius: 100% 100%;
   border-top-right-radius: 100% 100%;
   background-color: value(bruceBodyColor);
+  padding: 60px 0 0;
 }
 
 .eyeBox {
   -st-extends: Eyes;
   display: inline-block;
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .noseBox {
   -st-extends: Nose;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .noseBox::nose {

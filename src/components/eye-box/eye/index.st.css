@@ -12,6 +12,8 @@
 
 .brow {
   -st-states: mood( enum(happy, sad) );
+  top: 0;
+  position: relative;
 }
 
 .socket {
@@ -28,16 +30,19 @@
 .pupil {
   -st-states: direction( enum(up, down, right, left, center) ), 
               mood( enum(happy, sad) );
-  color: darkblue;
+  color: rgba(255, 255, 255, 0.4);
 }
+
 
 .pupil::after {
   content: '\25cf';
   display: block;
   text-align: center;
   font-size: calc(value(pupilSize));
-  transition: all 225ms ease-in;    
+  transition: all 225ms ease-in;
+  text-shadow: 0px 2px 8px rgba(0, 0, 139, 0.9);
 }
+
 
 .pupil:mood(sad) {
   line-height: calc(value(lidPositionSad) * 2);

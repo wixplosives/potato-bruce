@@ -12,6 +12,7 @@
 
 .mouthBox {
   /* max-width: 150px; */
+  -st-states: mood( enum(happy, sad) );
   margin: 0 auto;
   background: rgba(0, 0, 0, .25);
   padding: 0;
@@ -19,11 +20,15 @@
   overflow: hidden;
 }
 
+.mouthBox:mood(happy)::lip {
+  height: 60px;
+}
+
 .lip {
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 80, 0, 0.25);
   height: value(lipHeight);
   /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);  */
-  transition: 125ms ease-in-out;
+  transition: 225ms ease-in;
 }
 
 
@@ -47,5 +52,12 @@
 
 .lowerLip {
   -st-extends: lip;
+  -st-states: mood( enum(happy, sad) );
+  position: relative;
   /* border-bottom: 1px solid darkred; */
+}
+
+.lowerLip:mood(happy) {
+  top: 35px;
+  border: 5px solid rgba(255,25, 0, 0.8);
 }

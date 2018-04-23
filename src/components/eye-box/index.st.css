@@ -3,6 +3,10 @@
   -st-default: Eye;
 }
 
+:vars {
+  bruceBodyColor: rgb(228, 228, 228);
+}
+
 .root {
   text-align: center;
 }
@@ -14,14 +18,18 @@
 }
 
 .eye::brow {
-  width: 100%;
-  height: 10px;
-  background-color: black;
+  height: 1px;
+  border: 10px solid #000;
+  border-top: 1px dashed value(bruceBodyColor);
+  border-radius: 20%;
+  background-color: rgba(0,0,0,.7);
   transition: all 125ms ease-in-out;
 }
 
 .eye:first-child::brow:mood(happy) {
-  transform: rotate(15deg);
+  transform: rotate(0deg);
+  top: -20px;
+  /* border-top: 5px dashed value(bruceBodyColor); */
 }
 
 .eye:first-child::brow:mood(sad) {
@@ -30,10 +38,10 @@
 }
 
 .eye:last-child::brow:mood(happy) {
-  transform: rotate(-15deg);
+  transform: rotate(0deg);
+  top: -20px;
 }
 
 .eye:last-child::brow:mood(sad) {
   transform: rotate(15deg);
-  
 }
