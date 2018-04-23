@@ -1,14 +1,17 @@
+:import {
+  -st-from: "./colors.st.css";
+  -st-named: dark, navBg;
+}
 .root {
   height: 100vh;
 }
 
 .nav {
-  background-color: rebeccapurple;
+  background-color: value(navBg);
+  padding: 5px 0;
+  text-align: center;
 }
 
 .potatoWorld {
-  /* width: 100vw; */
-  /* height: 100vh; */
-  /* max-width: 800px; */
   margin: 0 auto;
 }

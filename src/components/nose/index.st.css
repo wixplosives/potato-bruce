@@ -1,3 +1,8 @@
+:import {
+  -st-from: "../colors.st.css";
+  -st-named: color5;
+}
+
 .root {
 }
 
@@ -6,5 +11,5 @@
   height: 110px;
   width: 100px;  
   margin: 0 auto;
-  background-color: #c0c0c0;
+  background-color: value(color5);
 }

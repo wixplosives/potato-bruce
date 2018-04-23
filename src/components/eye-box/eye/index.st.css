@@ -1,3 +1,8 @@
+:import {
+  -st-from: "../../colors.st.css";
+  -st-named: color1, color2, color3, color4, dark;
+}
+
 :vars {
   retinaSize: 100px;
   negativeRetinaSize: -100px;
@@ -24,16 +29,14 @@
   height: value(retinaSize);
   line-height: value(retinaSize);
   overflow: hidden;
-  background-color: #d0d0d0;
+  background-color: value(color1);
 }
 
 .pupil {
   -st-states: direction( enum(up, down, right, left, center) ), 
               mood( enum(happy, sad) );
-  /* color: rgba(255, 255, 255, 0.4); */
-  color: #000;
+  color: value(dark);
 }
-
 
 .pupil::after {
   content: '\25cf';
@@ -41,10 +44,8 @@
   text-align: center;
   font-size: calc(value(pupilSize));
   transition: all 225ms ease-in;
-  text-shadow: 0px 0px 100px rgba(0, 0, 0, 0.8);
-  /* text-shadow: 0px 0px 100px rgba(0, 0, 0, 0.8); */
+  text-shadow: 0px 0px 100px value(color2);
 }
-
 
 .pupil:mood(sad) {
   line-height: calc(value(lidPositionSad) * 2);
@@ -53,9 +54,9 @@
 .lid {
   -st-states: mood( enum(happy, sad) );
   position: absolute;
-  border-bottom: 1px solid #808080;
+  border-bottom: 1px solid value(color4);
   top: value(negativeRetinaSize);
-  background: #a0a0a0;
+  background: value(color3);
   width: value(retinaSize);
   height: value(retinaSize);
   transition: all 125ms ease-in-out;  
@@ -68,4 +69,3 @@
 .lid:mood(sad) {
   top: calc(value(negativeRetinaSize) + value(lidPositionSad));
 }
-

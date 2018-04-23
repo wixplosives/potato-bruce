@@ -1,10 +1,16 @@
 :import {
+  -st-from: "./../colors.st.css";
+  -st-named: color2, dark;
+}
+
+:import {
   -st-from: "./eye/index.st.css";
   -st-default: Eye;
 }
 
-:vars {
-  bruceBodyColor: rgb(228, 228, 228);
+:import {
+  -st-from: "./../colors.st.css";
+  -st-named: bodyColor;
 }
 
 .root {
@@ -19,17 +25,16 @@
 
 .eye::brow {
   height: 1px;
-  border: 10px solid #000;
-  border-top: 1px dashed value(bruceBodyColor);
+  border: 10px solid value(dark);
+  border-top: 1px dashed value(bodyColor);
   border-radius: 20%;
-  background-color: rgba(0,0,0,.7);
+  background-color: value(color2);
   transition: all 125ms ease-in-out;
 }
 
 .eye:first-child::brow:mood(happy) {
   transform: rotate(0deg);
   top: -20px;
-  /* border-top: 5px dashed value(bruceBodyColor); */
 }
 
 .eye:first-child::brow:mood(sad) {
