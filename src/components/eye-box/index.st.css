@@ -4,13 +4,11 @@
 }
 
 .root {
-  -st-states: mood( enum(happy, sad) );
   text-align: center;
 }
 
 .eye {
   -st-extends: Eye;
-  -st-states: mood( enum(happy, sad) );
   display: inline-block;
   margin: 0 20px;
 }

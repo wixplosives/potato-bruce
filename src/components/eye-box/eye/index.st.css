@@ -6,17 +6,12 @@
 :vars {
   retinaSize: 100px;
   negativeRetinaSize: -100px;
-  lidResetPosition: value(retinaSize) * -1;
   pupilSize: value(retinaSize) / 2;
-  lidPositionHappy: 25px;
-  lidPositionSad: 75px;
 }
 
-.root {
-}
+.root {}
 
 .brow {
-  -st-states: mood( enum(happy, sad) );
   top: 0;
   position: relative;
 }
@@ -32,17 +27,12 @@
 }
 
 .pupil {
-  -st-states: direction( enum(up, down, right, left, center) ), 
-              mood( enum(happy, sad) );
   color: value(dark);
 }
 
 .pupil::after {
   /* background: rgba(255, 255, 255, 1); */
   content: '👁';
-  /* content: '🥔';
-  content: '💰'; */
-  
   display: block;
   font-size: 85px!important;
   text-align: center;
@@ -51,25 +41,11 @@
   text-shadow: 0px 0px 10px value(color2);
 }
 
-.pupil:mood(sad) {
-  line-height: calc(value(lidPositionSad) * 2);
-  font-size: 50px!important;
-}
-
 .lid {
-  -st-states: mood( enum(happy, sad) );
   position: absolute;
   border-top: 3px solid red;
   top: value(negativeRetinaSize);
   width: value(retinaSize);
   height: value(retinaSize);
   transition: all 125ms ease-in-out;  
-}
-
-.lid:mood(happy) {
-  top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
-}
-
-.lid:mood(sad) {
-  top: calc(value(negativeRetinaSize) + value(lidPositionSad));
 }

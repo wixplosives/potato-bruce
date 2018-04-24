@@ -23,7 +23,6 @@
   background: value(dark);
   height: value(lipHeight);
   transition: 225ms ease-in;
-  -st-states: mood( enum(happy, sad) );
 }
 
 .upperLip {

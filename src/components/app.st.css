@@ -7,6 +7,16 @@
   -st-from: "./potato-bruce.st.css";
   -st-default: PotatoBruce;
 }
+
+:vars {
+  retinaSize: 100px;
+  negativeRetinaSize: -100px;
+  lidResetPosition: value(retinaSize) * -1;
+  pupilSize: value(retinaSize) / 2;
+  lidPositionHappy: 25px;
+  lidPositionSad: 75px;
+}
+
 .root {
   height: 100vh;
 }
@@ -47,5 +57,103 @@
   background-size: cover;
 }
 
-.potatoWorld {}
+.potatoWorld {
+  -st-extends: PotatoBruce;
+}
 
+/* HAPPY POTATO BRUCE IN PARIS */
+.potatoWorld:mood(happy)::eyeBox::eye:first-child {
+  transform: rotate(0deg);
+  top: -20px;
+}
+
+.potatoWorld:mood(happy)::eyeBox::eye:last-child {
+  animation: twitch1 250ms infinite;
+  transform: rotate(0deg);
+  top: -20px;
+}
+
+.potatoWorld:mood(happy)::eyeBox::eye::lid {
+  top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
+}
+
+/* mouth/happy */
+.potatoWorld:mood(happy)::mouth::upperLip {
+  display: none;
+}
+
+.potatoWorld:mood(happy)::mouth::lowerLip {
+  height: 180px;
+  width: 200px;
+  margin: 0 auto;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.potatoWorld:mood(happy)::mouth::lowerLip::after {
+  content: ' ';
+  height: 50px;
+  width: 100px;
+  margin: 0 auto;
+  background: #c00;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  border-top-left-radius: 50%;
+}
+
+/* BIG POTATO BRUCE IN JAPAN */
+.potatoWorld:mood(glasses)::eyeBox {
+  position: relative;
+  background: url(./glasses.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.potatoWorld:mood(glasses)::eyeBox::eye::socket {
+  box-shadow: none;
+}
+.potatoWorld:mood(glasses)::eyeBox::eye::pupil::after {
+  display: none;
+}
+
+/* SAD POTATO AT THE DMV */
+.potatoWorld:mood(sad)::eyeBox::eye::lid {
+  top: calc(value(negativeRetinaSize) + value(lidPositionSad));
+}
+
+.potatoWorld:mood(sad)::eyeBox::eye::pupil {
+  line-height: calc(value(lidPositionSad) * 2);
+  font-size: 50px!important;
+}
+
+.potatoWorld:mood(sad)::eyeBox::eye:first-child {
+  transform: rotate(-15deg);
+}
+
+.potatoWorld:mood(sad)::eyeBox::eye:first-child::brow {
+  animation: twitch1 250ms infinite;
+  transform: rotate(0deg);
+  top: -20px;
+}
+
+.potatoWorld:mood(sad)::eyeBox::eye:last-child::brow {
+  transform: rotate(15deg);
+}
+
+@keyframes twitch1 {
+  5% {
+    left: -1px;
+  }
+  50% {
+    left: 4px;
+  }
+  95% {
+    left: 0;
+  }
+}

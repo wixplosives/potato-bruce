@@ -27,23 +27,8 @@ export class App extends React.Component<{}, AppState> {
     }
 
     private handleBackdropChange(evt: any) {
-        // const value = evt.target.value;
-        // let mood: any;
-        // switch (value) {
-        //     case 'paris':
-        //         mood = 'happy';
-        //         break;
-        //     case 'wixhq':
-        //         mood = 'sad';
-        //         break;
-        //     case 'aliens':
-        //         mood = 'ecstatic';
-        //         break;
-        // }
-        // const mood = value === 'paris' ? 'happy' : 'sad';
         this.setState({
-            backdrop: evt.target.value,
-            // mood
+            backdrop: evt.target.value
         });
     }
 
@@ -53,7 +38,6 @@ export class App extends React.Component<{}, AppState> {
             <div {...style('nav')}>
                 <button value="happy" onClick={this.handleMoodChange}>Happy</button>
                 <button value="sad" onClick={this.handleMoodChange}>Sad</button>
-                <button value="ecstatic" onClick={this.handleMoodChange}>Ecstatic</button>
                 <button value="glasses" onClick={this.handleMoodChange}>Glasses</button>
                 <span> - </span>
                 <button value="paris" onClick={this.handleBackdropChange}>Paris</button>
