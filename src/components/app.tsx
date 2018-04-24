@@ -42,7 +42,7 @@ export class App extends React.Component<{}, AppState> {
                 <span> - </span>
                 <button value="paris" onClick={this.handleBackdropChange}>Paris</button>
                 <button value="wixhq" onClick={this.handleBackdropChange}>Wix HQ</button>
-                <button value="aliens" onClick={this.handleBackdropChange}>Aliens</button>
+                <button value="japan" onClick={this.handleBackdropChange}>Japan</button>
             </div>
 
 

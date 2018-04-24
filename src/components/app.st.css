@@ -105,7 +105,7 @@
 
 /* Backdrop Image */
 .backdrop {
-  -st-states: location( enum(paris, wixhq, aliens) );
+  -st-states: location( enum(paris, wixhq, japan) );
   position: fixed;
   top: 60px;
   left: 0;
@@ -118,8 +118,8 @@
 .backdrop:location(wixhq) {
   background: url(../assets/wixhq.webp) no-repeat center;
 }
-.backdrop:location(aliens) {
-  background: url(../assets/saucer.jpg) no-repeat center;
+.backdrop:location(japan) {
+  background: url(../assets/japan.jpg) no-repeat center;
   background-size: cover;
 }
 
