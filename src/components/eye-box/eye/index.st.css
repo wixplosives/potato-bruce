@@ -23,7 +23,7 @@
 
 .socket {
   position: relative;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7);
+  /* box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7); */
   border-radius: 50%;
   width: value(retinaSize);
   height: value(retinaSize);
@@ -38,10 +38,13 @@
 }
 
 .pupil::after {
-  background: rgba(255, 255, 255, 1);
-  content: '\25cf';
+  /* background: rgba(255, 255, 255, 1); */
+  content: '👁';
+  /* content: '🥔';
+  content: '💰'; */
+  
   display: block;
-  font-size: 200px!important;
+  font-size: 85px!important;
   text-align: center;
   font-size: calc(value(pupilSize));
   transition: all 325ms ease-in;
@@ -57,10 +60,7 @@
   -st-states: mood( enum(happy, sad) );
   position: absolute;
   border-top: 3px solid red;
-  /* border-bottom: 3px solid value(color4); */
   top: value(negativeRetinaSize);
-  /* background: value(color3); */
-  /* border: 5px solid red; */
   width: value(retinaSize);
   height: value(retinaSize);
   transition: all 125ms ease-in-out;  
