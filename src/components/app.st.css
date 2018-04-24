@@ -9,10 +9,7 @@
 }
 
 :vars {
-  retinaSize: 100px;
   negativeRetinaSize: -100px;
-  lidResetPosition: value(retinaSize) * -1;
-  pupilSize: value(retinaSize) / 2;
   lidPositionHappy: 25px;
   lidPositionSad: 75px;
 }
@@ -72,7 +69,7 @@
 */
 .potatoWorld:mood(glasses)::eyeBox {
   position: relative;
-  background: url(./glasses.png);
+  background: url(../assets/glasses.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -116,13 +113,13 @@
   height: calc(100% - 60px);
 }
 .backdrop:location(paris) {
-  background: url(../media/paris.jpg) no-repeat center;
+  background: url(../assets/paris.jpg) no-repeat center;
 }
 .backdrop:location(wixhq) {
-  background: url(../media/wixhq.webp) no-repeat center;
+  background: url(../assets/wixhq.webp) no-repeat center;
 }
 .backdrop:location(aliens) {
-  background: url(../media/saucer.jpg) no-repeat center;
+  background: url(../assets/saucer.jpg) no-repeat center;
   background-size: cover;
 }
 

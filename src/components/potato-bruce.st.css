@@ -4,13 +4,8 @@
 }
 
 :import {
-  -st-from: "./eye-box/index.st.css";
-  -st-default: Eyes;
-}
-
-:import {
-  -st-from: "./eye-box/eye/index.st.css";
-  -st-named: retinaSize;
+  -st-from: "./eye/index.st.css";
+  -st-default: Eye;
 }
 
 :import {
@@ -33,13 +28,19 @@
   margin: 10px auto;
   height: 70vh;
   max-width: 80vh;
-  background: url(../media/potato-body.png) no-repeat center;
+  background: url(../assets/potato-body.png) no-repeat center;
   background-size: cover;
 }
 
 .eyeBox {
-  -st-extends: Eyes;
   width: 100%;
+  text-align: center;
+}
+
+.eye {
+  -st-extends: Eye;
+  display: inline-block;
+  margin: 0 20px;
 }
 
 .mouth {
