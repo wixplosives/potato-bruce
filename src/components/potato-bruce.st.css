@@ -1,6 +1,6 @@
 :import {
   -st-from: "./colors.st.css";
-  -st-named: color1, color2, color3, color4, color5, dark, bodyColor;
+  -st-named: color2, dark, bodyColor;
 }
 
 :import {
@@ -24,17 +24,26 @@
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: url(../media/potato-body.png) no-repeat center;
-  background-size: cover;
-  position: relative;
   margin: 10px auto;
-  overflow: hidden;
   height: 70vh;
   max-width: 80vh;
+  background: url(../media/potato-body.png) no-repeat center;
+  background-size: cover;
+}
+
+.eyeBox {
+  -st-extends: Eyes;
+  width: 100%;
+}
+
+.mouth {
+  -st-extends: Mouth;
 }
 
 @keyframes potatoBoogie {
@@ -48,26 +57,3 @@
     transform: scale(0.4);
   }
 }
-
-/* eye-box */
-.eyeBox {
-  -st-extends: Eyes;
-  width: 100%;
-}
-
-.eyeBox::eye::brow {
-  height: 1px;
-  border: 10px solid value(dark);
-  border-top: 1px dashed value(bodyColor);
-  border-radius: 20%;
-  background-color: value(color2);
-  transition: all 125ms ease-in-out;
-}
-
-/* mouth */
-.mouth {
-  -st-extends: Mouth;
-  margin-top: 50px;
-  width: 100%;
-}
-

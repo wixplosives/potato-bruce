@@ -3,25 +3,21 @@
   -st-named: dark;
 }
 
-:vars {
-  lipHeight: 2px;
-}
-
 .root {
   position: relative;
   width: 100%;
 }
 
 .mouthBox {
-  max-width: 50%;
+  overflow: hidden;
   margin: 50px auto 0;
   padding: 0;
-  overflow: hidden;
+  max-width: 50%;
 }
 
 .lip {
   background: value(dark);
-  height: value(lipHeight);
+  height: 2px;
   transition: 225ms ease-in;
 }
 
