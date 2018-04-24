@@ -21,67 +21,28 @@
   height: 100vh;
 }
 
-.nav {
-  background-color: value(navBg);
-  padding: 5px 0;
-  text-align: center;
-  height: 60px;
-  line-height: 60px;
-}
-
-.nav button {
-  font-size: 30px;
-  outline: 0;
-}
-
-.backdrop {
-  -st-states: location( enum(paris, wixhq, aliens) );
-  position: fixed;
-  width: 100%;
-  height: calc(100% - 60px);
-  top: 60px;
-  left: 0;
-}
-
-.backdrop:location(paris) {
-  background: url(../media/paris.jpg) no-repeat center;
-
-}
-
-.backdrop:location(wixhq) {
-  background: url(../media/wixhq.webp) no-repeat center;
-}
-
-.backdrop:location(aliens) {
-  background: url(../media/saucer.jpg) no-repeat center;
-  background-size: cover;
-}
-
 .potatoWorld {
   -st-extends: PotatoBruce;
 }
 
-/* HAPPY POTATO BRUCE IN PARIS */
+/*
+  HAPPY POTATO BRUCE IN PARIS
+*/
 .potatoWorld:mood(happy)::eyeBox::eye:first-child {
   transform: rotate(0deg);
   top: -20px;
 }
-
 .potatoWorld:mood(happy)::eyeBox::eye:last-child {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-
 .potatoWorld:mood(happy)::eyeBox::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
 }
-
-/* mouth/happy */
 .potatoWorld:mood(happy)::mouth::upperLip {
   display: none;
 }
-
 .potatoWorld:mood(happy)::mouth::lowerLip {
   height: 180px;
   width: 200px;
@@ -106,7 +67,9 @@
   border-top-left-radius: 50%;
 }
 
-/* BIG POTATO BRUCE IN JAPAN */
+/*
+  BIG POTATO BRUCE IN JAPAN
+*/
 .potatoWorld:mood(glasses)::eyeBox {
   position: relative;
   background: url(./glasses.png);
@@ -114,7 +77,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .potatoWorld:mood(glasses)::eyeBox::eye::socket {
   box-shadow: none;
 }
@@ -122,30 +84,62 @@
   display: none;
 }
 
-/* SAD POTATO AT THE DMV */
+/*
+  SAD POTATO AT THE DMV
+*/
 .potatoWorld:mood(sad)::eyeBox::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionSad));
 }
-
 .potatoWorld:mood(sad)::eyeBox::eye::pupil {
   line-height: calc(value(lidPositionSad) * 2);
   font-size: 50px!important;
 }
-
 .potatoWorld:mood(sad)::eyeBox::eye:first-child {
   transform: rotate(-15deg);
 }
-
 .potatoWorld:mood(sad)::eyeBox::eye:first-child::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-
 .potatoWorld:mood(sad)::eyeBox::eye:last-child::brow {
   transform: rotate(15deg);
 }
 
+/* Backdrop Image */
+.backdrop {
+  -st-states: location( enum(paris, wixhq, aliens) );
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+}
+.backdrop:location(paris) {
+  background: url(../media/paris.jpg) no-repeat center;
+}
+.backdrop:location(wixhq) {
+  background: url(../media/wixhq.webp) no-repeat center;
+}
+.backdrop:location(aliens) {
+  background: url(../media/saucer.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/* App Navigation */
+.nav {
+  background-color: value(navBg);
+  padding: 5px 0;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.nav button {
+  font-size: 30px;
+  outline: 0;
+}
+
+/* Animations */
 @keyframes twitch1 {
   5% {
     left: -1px;
