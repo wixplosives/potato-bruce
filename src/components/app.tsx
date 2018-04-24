@@ -12,7 +12,7 @@ export class App extends React.Component<{}, AppState> {
     constructor(props: any) {
         super(props);
         this.state = {
-            mood: 'happy',
+            mood: 'reset',
             backdrop: 'wixhq'
         };
 
@@ -36,6 +36,7 @@ export class App extends React.Component<{}, AppState> {
         return <div {...style('root')}>
             <div {...style('backdrop', { location: this.state.backdrop })} />
             <div {...style('nav')}>
+                <button value="" onClick={this.handleMoodChange}>Reset</button>
                 <button value="happy" onClick={this.handleMoodChange}>Happy</button>
                 <button value="sad" onClick={this.handleMoodChange}>Sad</button>
                 <button value="glasses" onClick={this.handleMoodChange}>Glasses</button>

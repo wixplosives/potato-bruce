@@ -18,43 +18,14 @@
   overflow: hidden;
 }
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px auto;
-  height: 70vh;
-  max-width: 80vh;
-  background: url(../../assets/potato-body.png) no-repeat center;
-  background-size: cover;
-}
+.hero {}
 
-.eyes {
-  width: 100%;
-  text-align: center;
-}
+.eyes {}
 
 .eye {
   -st-extends: Eye;
-  display: inline-block;
-  margin: 0 20px;
 }
 
 .mouth {
   -st-extends: Mouth;
-}
-
-@keyframes potatoBoogie {
-  0% {
-    transform: scale(0.4);
-  }
-  45% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(0.4);
-  }
 }

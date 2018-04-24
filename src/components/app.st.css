@@ -5,7 +5,7 @@
 
 :import {
   -st-from: "./potato-bruce/potato-bruce.st.css";
-  -st-default: PotatoBruce;
+  -st-default: PotatoWorld;
 }
 
 :vars {
@@ -20,12 +20,38 @@
 }
 
 .potatoWorld {
-  -st-extends: PotatoBruce;
+  -st-extends: PotatoWorld;
+  overflow: hidden;
+}
+
+.potatoWorld::hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto;
+  height: 70vh;
+  max-width: 80vh;
+}
+
+.potatoWorld::hero::eyes {
+  width: 100%;
+  text-align: center;
+}
+
+.potatoWorld::hero::eyes::eye {
+  display: inline-block;
+  margin: 0 20px;
 }
 
 /*
   HAPPY POTATO BRUCE IN PARIS
 */
+.potatoWorld:mood(happy)::hero {
+  background: url(../assets/potato-body.png) no-repeat center;
+  background-size: cover;
+}
 .potatoWorld:mood(happy)::eyes::eye:first-child {
   transform: rotate(0deg);
   top: -20px;
@@ -147,5 +173,17 @@
   }
   95% {
     left: 0;
+  }
+}
+
+@keyframes potatoBoogie {
+  0% {
+    transform: scale(0.4);
+  }
+  45% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0.4);
   }
 }
