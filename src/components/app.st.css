@@ -12,6 +12,7 @@
   negativeRetinaSize: -100px;
   lidPositionHappy: 25px;
   lidPositionSad: 75px;
+  navBarHeight: 60px;
 }
 
 .root {
@@ -25,16 +26,16 @@
 /*
   HAPPY POTATO BRUCE IN PARIS
 */
-.potatoWorld:mood(happy)::eyeBox::eye:first-child {
+.potatoWorld:mood(happy)::eyes::eye:first-child {
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoWorld:mood(happy)::eyeBox::eye:last-child {
+.potatoWorld:mood(happy)::eyes::eye:last-child::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoWorld:mood(happy)::eyeBox::eye::lid {
+.potatoWorld:mood(happy)::eyes::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
 }
 .potatoWorld:mood(happy)::mouth::upperLip {
@@ -67,39 +68,39 @@
 /*
   BIG POTATO BRUCE IN JAPAN
 */
-.potatoWorld:mood(glasses)::eyeBox {
+.potatoWorld:mood(glasses)::eyes {
   position: relative;
   background: url(../assets/glasses.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.potatoWorld:mood(glasses)::eyeBox::eye::socket {
+.potatoWorld:mood(glasses)::eyes::eye::socket {
   box-shadow: none;
 }
-.potatoWorld:mood(glasses)::eyeBox::eye::pupil::after {
+.potatoWorld:mood(glasses)::eyes::eye::pupil::after {
   display: none;
 }
 
 /*
   SAD POTATO AT THE DMV
 */
-.potatoWorld:mood(sad)::eyeBox::eye::lid {
+.potatoWorld:mood(sad)::eyes::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionSad));
 }
-.potatoWorld:mood(sad)::eyeBox::eye::pupil {
+.potatoWorld:mood(sad)::eyes::eye::pupil {
   line-height: calc(value(lidPositionSad) * 2);
   font-size: 50px!important;
 }
-.potatoWorld:mood(sad)::eyeBox::eye:first-child {
+.potatoWorld:mood(sad)::eyes::eye:first-child {
   transform: rotate(-15deg);
 }
-.potatoWorld:mood(sad)::eyeBox::eye:first-child::brow {
+.potatoWorld:mood(sad)::eyes::eye:first-child::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoWorld:mood(sad)::eyeBox::eye:last-child::brow {
+.potatoWorld:mood(sad)::eyes::eye:last-child::brow {
   transform: rotate(15deg);
 }
 
@@ -107,10 +108,10 @@
 .backdrop {
   -st-states: location( enum(paris, wixhq, aliens) );
   position: fixed;
-  top: 60px;
+  top: value(navBarHeight);
   left: 0;
   width: 100%;
-  height: calc(100% - 60px);
+  height: calc(100% - value(navBarHeight));
 }
 .backdrop:location(paris) {
   background: url(../assets/paris.jpg) no-repeat center;
@@ -127,8 +128,8 @@
 .nav {
   background-color: value(navBg);
   padding: 5px 0;
-  height: 60px;
-  line-height: 60px;
+  height: value(navBarHeight);
+  line-height: value(navBarHeight);
   text-align: center;
 }
 .nav button {
