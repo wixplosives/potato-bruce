@@ -21,6 +21,9 @@
 
 .potatoWorld {
   -st-extends: PotatoWorld;
+}
+
+.potatoWorld::heroBox {
   overflow: hidden;
 }
 
@@ -33,6 +36,15 @@
   margin: 10px auto;
   height: 70vh;
   max-width: 80vh;
+  transition: 125ms ease-in-out;
+}
+
+.potatoWorld::hero:size(small) {
+  transform: scale(0.3);
+}
+
+.potatoWorld::hero:size(big) {
+  transform: scale(0.7);
 }
 
 .potatoWorld::hero::eyes {
@@ -107,6 +119,7 @@
 .potatoWorld:mood(glasses)::eyes::eye::pupil::after {
   display: none;
 }
+.potatoWorld::hero:size(big):in(japan) {}
 
 /*
   SAD POTATO AT THE DMV
@@ -131,21 +144,20 @@
 }
 
 /* Backdrop Image */
-.backdrop {
-  -st-states: location( enum(paris, wixhq, japan) );
+.potatoWorld::backdrop {
   position: fixed;
   top: value(navBarHeight);
   left: 0;
   width: 100%;
   height: calc(100% - value(navBarHeight));
 }
-.backdrop:location(paris) {
+.potatoWorld::backdrop:location(paris) {
   background: url(../assets/paris.jpg) no-repeat center;
 }
-.backdrop:location(wixhq) {
+.potatoWorld::backdrop:location(wixhq) {
   background: url(../assets/wixhq.webp) no-repeat center;
 }
-.backdrop:location(japan) {
+.potatoWorld::backdrop:location(japan) {
   background: url(../assets/japan.jpg) no-repeat center;
   background-size: cover;
 }

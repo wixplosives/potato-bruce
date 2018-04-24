@@ -18,7 +18,11 @@
   overflow: hidden;
 }
 
-.hero {}
+.heroBox {}
+
+.hero {
+  -st-states: size( enum(small, big) ), in( enum(paris, wixhq, japan) );
+}
 
 .eyes {}
 
@@ -28,4 +32,8 @@
 
 .mouth {
   -st-extends: Mouth;
+}
+
+.backdrop {
+  -st-states: location( enum(paris, wixhq, japan) );
 }
