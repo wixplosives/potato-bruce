@@ -1,10 +1,10 @@
 :import {
   -st-from: "./colors.st.css";
-  -st-named: dark, navBg;
+  -st-named: dark, navBg, crimsonColor;
 }
 
 :import {
-  -st-from: "./potato-bruce.st.css";
+  -st-from: "./potato-bruce/potato-bruce.st.css";
   -st-default: PotatoBruce;
 }
 
@@ -56,7 +56,7 @@
   height: 50px;
   width: 100px;
   margin: 0 auto;
-  background: #c00;
+  background: value(crimsonColor);
   position: absolute;
   bottom: 0;
   right: 0;
