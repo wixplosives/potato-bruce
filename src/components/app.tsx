@@ -15,7 +15,7 @@ export class App extends React.Component<{}, AppState> {
         this.state = {
             mood: 'reset',
             backdrop: 'wixhq',
-            size: 'small'
+            size: 'big'
         };
 
         this.handleMoodChange = this.handleMoodChange.bind(this);
@@ -43,7 +43,6 @@ export class App extends React.Component<{}, AppState> {
 
     public render() {
         return <div {...style('root')}>
-            {/* <div {...style('backdrop', { location: this.state.backdrop })} /> */}
             <div {...style('nav')}>
                 <button value="" onClick={this.handleMoodChange}>Reset</button>
                 <button value="happy" onClick={this.handleMoodChange}>Happy</button>

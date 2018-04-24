@@ -35,5 +35,5 @@
 }
 
 .backdrop {
-  -st-states: location( enum(paris, wixhq, japan) );
+  -st-states: in( enum(paris, wixhq, japan) );
 }

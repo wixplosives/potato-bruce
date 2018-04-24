@@ -151,13 +151,13 @@
   width: 100%;
   height: calc(100% - value(navBarHeight));
 }
-.potatoWorld::backdrop:location(paris) {
+.potatoWorld::backdrop:in(paris) {
   background: url(../assets/paris.jpg) no-repeat center;
 }
-.potatoWorld::backdrop:location(wixhq) {
+.potatoWorld::backdrop:in(wixhq) {
   background: url(../assets/wixhq.webp) no-repeat center;
 }
-.potatoWorld::backdrop:location(japan) {
+.potatoWorld::backdrop:in(japan) {
   background: url(../assets/japan.jpg) no-repeat center;
   background-size: cover;
 }
