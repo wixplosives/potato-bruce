@@ -1,17 +1,18 @@
 :import {
   -st-from: "./colors.st.css";
-  -st-named: dark, navBg;
+  -st-named: dark, navBg, crimsonColor;
 }
 
 :import {
-  -st-from: "./potato-bruce.st.css";
-  -st-default: PotatoBruce;
+  -st-from: "./potato-bruce/potato-bruce.st.css";
+  -st-default: PotatoWorld;
 }
 
 :vars {
   negativeRetinaSize: -100px;
   lidPositionHappy: 25px;
   lidPositionSad: 75px;
+  navBarHeight: 60px;
 }
 
 .root {
@@ -19,22 +20,48 @@
 }
 
 .potatoWorld {
-  -st-extends: PotatoBruce;
+  -st-extends: PotatoWorld;
+  overflow: hidden;
+}
+
+.potatoWorld::hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px auto;
+  height: 70vh;
+  max-width: 80vh;
+}
+
+.potatoWorld::hero::eyes {
+  width: 100%;
+  text-align: center;
+}
+
+.potatoWorld::hero::eyes::eye {
+  display: inline-block;
+  margin: 0 20px;
 }
 
 /*
   HAPPY POTATO BRUCE IN PARIS
 */
-.potatoWorld:mood(happy)::eyeBox::eye:first-child {
+.potatoWorld:mood(happy)::hero {
+  background: url(../assets/potato-body.png) no-repeat center;
+  background-size: cover;
+}
+.potatoWorld:mood(happy)::eyes::eye:first-child {
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoWorld:mood(happy)::eyeBox::eye:last-child {
+.potatoWorld:mood(happy)::eyes::eye:last-child::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoWorld:mood(happy)::eyeBox::eye::lid {
+.potatoWorld:mood(happy)::eyes::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
 }
 .potatoWorld:mood(happy)::mouth::upperLip {
@@ -55,7 +82,7 @@
   height: 50px;
   width: 100px;
   margin: 0 auto;
-  background: #c00;
+  background: value(crimsonColor);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -67,39 +94,39 @@
 /*
   BIG POTATO BRUCE IN JAPAN
 */
-.potatoWorld:mood(glasses)::eyeBox {
+.potatoWorld:mood(glasses)::eyes {
   position: relative;
   background: url(../assets/glasses.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.potatoWorld:mood(glasses)::eyeBox::eye::socket {
+.potatoWorld:mood(glasses)::eyes::eye::socket {
   box-shadow: none;
 }
-.potatoWorld:mood(glasses)::eyeBox::eye::pupil::after {
+.potatoWorld:mood(glasses)::eyes::eye::pupil::after {
   display: none;
 }
 
 /*
   SAD POTATO AT THE DMV
 */
-.potatoWorld:mood(sad)::eyeBox::eye::lid {
+.potatoWorld:mood(sad)::eyes::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionSad));
 }
-.potatoWorld:mood(sad)::eyeBox::eye::pupil {
+.potatoWorld:mood(sad)::eyes::eye::pupil {
   line-height: calc(value(lidPositionSad) * 2);
   font-size: 50px!important;
 }
-.potatoWorld:mood(sad)::eyeBox::eye:first-child {
+.potatoWorld:mood(sad)::eyes::eye:first-child {
   transform: rotate(-15deg);
 }
-.potatoWorld:mood(sad)::eyeBox::eye:first-child::brow {
+.potatoWorld:mood(sad)::eyes::eye:first-child::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoWorld:mood(sad)::eyeBox::eye:last-child::brow {
+.potatoWorld:mood(sad)::eyes::eye:last-child::brow {
   transform: rotate(15deg);
 }
 
@@ -107,10 +134,10 @@
 .backdrop {
   -st-states: location( enum(paris, wixhq, japan) );
   position: fixed;
-  top: 60px;
+  top: value(navBarHeight);
   left: 0;
   width: 100%;
-  height: calc(100% - 60px);
+  height: calc(100% - value(navBarHeight));
 }
 .backdrop:location(paris) {
   background: url(../assets/paris.jpg) no-repeat center;
@@ -127,8 +154,8 @@
 .nav {
   background-color: value(navBg);
   padding: 5px 0;
-  height: 60px;
-  line-height: 60px;
+  height: value(navBarHeight);
+  line-height: value(navBarHeight);
   text-align: center;
 }
 .nav button {
@@ -146,5 +173,17 @@
   }
   95% {
     left: 0;
+  }
+}
+
+@keyframes potatoBoogie {
+  0% {
+    transform: scale(0.4);
+  }
+  45% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0.4);
   }
 }
