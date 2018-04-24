@@ -2,6 +2,7 @@
   "name": "potato-bruce",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.potatobruce.io",
   "dependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
@@ -10,10 +11,12 @@
   "scripts": {
     "start": "stylable-scripts start",
     "build": "stylable-scripts build",
-    "eject": "stylable-scripts eject"
+    "eject": "stylable-scripts eject",
+    "deploy": "gh-pages -d ./build"
   },
   "devDependencies": {
     "@types/react": "16",
-    "@types/react-dom": "16"
+    "@types/react-dom": "16",
+    "gh-pages": "^1.1.0"
   }
 }
