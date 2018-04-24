@@ -141,7 +141,7 @@
   HAPPY POTATO BRUCE IN PARIS
 */
 .app3574044186--root .app3574044186--potatoWorld.potatobruce371089062--root[data-potatobruce371089062-mood="happy"] .potatobruce371089062--hero {
-  background: url(/mr-potato-head/static/media/potato-body.036f5ecb.png) no-repeat center;
+  background: url(/static/media/potato-body.036f5ecb.png) no-repeat center;
   background-size: cover;
 }
 .app3574044186--root .app3574044186--potatoWorld.potatobruce371089062--root[data-potatobruce371089062-mood="happy"] .potatobruce371089062--eyes .potatobruce371089062--eye:first-child {
@@ -232,13 +232,13 @@
   height: calc(100% - 60px);
 }
 .app3574044186--root .app3574044186--potatoWorld.potatobruce371089062--root .potatobruce371089062--backdrop[data-potatobruce371089062-in="paris"] {
-  background: url(/mr-potato-head/static/media/paris.61da2ea6.jpg) no-repeat center;
+  background: url(/static/media/paris.61da2ea6.jpg) no-repeat center;
 }
 .app3574044186--root .app3574044186--potatoWorld.potatobruce371089062--root .potatobruce371089062--backdrop[data-potatobruce371089062-in="wixhq"] {
-  background: url(/mr-potato-head/static/media/wixhq.76534dae.webp) no-repeat center;
+  background: url(/static/media/wixhq.76534dae.webp) no-repeat center;
 }
 .app3574044186--root .app3574044186--potatoWorld.potatobruce371089062--root .potatobruce371089062--backdrop[data-potatobruce371089062-in="japan"] {
-  background: url(/mr-potato-head/static/media/japan.2ba01653.jpg) no-repeat center;
+  background: url(/static/media/japan.2ba01653.jpg) no-repeat center;
   background-size: cover;
 }
 
