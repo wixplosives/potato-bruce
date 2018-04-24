@@ -155,7 +155,7 @@
   background: url(../assets/paris.jpg) no-repeat center;
 }
 .potatoWorld::backdrop:in(wixhq) {
-  background: url(../assets/wixhq.webp) no-repeat center;
+  background: url(../assets/wixhq.jpg) no-repeat center;
 }
 .potatoWorld::backdrop:in(japan) {
   background: url(../assets/japan.jpg) no-repeat center;
