@@ -23,9 +23,9 @@
   -st-extends: PotatoWorld;
 }
 
-.potatoWorld::heroBox {
+/* .potatoWorld::heroBox {
   overflow: hidden;
-}
+} */
 
 .potatoWorld::hero {
   position: relative;
@@ -39,11 +39,11 @@
   transition: 125ms ease-in-out;
 }
 
-.potatoWorld::hero:size(small) {
+.potatoWorld:size(small) {
   transform: scale(0.3);
 }
 
-.potatoWorld::hero:size(big) {
+.potatoWorld:size(big) {
   transform: scale(0.7);
 }
 
@@ -119,7 +119,6 @@
 .potatoWorld:mood(glasses)::eyes::eye::pupil::after {
   display: none;
 }
-.potatoWorld::hero:size(big):in(japan) {}
 
 /*
   SAD POTATO AT THE DMV

@@ -12,16 +12,16 @@ interface PotatoBruceProps {
 }
 
 export const PotatoBruce: React.SFC<PotatoBruceProps> = (props: PotatoBruceProps) => (
-    <div {...style('root', { mood: props.mood }, props)}>
+    <div {...style('root', { mood: props.mood, size: props.size }, props)}>
 
-        <div {...style('heroBox')}>
-            <div {...style('hero', { size: props.size } )}>
+        {/* <div {...style('heroBox')}> */}
+            <div {...style('hero')}>
                 <div className={style.eyes}>
                     <Eye {...style('eye')} />
                     <Eye {...style('eye')} />
                 </div>
                 <Mouth className={style.mouth} />
             </div>
-        </div>
+        {/* </div> */}
     </div>
 );
