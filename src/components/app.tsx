@@ -43,6 +43,8 @@ export class App extends React.Component<{}, AppState> {
 
     public render() {
         return <div {...style('root')}>
+            <div {...style('backdrop', { in: this.state.backdrop })} />
+        
             <div {...style('nav')}>
                 <button value="" onClick={this.handleMoodChange}>Reset</button>
                 <button value="happy" onClick={this.handleMoodChange}>Happy</button>
@@ -60,8 +62,7 @@ export class App extends React.Component<{}, AppState> {
             <PotatoBruce 
                 {...style('potatoWorld')} 
                 mood={this.state.mood} 
-                size={this.state.size} 
-                backdrop={this.state.backdrop} />
+                size={this.state.size} />
         </div>
     }
 }

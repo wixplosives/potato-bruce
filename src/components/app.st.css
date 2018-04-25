@@ -144,20 +144,21 @@
 }
 
 /* Backdrop Image */
-.potatoWorld::backdrop {
+.backdrop {
+  -st-states: in( enum(paris, wixhq, japan) );
   position: fixed;
   top: value(navBarHeight);
   left: 0;
   width: 100%;
   height: calc(100% - value(navBarHeight));
 }
-.potatoWorld::backdrop:in(paris) {
+.backdrop:in(paris) {
   background: url(../assets/paris.jpg) no-repeat center;
 }
-.potatoWorld::backdrop:in(wixhq) {
+.backdrop:in(wixhq) {
   background: url(../assets/wixhq.jpg) no-repeat center;
 }
-.potatoWorld::backdrop:in(japan) {
+.backdrop:in(japan) {
   background: url(../assets/japan.jpg) no-repeat center;
   background-size: cover;
 }
