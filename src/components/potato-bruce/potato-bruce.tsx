@@ -7,8 +7,8 @@ import { Mouth } from './../mouth';
 
 interface PotatoBruceProps {
     mood: Mood;
-    className?: string;
     size: Size;
+    className?: string;
 }
 
 export const PotatoBruce: React.SFC<PotatoBruceProps> = (props: PotatoBruceProps) => (
