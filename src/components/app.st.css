@@ -21,9 +21,6 @@
 
 .potatoWorld {
   -st-extends: PotatoWorld;
-}
-
-.potatoWorld {
   position: relative;
   display: flex;
   align-items: center;
@@ -41,6 +38,31 @@
 
 .potatoWorld:size(big) {
   transform: scale(0.7);
+}
+
+.potatoWorld::top {
+  display: inline-block;
+  height: 250px;
+  width: 200px;
+  margin-top: -265px;
+
+  -webkit-mask: url(../assets/mohawk.svg) no-repeat center;
+  mask: url(../assets/mohawk.svg) no-repeat center;
+
+  animation-name: background_change;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes background_change {
+  0% { background-color: #ff0000; }
+  15% { background-color: #ff6600; }
+  30% { background-color: #ffee00; }
+  45% { background-color: #00ff00; }
+  60% { background-color: #0000ff; }
+  75% { background-color: #4400FF; }
+  100% { background-color: #9900FF; }; 
 }
 
 .potatoWorld::eyes {

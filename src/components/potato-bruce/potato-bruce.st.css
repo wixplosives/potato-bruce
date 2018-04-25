@@ -15,8 +15,9 @@
 
 .root {
   -st-states: mood( enum(happy, sad, glasses) ), size( enum(small, big) );  
-  overflow: hidden;
 }
+
+.top {}
 
 .eyes {}
 
