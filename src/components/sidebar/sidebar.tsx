@@ -11,20 +11,22 @@ const NavBar = (props: NavBarProps) => {
 
   return <div {...style('root')}>
     <div {...style('nav')}>
-      <div {...style('buttonGroup')}>
+      <div {...style('buttonGroup reset')}>
         <button value="" onClick={handleMoodChange}>Reset</button>
+      </div>
+      <div {...style('buttonGroup mood')}>
         <button value="happy" onClick={handleMoodChange}>Happy</button>
         <button value="sad" onClick={handleMoodChange}>Sad</button>
         <button value="glasses" onClick={handleMoodChange}>Glasses</button>
       </div>
-      <div {...style('buttonGroup')}>
+      <div {...style('buttonGroup size')}>
+        <button value="small" onClick={handleSizeChange}>Small</button>
+        <button value="big" onClick={handleSizeChange}>Big</button>
+      </div>
+      <div {...style('buttonGroup location')}>
         <button value="paris" onClick={handleBackdropChange}>Paris</button>
         <button value="wixhq" onClick={handleBackdropChange}>WixHQ</button>
         <button value="japan" onClick={handleBackdropChange}>Japan</button>
-      </div>
-      <div {...style('buttonGroup')}>
-        <button value="small" onClick={handleSizeChange}>Small</button>
-        <button value="big" onClick={handleSizeChange}>Big</button>
       </div>
     </div>
 

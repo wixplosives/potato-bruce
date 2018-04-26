@@ -24,7 +24,7 @@
   -st-extends: PotatoBruce;
   position: relative;
   display: flex;
-  flex: 1 1;
+  flex: 1;
   min-width: 500px;
   align-items: center;
   flex-direction: column;
@@ -207,15 +207,17 @@
   font-size: 14px;
   outline: 0;
   cursor: pointer;
-  flex: 1;
+  flex: 1 0;
 }
 .nav .buttonGroup {
   flex: 1;
   display: flex;
 }
 .nav button:hover {
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background: rgba(184, 255, 189, 0.8);
+}
+.buttonGroup:hover {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
 }
 
 /* Animations */
@@ -262,3 +264,20 @@
   75% { text-shadow: 0 0 0 #4400FF; }
   100% { text-shadow: 0 0 0 #9900FF; }; 
 }
+
+.buttonGroup.reset {
+  /* background: rgba(255, 155, 155); */
+}
+
+.buttonGroup.mood {
+  /* background: rgba(0, 0, 0, .2); */
+}
+
+.buttonGroup.size {
+  /* background: rgba(0, 0, 0, .2); */
+}
+
+.buttonGroup.location {
+  /* background: rgba(0, 0, 0, .2); */
+}
+
