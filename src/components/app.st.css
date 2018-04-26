@@ -283,3 +283,11 @@
   100% { text-shadow: 0 0 0 #9900FF; }; 
 }
 
+.resetAllButton {
+
+}
+
+.nav button.resetAllButton:hover {
+  background: value(crimsonColor);
+  color: #fff;
+}
