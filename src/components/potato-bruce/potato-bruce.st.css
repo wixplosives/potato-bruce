@@ -14,10 +14,11 @@
 }
 
 .root {
-  -st-states: mood( enum(happy, sad, glasses) ), size( enum(small, big) );  
+  -st-states: mood( enum(happy, sad, glasses) ), size( enum(small, big) );
 }
 
 .top {}
+.top::after {}
 
 .eyes {}
 

@@ -2,6 +2,10 @@ import * as React from 'react';
 import { PotatoBruce } from './potato-bruce/potato-bruce';
 import { Mood, Backdrop, Size } from './types';
 import style from './app.st.css';
+import NavBar from '../components/sidebar/sidebar';
+
+const moods = ["happy", "sad"];
+const sizes = ["big", "small"];
 
 interface AppState {
     mood: Mood;
@@ -41,28 +45,43 @@ export class App extends React.Component<{}, AppState> {
         });
     }
 
+    randomSize(size: string): Size {
+        const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+        if (size === randomSize) {
+            return this.randomSize(size)
+        }
+        return randomSize as Size;
+    }
+
+    randomMood(mood: string): Mood {
+        const randomMood = moods[Math.floor(Math.random() * moods.length)];
+        if (mood === randomMood) {
+            return this.randomMood(mood);
+        }
+        return randomMood;
+    }
+
     public render() {
+        let bruces = [];
+
         return <div {...style('root')}>
             <div {...style('backdrop', { in: this.state.backdrop })} />
-        
-            <div {...style('nav')}>
-                <button value="" onClick={this.handleMoodChange}>Reset</button>
-                <button value="happy" onClick={this.handleMoodChange}>Happy</button>
-                <button value="sad" onClick={this.handleMoodChange}>Sad</button>
-                <button value="glasses" onClick={this.handleMoodChange}>Glasses</button>
-                <span>&mdash;</span>
-                <button value="paris" onClick={this.handleBackdropChange}>Paris</button>
-                <button value="wixhq" onClick={this.handleBackdropChange}>Wix HQ</button>
-                <button value="japan" onClick={this.handleBackdropChange}>Japan</button>
-                <span>&mdash;</span>
-                <button value="small" onClick={this.handleSizeChange}>Small</button>
-                <button value="big" onClick={this.handleSizeChange}>Big</button>
-            </div>
 
-            <PotatoBruce 
-                {...style('potatoWorld')} 
-                mood={this.state.mood} 
+            <NavBar
+                handleBackdropChange={this.handleBackdropChange}
+                handleMoodChange={this.handleMoodChange}
+                handleSizeChange={this.handleSizeChange}
+            />
+
+            <PotatoBruce
+                {...style('potatoBruce')}
+                mood={this.state.mood}
                 size={this.state.size} />
+
+            {/* <PotatoBruce
+                {...style('potatoBruce')}
+                mood={this.randomMood(this.state.mood)}
+                size={this.state.size} /> */}
         </div>
     }
 }

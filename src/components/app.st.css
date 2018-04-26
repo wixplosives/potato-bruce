@@ -5,7 +5,7 @@
 
 :import {
   -st-from: "./potato-bruce/potato-bruce.st.css";
-  -st-default: PotatoWorld;
+  -st-default: PotatoBruce;
 }
 
 :vars {
@@ -16,13 +16,16 @@
 }
 
 .root {
-  height: 100vh;
+  display: flex;
+  padding: 10vh 0;
 }
 
-.potatoWorld {
-  -st-extends: PotatoWorld;
+.potatoBruce {
+  -st-extends: PotatoBruce;
   position: relative;
   display: flex;
+  flex: 1 1;
+  min-width: 500px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -32,45 +35,20 @@
   transition: 125ms ease-in-out;
 }
 
-.potatoWorld:size(small) {
+.potatoBruce:size(small) {
   transform: scale(0.3);
 }
 
-.potatoWorld:size(big) {
+.potatoBruce:size(big) {
   transform: scale(0.7);
 }
 
-.potatoWorld::top {
-  display: inline-block;
-  height: 250px;
-  width: 200px;
-  margin-top: -265px;
-
-  -webkit-mask: url(../assets/mohawk.svg) no-repeat center;
-  mask: url(../assets/mohawk.svg) no-repeat center;
-
-  animation-name: background_change;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes background_change {
-  0% { background-color: #ff0000; }
-  15% { background-color: #ff6600; }
-  30% { background-color: #ffee00; }
-  45% { background-color: #00ff00; }
-  60% { background-color: #0000ff; }
-  75% { background-color: #4400FF; }
-  100% { background-color: #9900FF; }; 
-}
-
-.potatoWorld::eyes {
+.potatoBruce::eyes {
   width: 100%;
   text-align: center;
 }
 
-.potatoWorld::eyes::eye {
+.potatoBruce::eyes::eye {
   display: inline-block;
   margin: 0 20px;
 }
@@ -78,26 +56,42 @@
 /*
   HAPPY POTATO BRUCE IN PARIS
 */
-.potatoWorld:mood(happy) {
+.potatoBruce:mood(happy)::top {
+  position: relative;
+  top: -100px;
+}
+
+.potatoBruce:mood(happy)::top::after {
+  content: '🔥';
+  font-size: 120px;
+  text-shadow: 0 0 0 green;
+  position: relative;
+  color: transparent;
+  animation-name: emoji_color_change;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.potatoBruce:mood(happy) {
   background: url(../assets/potato-body.png) no-repeat center;
   background-size: cover;
 }
-.potatoWorld:mood(happy)::eyes::eye:first-child {
+.potatoBruce:mood(happy)::eyes::eye:first-child {
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoWorld:mood(happy)::eyes::eye:last-child::brow {
+.potatoBruce:mood(happy)::eyes::eye:last-child::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoWorld:mood(happy)::eyes::eye::lid {
+.potatoBruce:mood(happy)::eyes::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
 }
-.potatoWorld:mood(happy)::mouth::upperLip {
+.potatoBruce:mood(happy)::mouth::upperLip {
   display: none;
 }
-.potatoWorld:mood(happy)::mouth::lowerLip {
+.potatoBruce:mood(happy)::mouth::lowerLip {
   height: 180px;
   width: 200px;
   margin: 0 auto;
@@ -107,7 +101,7 @@
   overflow: hidden;
   position: relative;
 }
-.potatoWorld:mood(happy)::mouth::lowerLip::after {
+.potatoBruce:mood(happy)::mouth::lowerLip::after {
   content: ' ';
   height: 50px;
   width: 100px;
@@ -124,39 +118,50 @@
 /*
   BIG POTATO BRUCE IN JAPAN
 */
-.potatoWorld:mood(glasses)::eyes {
+.potatoBruce:mood(glasses)::eyes {
   position: relative;
   background: url(../assets/glasses.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.potatoWorld:mood(glasses)::eyes::eye::socket {
+.potatoBruce:mood(glasses)::eyes::eye::socket {
   box-shadow: none;
 }
-.potatoWorld:mood(glasses)::eyes::eye::pupil::after {
+.potatoBruce:mood(glasses)::eyes::eye::pupil::after {
   display: none;
 }
 
 /*
   SAD POTATO AT THE DMV
 */
-.potatoWorld:mood(sad)::eyes::eye::lid {
+.potatoBruce:mood(sad)::top {
+  height: 250px;
+  width: 200px;
+  margin-top: -265px;
+  -webkit-mask: url(../assets/mohawk.svg) no-repeat center;
+  mask: url(../assets/mohawk.svg) no-repeat center;
+  animation-name: background_change;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.potatoBruce:mood(sad)::eyes::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionSad));
 }
-.potatoWorld:mood(sad)::eyes::eye::pupil {
+.potatoBruce:mood(sad)::eyes::eye::pupil {
   line-height: calc(value(lidPositionSad) * 2);
   font-size: 50px!important;
 }
-.potatoWorld:mood(sad)::eyes::eye:first-child {
+.potatoBruce:mood(sad)::eyes::eye:first-child {
   transform: rotate(-15deg);
 }
-.potatoWorld:mood(sad)::eyes::eye:first-child::brow {
+.potatoBruce:mood(sad)::eyes::eye:first-child::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoWorld:mood(sad)::eyes::eye:last-child::brow {
+.potatoBruce:mood(sad)::eyes::eye:last-child::brow {
   transform: rotate(15deg);
 }
 
@@ -182,15 +187,35 @@
 
 /* App Navigation */
 .nav {
-  background-color: value(navBg);
-  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: value(navBarHeight);
-  line-height: value(navBarHeight);
+  background-color: value(navBg);
+  height: value(navBarHeight);
   text-align: center;
+  z-index: 1000;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  display: flex;
 }
 .nav button {
-  font-size: 30px;
+  height: value(navBarHeight);
+  line-height: calc(value(navBarHeight) / 2);
+  border: none;
+  background: none;
+  font-size: 14px;
   outline: 0;
+  cursor: pointer;
+  flex: 1;
+}
+.nav .buttonGroup {
+  flex: 1;
+  display: flex;
+}
+.nav button:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
 }
 
 /* Animations */
@@ -216,4 +241,24 @@
   100% {
     transform: scale(0.4);
   }
+}
+
+@keyframes background_change {
+  0% { background-color: #ff0000; }
+  15% { background-color: #ff6600; }
+  30% { background-color: #ffee00; }
+  45% { background-color: #00ff00; }
+  60% { background-color: #0000ff; }
+  75% { background-color: #4400FF; }
+  100% { background-color: #9900FF; }; 
+}
+
+@keyframes emoji_color_change {
+  0% { text-shadow: 0 0 0 green; }
+  15% { text-shadow: 0 0 0 #ff6600; }
+  30% { text-shadow: 0 0 0 #ffee00; }
+  45% { text-shadow: 0 0 0 #00ff00; }
+  60% { text-shadow: 0 0 0 #0000ff; }
+  75% { text-shadow: 0 0 0 #4400FF; }
+  100% { text-shadow: 0 0 0 #9900FF; }; 
 }
