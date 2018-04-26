@@ -61,14 +61,19 @@
   top: -100px;
 }
 
+.potatoBruce:mood(sad)::eyes::eye::pupil::after {
+  content: '^';
+  text-shadow: none;
+  zoom: 1;
+}
 .potatoBruce:mood(happy)::top::after {
-  content: '🔥';
+  content: '🔥'; /* 👁🥔💰🍌🐸🤘🔥 */
   font-size: 120px;
-  text-shadow: 0 0 0 green;
+  text-shadow: 0 0 0 #000;
   position: relative;
   color: transparent;
   animation-name: emoji_color_change;
-  animation-duration: 7s;
+  animation-duration: 700ms;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
