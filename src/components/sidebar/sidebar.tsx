@@ -12,8 +12,8 @@ const NavBar = (props: NavBarProps) => {
 
   return <div {...style('root')}>
     <div {...style('nav')}>
-      <div {...style('buttonGroup reset')}>
-        <button onClick={resetAll}>Reset</button>
+      <div {...style('buttonGroup header')}>
+        <button onClick={resetAll}>Reset All</button>
       </div>
       <div {...style('buttonGroup mood')}>
         <button value="happy" onClick={handleMoodChange}>Happy</button>

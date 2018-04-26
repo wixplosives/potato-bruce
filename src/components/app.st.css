@@ -199,7 +199,23 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   display: flex;
 }
+
+.buttonGroup.header {
+  /* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25); */
+}
+.demoTitle {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  line-height: value(navBarHeight);
+  font-weight: 100;
+  padding: 0 2rem;
+  text-transform: uppercase;
+}
+
 .nav button {
+  text-transform: uppercase;
   height: value(navBarHeight);
   line-height: calc(value(navBarHeight) / 2);
   border: none;
@@ -263,21 +279,5 @@
   60% { text-shadow: 0 0 0 #0000ff; }
   75% { text-shadow: 0 0 0 #4400FF; }
   100% { text-shadow: 0 0 0 #9900FF; }; 
-}
-
-.buttonGroup.reset {
-  /* background: rgba(255, 155, 155); */
-}
-
-.buttonGroup.mood {
-  /* background: rgba(0, 0, 0, .2); */
-}
-
-.buttonGroup.size {
-  /* background: rgba(0, 0, 0, .2); */
-}
-
-.buttonGroup.location {
-  /* background: rgba(0, 0, 0, .2); */
 }
 
