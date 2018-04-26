@@ -172,7 +172,7 @@
 
 /* Backdrop Image */
 .backdrop {
-  -st-states: in( enum(paris, wixhq, japan) );
+  -st-states: in( enum(paris, wixhq, perspective) );
   position: fixed;
   top: value(navBarHeight);
   left: 0;
@@ -185,9 +185,12 @@
 .backdrop:in(wixhq) {
   background: url(../assets/wixhq.jpg) no-repeat center;
 }
-.backdrop:in(japan) {
-  background: url(../assets/japan.jpg) no-repeat center;
-  background-size: cover;
+.backdrop:in(perspective) {
+  background-color: #eee;
+  background-image: linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228)), 
+  linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228));
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
 }
 
 /* App Navigation */

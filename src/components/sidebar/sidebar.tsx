@@ -13,7 +13,8 @@ const NavBar = (props: NavBarProps) => {
   return <div {...style('root')}>
     <div {...style('nav')}>
       <div {...style('buttonGroup header')}>
-        <button {...style('resetAllButton')} onClick={resetAll}>Reset All</button>
+        <button {...style('resetAllButton')} onClick={resetAll}>Reset</button>
+        <button value="perspective" onClick={handleBackdropChange}>Grid</button>
       </div>
       <div {...style('buttonGroup mood')}>
         <button value="happy" onClick={handleMoodChange}>Happy</button>
@@ -27,7 +28,6 @@ const NavBar = (props: NavBarProps) => {
       <div {...style('buttonGroup location')}>
         <button value="paris" onClick={handleBackdropChange}>Paris</button>
         <button value="wixhq" onClick={handleBackdropChange}>WixHQ</button>
-        <button value="japan" onClick={handleBackdropChange}>Japan</button>
       </div>
     </div>
 
