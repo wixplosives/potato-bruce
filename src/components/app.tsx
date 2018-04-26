@@ -25,6 +25,15 @@ export class App extends React.Component<{}, AppState> {
         this.handleMoodChange = this.handleMoodChange.bind(this);
         this.handleBackdropChange = this.handleBackdropChange.bind(this);
         this.handleSizeChange = this.handleSizeChange.bind(this);
+        this.resetAll = this.resetAll.bind(this);
+    }
+
+    private resetAll() {
+        this.setState({
+            mood: 'blank',
+            backdrop: 'blank',
+            size: 'small'
+        });
     }
 
     private handleMoodChange(evt: any) {
@@ -71,6 +80,7 @@ export class App extends React.Component<{}, AppState> {
                 handleBackdropChange={this.handleBackdropChange}
                 handleMoodChange={this.handleMoodChange}
                 handleSizeChange={this.handleSizeChange}
+                resetAll={this.resetAll}
             />
 
             <PotatoBruce

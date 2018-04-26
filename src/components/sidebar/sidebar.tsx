@@ -6,13 +6,14 @@ const NavBar = (props: NavBarProps) => {
   const {
     handleMoodChange,
     handleSizeChange,
-    handleBackdropChange
+    handleBackdropChange,
+    resetAll
   } = props;
 
   return <div {...style('root')}>
     <div {...style('nav')}>
       <div {...style('buttonGroup reset')}>
-        <button value="" onClick={handleMoodChange}>Reset</button>
+        <button onClick={resetAll}>Reset</button>
       </div>
       <div {...style('buttonGroup mood')}>
         <button value="happy" onClick={handleMoodChange}>Happy</button>
