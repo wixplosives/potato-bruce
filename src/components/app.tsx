@@ -16,9 +16,10 @@ interface AppState {
 export class App extends React.Component<{}, AppState> {
     constructor(props: any) {
         super(props);
+
         this.state = {
             mood: 'reset',
-            backdrop: 'wixhq',
+            backdrop: 'blank',
             size: 'big'
         };
 
@@ -30,9 +31,9 @@ export class App extends React.Component<{}, AppState> {
 
     private resetAll() {
         this.setState({
-            mood: 'blank',
+            mood: 'reset',
             backdrop: 'blank',
-            size: 'small'
+            size: 'big'
         });
     }
 
