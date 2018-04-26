@@ -16,15 +16,25 @@ interface AppState {
 export class App extends React.Component<{}, AppState> {
     constructor(props: any) {
         super(props);
+
         this.state = {
             mood: 'reset',
-            backdrop: 'perspective',
+            backdrop: 'blank',
             size: 'big'
         };
 
         this.handleMoodChange = this.handleMoodChange.bind(this);
         this.handleBackdropChange = this.handleBackdropChange.bind(this);
         this.handleSizeChange = this.handleSizeChange.bind(this);
+        this.resetAll = this.resetAll.bind(this);
+    }
+
+    private resetAll() {
+        this.setState({
+            mood: 'reset',
+            backdrop: 'blank',
+            size: 'big'
+        });
     }
 
     private handleMoodChange(evt: any) {
@@ -71,6 +81,7 @@ export class App extends React.Component<{}, AppState> {
                 handleBackdropChange={this.handleBackdropChange}
                 handleMoodChange={this.handleMoodChange}
                 handleSizeChange={this.handleSizeChange}
+                resetAll={this.resetAll}
             />
 
             <PotatoBruce

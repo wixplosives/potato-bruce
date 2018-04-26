@@ -37,7 +37,7 @@
 }
 
 .pupil::after {
-  content: '👁';
+  content: '👁'; /* 👁🥔💰🍌🐸🤘🔥 */
   display: block;
   text-align: center;
   transition: all 325ms ease-in;
