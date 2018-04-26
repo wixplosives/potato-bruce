@@ -18,7 +18,7 @@ export class App extends React.Component<{}, AppState> {
         super(props);
         this.state = {
             mood: 'reset',
-            backdrop: 'wixhq',
+            backdrop: 'perspective',
             size: 'big'
         };
 

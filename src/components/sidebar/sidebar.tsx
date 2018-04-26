@@ -20,7 +20,7 @@ const NavBar = (props: NavBarProps) => {
       <div {...style('buttonGroup')}>
         <button value="paris" onClick={handleBackdropChange}>Paris</button>
         <button value="wixhq" onClick={handleBackdropChange}>WixHQ</button>
-        <button value="japan" onClick={handleBackdropChange}>Japan</button>
+        <button value="perspective" onClick={handleBackdropChange}>Perspective</button>
       </div>
       <div {...style('buttonGroup')}>
         <button value="small" onClick={handleSizeChange}>Small</button>
