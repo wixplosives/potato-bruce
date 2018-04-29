@@ -313,12 +313,16 @@
 }
 
 .siteFooter {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   position: fixed;
-  bottom: 1rem;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
   left: 0;
   text-align: center;
   width: 100%;
   font-size: 0.8rem;
+  background: #fff;
 }
 
 .stylableLogo {

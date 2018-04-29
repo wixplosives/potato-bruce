@@ -93,8 +93,6 @@ export class App extends React.Component<{}, AppState> {
                 <span {...style('stylableLogo')}></span>
                 <a href="https://stylable.io/" target="_blank">Stylable</a> is CSS for components
             </footer>
-
-
         </div>
     }
 }
