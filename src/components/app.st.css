@@ -57,19 +57,18 @@
 /*
   HAPPY POTATO BRUCE IN PARIS
 */
+.potatoBruce:mood(happy) {
+  border-color: transparent;
+  background: url(../assets/potato-body.png) no-repeat center;
+  background-size: cover;
+}
 .potatoBruce:mood(happy)::top {
   position: relative;
   top: -100px;
 }
-
 .potatoBruce:mood(happy)::eyes::eye::pupil::after {
   content: '👁';
   background: none;
-}
-.potatoBruce:mood(sad)::eyes::eye::pupil::after {
-  content: '^';
-  text-shadow: none;
-  zoom: 1;
 }
 .potatoBruce:mood(happy)::top::after {
   content: '🔥'; /* 👁🥔💰🍌🐸🤘🔥 */
@@ -81,10 +80,6 @@
   animation-duration: 700ms;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-.potatoBruce:mood(happy) {
-  background: url(../assets/potato-body.png) no-repeat center;
-  background-size: cover;
 }
 .potatoBruce:mood(happy)::eyes::eye:first-child {
   transform: rotate(0deg);
@@ -131,6 +126,7 @@
 .potatoBruce:mood(glasses) {
   background: url(../assets/potato-body.png) no-repeat center;
   background-size: cover;
+  border-color: transparent;
 }
 .potatoBruce:mood(glasses)::eyes {
   position: relative;
@@ -152,6 +148,12 @@
 .potatoBruce:mood(sad) {
   background: url(../assets/potato-body.png) no-repeat center;
   background-size: cover;
+  border-color: transparent;
+}
+.potatoBruce:mood(sad)::eyes::eye::pupil::after {
+  content: '^';
+  text-shadow: none;
+  zoom: 1;
 }
 .potatoBruce:mood(sad)::top {
   height: 250px;
@@ -312,10 +314,6 @@
   60% { text-shadow: 0 0 0 #0000ff; }
   75% { text-shadow: 0 0 0 #4400FF; }
   100% { text-shadow: 0 0 0 #9900FF; }; 
-}
-
-.resetAllButton {
-
 }
 
 .nav button.resetAllButton:hover {

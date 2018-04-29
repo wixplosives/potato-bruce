@@ -41,8 +41,8 @@
   display: block;
   text-align: center;
   transition: all 325ms ease-in;
-  font-size: 85px;
-  font-size: calc(value(pupilSize));
+  /* font-size: calc(value(pupilSize)); */
+  font-size: 150px;
   background: rgba(255, 255, 255, 1);
 }
 

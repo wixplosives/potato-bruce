@@ -15,6 +15,9 @@
 
 .root {
   -st-states: mood( enum(happy, sad, glasses) ), size( enum(small, big) );
+  border: 10px solid #000;
+  border-radius: 50%;
+  background: #f0f0f0;
 }
 
 .top {}
