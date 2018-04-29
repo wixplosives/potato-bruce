@@ -90,8 +90,7 @@ export class App extends React.Component<{}, AppState> {
                 size={this.state.size} />
 
             <footer {...style('siteFooter')}>
-                <span {...style('stylableLogo')}></span>
-                <a href="https://stylable.io/" target="_blank">Stylable</a> is CSS for components
+                <a href="https://stylable.io/" target="_blank"><span {...style('stylableLogo')}></span>Stylable</a> is CSS for components / Check out the source code in <a href="https://github.com/wix/potato-bruce" target="_blank"><span {...style('githubLogo')}></span>Github Repo</a>
             </footer>
         </div>
     }

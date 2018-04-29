@@ -271,7 +271,24 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
 }
 
+/* .potatoBruce::eyes::eye::pupil::after { */
+  /* position: relative; */ */
+  /* background: none; */
+  /* animation: eyes 5000ms linear infinite alternate-reverse;
+/* } */
 /* Animations */
+/* @keyframes eyes {
+  0% {
+    left: 0;
+  }
+  50% {
+    right: 20px;
+  }
+  100% {
+    left: 10px;
+  }
+} */
+
 @keyframes twitch1 {
   5% {
     left: -1px;
@@ -349,4 +366,21 @@
   height: 25px;
   background: url(../assets/stylable-logo.png) no-repeat center;
   background-size: contain;
+}
+
+.githubLogo {
+  margin: 0 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../assets/github-logo.png) no-repeat center;
+  background-size: contain;
+}
+
+button.smallSize {
+  font-size: 1rem;
+}
+button.largeSize {
+  font-size: 2rem;
 }
