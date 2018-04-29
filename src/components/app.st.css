@@ -93,6 +93,9 @@
 .potatoBruce:mood(happy)::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
 }
+.potatoBruce:mood(happy)::eye::socket {
+  background: none;
+}
 .potatoBruce:mood(happy)::mouth::upperLip {
   display: none;
 }
@@ -136,7 +139,8 @@
   background-size: cover;
 }
 .potatoBruce:mood(glasses)::eye::socket {
-  box-shadow: none;
+  margin-top: 20px;
+  background: none;
 }
 .potatoBruce:mood(glasses)::eye::pupil::after {
   display: none;
@@ -149,6 +153,9 @@
   background: url(../assets/potato-body.png) no-repeat center;
   background-size: cover;
   border-color: transparent;
+}
+.potatoBruce:mood(sad)::eye::socket {
+  background: none;
 }
 .potatoBruce:mood(sad)::eye::pupil::after {
   content: '^';
