@@ -1,6 +1,6 @@
 :import {
   -st-from: "./colors.st.css";
-  -st-named: dark, navBg, crimsonColor;
+  -st-named: dark, navBg, crimsonColor, color2;
 }
 
 :import {
@@ -62,6 +62,10 @@
   top: -100px;
 }
 
+.potatoBruce:mood(happy)::eyes::eye::pupil::after {
+  content: '👁';
+  background: none;
+}
 .potatoBruce:mood(sad)::eyes::eye::pupil::after {
   content: '^';
   text-shadow: none;
@@ -122,8 +126,12 @@
 }
 
 /*
-  BIG POTATO BRUCE IN JAPAN
+  GLASSES
 */
+.potatoBruce:mood(glasses) {
+  background: url(../assets/potato-body.png) no-repeat center;
+  background-size: cover;
+}
 .potatoBruce:mood(glasses)::eyes {
   position: relative;
   background: url(../assets/glasses.png);
@@ -141,6 +149,10 @@
 /*
   SAD POTATO AT THE DMV
 */
+.potatoBruce:mood(sad) {
+  background: url(../assets/potato-body.png) no-repeat center;
+  background-size: cover;
+}
 .potatoBruce:mood(sad)::top {
   height: 250px;
   width: 200px;
@@ -157,7 +169,13 @@
 }
 .potatoBruce:mood(sad)::eyes::eye::pupil {
   line-height: calc(value(lidPositionSad) * 2);
-  font-size: 50px!important;
+  font-size: 50px;
+}
+.potatoBruce:mood(sad)::eyes::eye::pupil::after {
+  background: none;
+}
+.potatoBruce:mood(sad)::eyes::eye::pupil::after {
+  text-shadow: 0px 0px 10px value(color2);
 }
 .potatoBruce:mood(sad)::eyes::eye:first-child {
   transform: rotate(-15deg);
@@ -322,7 +340,7 @@
   text-align: center;
   width: 100%;
   font-size: 0.8rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .stylableLogo {

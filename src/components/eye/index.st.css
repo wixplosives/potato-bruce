@@ -37,14 +37,13 @@
 }
 
 .pupil::after {
-  content: '👁'; /* 👁🥔💰🍌🐸🤘🔥 */
+  content: '\2022'; /* 👁🥔💰🍌🐸🤘🔥 */
   display: block;
   text-align: center;
   transition: all 325ms ease-in;
   font-size: 85px;
   font-size: calc(value(pupilSize));
-  text-shadow: 0px 0px 10px value(color2);
-  /* background: rgba(255, 255, 255, 1); */
+  background: rgba(255, 255, 255, 1);
 }
 
 .lid {
