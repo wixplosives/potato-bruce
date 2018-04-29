@@ -3,7 +3,7 @@ import style from './../app.st.css';
 import { NavBarProps } from '../types';
 
 //   ⏄⏁⏇⏃
-// 
+
 const NavBar = (props: NavBarProps) => {
   const {
     handleMoodChange,
@@ -32,7 +32,6 @@ const NavBar = (props: NavBarProps) => {
         <button value="wixhq" onClick={handleBackdropChange}>🏙</button>
       </div>
     </div>
-
   </div>
 }
 

@@ -304,3 +304,29 @@
   background: value(crimsonColor);
   color: #fff;
 }
+
+.siteTitle {
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 40px;
+  margin-left: 10px;
+}
+
+.siteFooter {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.stylableLogo {
+  margin: 0 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(../assets/stylable-logo.png) no-repeat center;
+  background-size: contain;
+}

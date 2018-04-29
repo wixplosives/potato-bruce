@@ -89,10 +89,12 @@ export class App extends React.Component<{}, AppState> {
                 mood={this.state.mood}
                 size={this.state.size} />
 
-            {/* <PotatoBruce
-                {...style('potatoBruce')}
-                mood={this.randomMood(this.state.mood)}
-                size={this.state.size} /> */}
+            <footer {...style('siteFooter')}>
+                <span {...style('stylableLogo')}></span>
+                <a href="https://stylable.io/" target="_blank">Stylable</a> is CSS for components
+            </footer>
+
+
         </div>
     }
 }
