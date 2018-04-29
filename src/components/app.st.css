@@ -18,6 +18,7 @@
 .root {
   display: flex;
   padding: 10vh 0;
+  justify-content: center;
 }
 
 .potatoBruce {
@@ -178,6 +179,12 @@
   left: 0;
   width: 100%;
   height: calc(100% - value(navBarHeight));
+  background-color: #eee;
+  background-image: linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228)), 
+  linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228));
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+
 }
 .backdrop:in(paris) {
   background: url(../assets/paris.jpg) no-repeat center;
@@ -186,11 +193,12 @@
   background: url(../assets/wixhq.jpg) no-repeat center;
 }
 .backdrop:in(perspective) {
-  background-color: #eee;
+  background: white;
+  /* background-color: #eee;
   background-image: linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228)), 
   linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228));
   background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
+  background-position: 0 0, 15px 15px; */
 }
 
 /* App Navigation */
@@ -207,7 +215,6 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   display: flex;
 }
-
 .demoTitle {
   margin: 0;
   font-size: 14px;
@@ -233,6 +240,9 @@
 .nav .buttonGroup {
   flex: 1;
   display: flex;
+}
+.nav button {
+  font-size: 25px;
 }
 .nav button:hover {
   background: rgba(184, 255, 189, 0.8);
