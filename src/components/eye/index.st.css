@@ -9,7 +9,9 @@
   pupilSize: value(retinaSize) / 2;
 }
 
-.root {}
+.root {
+  -st-states: pos( enum(left, right) );
+}
 
 .brow {
   top: 0;

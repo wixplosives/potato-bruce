@@ -49,7 +49,7 @@
   text-align: center;
 }
 
-.potatoBruce::eyes::eye {
+.potatoBruce::eye {
   display: inline-block;
   margin: 0 20px;
 }
@@ -66,7 +66,7 @@
   position: relative;
   top: -100px;
 }
-.potatoBruce:mood(happy)::eyes::eye::pupil::after {
+.potatoBruce:mood(happy)::eye::pupil::after {
   content: '👁';
   background: none;
 }
@@ -81,16 +81,16 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-.potatoBruce:mood(happy)::eyes::eye:first-child {
+.potatoBruce:mood(happy)::eye:pos(left) {
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoBruce:mood(happy)::eyes::eye:last-child::brow {
+.potatoBruce:mood(happy)::eye:pos(right)::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoBruce:mood(happy)::eyes::eye::lid {
+.potatoBruce:mood(happy)::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
 }
 .potatoBruce:mood(happy)::mouth::upperLip {
@@ -135,10 +135,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.potatoBruce:mood(glasses)::eyes::eye::socket {
+.potatoBruce:mood(glasses)::eye::socket {
   box-shadow: none;
 }
-.potatoBruce:mood(glasses)::eyes::eye::pupil::after {
+.potatoBruce:mood(glasses)::eye::pupil::after {
   display: none;
 }
 
@@ -150,7 +150,7 @@
   background-size: cover;
   border-color: transparent;
 }
-.potatoBruce:mood(sad)::eyes::eye::pupil::after {
+.potatoBruce:mood(sad)::eye::pupil::after {
   content: '^';
   text-shadow: none;
   zoom: 1;
@@ -166,28 +166,28 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-.potatoBruce:mood(sad)::eyes::eye::lid {
+.potatoBruce:mood(sad)::eye::lid {
   top: calc(value(negativeRetinaSize) + value(lidPositionSad));
 }
-.potatoBruce:mood(sad)::eyes::eye::pupil {
+.potatoBruce:mood(sad)::eye::pupil {
   line-height: calc(value(lidPositionSad) * 2);
   font-size: 50px;
 }
-.potatoBruce:mood(sad)::eyes::eye::pupil::after {
+.potatoBruce:mood(sad)::eye::pupil::after {
   background: none;
 }
-.potatoBruce:mood(sad)::eyes::eye::pupil::after {
+.potatoBruce:mood(sad)::eye::pupil::after {
   text-shadow: 0px 0px 10px value(color2);
 }
-.potatoBruce:mood(sad)::eyes::eye:first-child {
+.potatoBruce:mood(sad)::eye:pos(left) {
   transform: rotate(-15deg);
 }
-.potatoBruce:mood(sad)::eyes::eye:first-child::brow {
+.potatoBruce:mood(sad)::eye:pos(left)::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoBruce:mood(sad)::eyes::eye:last-child::brow {
+.potatoBruce:mood(sad)::eye:pos(right)::brow {
   transform: rotate(15deg);
 }
 
