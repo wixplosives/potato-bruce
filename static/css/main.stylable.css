@@ -438,6 +438,7 @@
 }
 
 .sidebar2629110395--root button {
+  user-select: none;
   text-transform: uppercase;
   height: 60px;
   line-height: calc(60px / 2);
