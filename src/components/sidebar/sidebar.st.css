@@ -37,6 +37,7 @@
 }
 
 button {
+  user-select: none;
   text-transform: uppercase;
   height: value(navBarHeight);
   line-height: calc(value(navBarHeight) / 2);
