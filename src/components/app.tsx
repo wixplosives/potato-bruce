@@ -78,6 +78,9 @@ export class App extends React.Component<{}, AppState> {
             <div {...style('backdrop', { in: this.state.backdrop })} />
 
             <NavBar
+                mood={this.state.mood}
+                backdrop={this.state.backdrop}
+                size={this.state.size}
                 handleBackdropChange={this.handleBackdropChange}
                 handleMoodChange={this.handleMoodChange}
                 handleSizeChange={this.handleSizeChange}
