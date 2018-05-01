@@ -4,7 +4,7 @@ import { Mood, Backdrop, Size } from './types';
 import style from './app.st.css';
 import NavBar from '../components/sidebar/sidebar';
 
-const moods = ["happy", "sad"];
+const moods = ["happy", "shy"];
 const sizes = ["big", "small"];
 
 interface AppState {
@@ -19,7 +19,7 @@ export class App extends React.Component<{}, AppState> {
 
         this.state = {
             mood: 'reset',
-            backdrop: 'blank',
+            backdrop: 'default',
             size: 'big'
         };
 
@@ -32,7 +32,7 @@ export class App extends React.Component<{}, AppState> {
     private resetAll() {
         this.setState({
             mood: 'reset',
-            backdrop: 'blank',
+            backdrop: 'default',
             size: 'big'
         });
     }

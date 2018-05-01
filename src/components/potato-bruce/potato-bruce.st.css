@@ -14,7 +14,7 @@
 }
 
 .root {
-  -st-states: mood( enum(happy, sad, glasses) ), size( enum(small, big) );
+  -st-states: mood( enum(happy, shy, dealWithIt) ), size( enum(small, big) );
   border: 10px solid #000;
   border-radius: 50%;
   background: #f0f0f0;
@@ -27,6 +27,7 @@
 
 .eye {
   -st-extends: Eye;
+  -st-states: position( enum(left, right) );
 }
 
 .mouth {

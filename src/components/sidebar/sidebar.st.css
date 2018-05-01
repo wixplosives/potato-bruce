@@ -1,14 +1,14 @@
 :vars {
   negativeRetinaSize: -100px;
   lidPositionHappy: 25px;
-  lidPositionSad: 75px;
+  lidPositionShy: 75px;
   navBarHeight: 60px;
 }
 
 .root {
-  -st-states: mood( enum(happy, sad, glasses) ),
+  -st-states: mood( enum(happy, shy, dealWithIt) ),
               size( enum(small, big) ),
-              backdrop( enum(paris, wixhq, perspective) );
+              backdrop( enum(paris, wixhq) );
 
   position: fixed;
   top: 0;
@@ -69,7 +69,7 @@ button {
 .backdrop {}
 .size {}
 .isHappy {}
-.isSad {}
+.isShy {}
 .isGlasses{}
 .inParis{}
 .inWix {}
@@ -85,8 +85,8 @@ button {
   box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
 }
 .root:mood(happy)::nav::resetAllButton,
-.root:mood(sad)::nav::resetAllButton,
-.root:mood(glasses)::nav::resetAllButton {
+.root:mood(shy)::nav::resetAllButton,
+.root:mood(dealWithIt)::nav::resetAllButton {
   -st-mixin: inactive;
 }
 .root::nav::resetAllButton {
@@ -94,8 +94,8 @@ button {
 }
 
 .root:mood(happy)::nav::isHappy,
-.root:mood(sad)::nav::isSad,
-.root:mood(glasses)::nav::isGlasses,
+.root:mood(shy)::nav::isShy,
+.root:mood(dealWithIt)::nav::isGlasses,
 .root:backdrop(paris)::nav::inParis,
 .root:backdrop(wixhq)::nav::inWix,
 .root:size(small)::nav::smallSize,

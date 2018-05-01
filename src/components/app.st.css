@@ -1,6 +1,6 @@
 :import {
   -st-from: "./colors.st.css";
-  -st-named: dark, navBg, crimsonColor, color2;
+  -st-named: dark, navBg, tongueColor;
 }
 
 :import {
@@ -10,14 +10,13 @@
 
 :vars {
   negativeRetinaSize: -100px;
-  lidPositionHappy: 25px;
-  lidPositionSad: 75px;
+  lidPositionShy: 75px;
   navBarHeight: 60px;
 }
 
 .root {
+  height: 100vh;
   display: flex;
-  padding: 10vh 0;
   justify-content: center;
 }
 
@@ -25,14 +24,14 @@
   -st-extends: PotatoBruce;
   position: relative;
   display: flex;
-  flex: 1;
   min-width: 500px;
+  min-height: 500px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin: 10px auto;
-  height: 70vh;
-  max-width: 80vh;
+  margin-top: 100px;
+  max-height: 600px;
+  max-width: 700px;
   transition: 125ms ease-in-out;
 }
 
@@ -55,7 +54,7 @@
 }
 
 /*
-  HAPPY POTATO BRUCE IN PARIS
+  HAPPY POTATO
 */
 .potatoBruce:mood(happy) {
   border-color: transparent;
@@ -81,17 +80,14 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-.potatoBruce:mood(happy)::eye:pos(left) {
+.potatoBruce:mood(happy)::eye:position(left) {
   transform: rotate(0deg);
   top: -20px;
 }
-.potatoBruce:mood(happy)::eye:pos(right)::brow {
+.potatoBruce:mood(happy)::eye:position(right)::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px;
-}
-.potatoBruce:mood(happy)::eye::lid {
-  top: calc(value(negativeRetinaSize) + value(lidPositionHappy));
 }
 .potatoBruce:mood(happy)::eye::socket {
   background: none;
@@ -111,10 +107,8 @@
 }
 .potatoBruce:mood(happy)::mouth::lowerLip::after {
   content: ' ';
-  height: 50px;
-  width: 100px;
   margin: 0 auto;
-  background: value(crimsonColor);
+  background: value(tongueColor);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -124,83 +118,110 @@
 }
 
 /*
-  GLASSES
+  DEAL-WITH-IT POTATO
 */
-.potatoBruce:mood(glasses) {
+.potatoBruce:mood(dealWithIt) {
   background: url(../assets/potato-body.png) no-repeat center;
   background-size: cover;
   border-color: transparent;
 }
-.potatoBruce:mood(glasses)::eyes {
+.potatoBruce:mood(dealWithIt)::eyes {
   position: relative;
   background: url(../assets/glasses.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.potatoBruce:mood(glasses)::eye::socket {
+.potatoBruce:mood(dealWithIt)::eye::socket {
   margin-top: 20px;
   background: none;
 }
-.potatoBruce:mood(glasses)::eye::pupil::after {
+.potatoBruce:mood(dealWithIt)::eye::pupil::after {
   display: none;
 }
 
 /*
-  SAD POTATO AT THE DMV
+  SHY POTATO
 */
-.potatoBruce:mood(sad) {
+.potatoBruce:mood(shy) {
   background: url(../assets/potato-body.png) no-repeat center;
   background-size: cover;
   border-color: transparent;
 }
-.potatoBruce:mood(sad)::eye::socket {
-  background: none;
-}
-.potatoBruce:mood(sad)::eye::pupil::after {
-  content: '^';
-  text-shadow: none;
-  zoom: 1;
-}
-.potatoBruce:mood(sad)::top {
+.potatoBruce:mood(shy)::top {
+  position: absolute;
+  top: 122px;
   height: 250px;
   width: 200px;
   margin-top: -265px;
   -webkit-mask: url(../assets/mohawk.svg) no-repeat center;
   mask: url(../assets/mohawk.svg) no-repeat center;
+  background-color: green;
+}
+.backdrop:in(paris) ~ .potatoBruce:mood(shy)::top {
   animation-name: background_change;
-  animation-duration: 7s;
+  animation-duration: 2700ms;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-.potatoBruce:mood(sad)::eye::lid {
-  top: calc(value(negativeRetinaSize) + value(lidPositionSad));
-}
-.potatoBruce:mood(sad)::eye::pupil {
-  line-height: calc(value(lidPositionSad) * 2);
-  font-size: 50px;
-}
-.potatoBruce:mood(sad)::eye::pupil::after {
-  background: none;
-}
-.potatoBruce:mood(sad)::eye::pupil::after {
-  text-shadow: 0px 0px 10px value(color2);
-}
-.potatoBruce:mood(sad)::eye:pos(left) {
-  transform: rotate(-15deg);
-}
-.potatoBruce:mood(sad)::eye:pos(left)::brow {
+.potatoBruce:mood(shy)::eye:position(left)::brow {
   animation: twitch1 250ms infinite;
-  transform: rotate(0deg);
+  transform: rotate(-15deg);
   top: -20px;
 }
-.potatoBruce:mood(sad)::eye:pos(right)::brow {
+.potatoBruce:mood(shy)::eye:position(right)::brow {
   transform: rotate(15deg);
+  top: -5px;
+}
+.potatoBruce:mood(shy)::eye::socket {
+  overflow: hidden;
+}
+.potatoBruce:mood(shy)::eye::pupil {
+  line-height: calc(value(lidPositionShy) * 2);
+  font-size: 50px;
+}
+.potatoBruce:mood(shy)::eye::pupil::after {
+  content: '●';
+  zoom: 1;
+  text-shadow: none;
+  color: rgb(22, 38, 180);
+}
+.potatoBruce:mood(shy)::eye:position(left)::pupil::after {
+  position: absolute;
+  left: 15px;
+}
+.potatoBruce:mood(shy)::eye:position(right)::pupil::after {
+  position: absolute;
+  right: 15px;
+}
+.potatoBruce:mood(shy)::mouth::upperLip {
+  display: none;
+}
+.potatoBruce:mood(shy)::mouth::lowerLip {
+  position: relative;
+  height: 85px;
+  width: 200px;
+  margin: 0 auto;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+}
+.potatoBruce:mood(shy)::mouth::lowerLip::after {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  background: value(tongueColor);
+  border-top-left-radius: 50%;
 }
 
 /* Backdrop Image */
 .backdrop {
-  -st-states: in( enum(paris, wixhq, perspective) );
+  -st-states: in( enum(paris, wixhq) );
   position: fixed;
   top: value(navBarHeight);
   left: 0;
@@ -214,36 +235,25 @@
 
 }
 .backdrop:in(paris) {
-  background: url(../assets/paris.jpg) no-repeat center;
+  background: url(../assets/paris4.jpg) no-repeat center;
+  background-size: cover;
 }
 .backdrop:in(wixhq) {
   background: url(../assets/wixhq.jpg) no-repeat center;
 }
-.backdrop:in(perspective) {
-  background: white;
-  /* background-color: #eee;
-  background-image: linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228)), 
-  linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228));
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px; */
-}
 
-
-/* .potatoBruce::eyes::eye::pupil::after { */
-  /* position: relative; */ */
-  /* background: none; */
-  /* animation: eyes 5000ms linear infinite alternate-reverse;
-/* } */
+/* .potatoBruce::eyes::eye::pupil::after {
+  position: absolute;
+  background: none;
+  animation: eyes 2500ms linear infinite alternate-reverse;
+} */
 /* Animations */
 /* @keyframes eyes {
-  0% {
+  from {
     left: 0;
   }
-  50% {
-    right: 20px;
-  }
-  100% {
-    left: 10px;
+  to {
+    left: 50px;
   }
 } */
 
@@ -259,40 +269,28 @@
   }
 }
 
-@keyframes potatoBoogie {
-  0% {
-    transform: scale(0.4);
-  }
-  45% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(0.4);
-  }
-}
-
 @keyframes background_change {
-  0% { background-color: #ff0000; }
-  15% { background-color: #ff6600; }
-  30% { background-color: #ffee00; }
-  45% { background-color: #00ff00; }
-  60% { background-color: #0000ff; }
-  75% { background-color: #4400FF; }
-  100% { background-color: #9900FF; }; 
+  0%   { background-color: #ff0000; }
+  15%  { background-color: #ff6600; }
+  30%  { background-color: #ffee00; }
+  45%  { background-color: #00ff00; }
+  60%  { background-color: #0000ff; }
+  75%  { background-color: #4400ff; }
+  100% { background-color: #9900ff; }; 
 }
 
 @keyframes emoji_color_change {
-  0% { text-shadow: 0 0 0 green; }
-  15% { text-shadow: 0 0 0 #ff6600; }
-  30% { text-shadow: 0 0 0 #ffee00; }
-  45% { text-shadow: 0 0 0 #00ff00; }
-  60% { text-shadow: 0 0 0 #0000ff; }
-  75% { text-shadow: 0 0 0 #4400FF; }
+  0%   { text-shadow: 0 0 0 green;   }
+  15%  { text-shadow: 0 0 0 #ff6600; }
+  30%  { text-shadow: 0 0 0 #ffee00; }
+  45%  { text-shadow: 0 0 0 #00ff00; }
+  60%  { text-shadow: 0 0 0 #0000ff; }
+  75%  { text-shadow: 0 0 0 #4400FF; }
   100% { text-shadow: 0 0 0 #9900FF; }; 
 }
 
 .nav button.resetAllButton:hover {
-  background: value(crimsonColor);
+  background: value(tongueColor);
   color: #fff;
 }
 

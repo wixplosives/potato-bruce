@@ -1,5 +1,5 @@
-export type Mood = string; //'happy' | 'sad' | 'glasses' | 'reset';
-export type Backdrop = 'paris' | 'wixhq' | 'perspective' | 'blank';
+export type Mood = string; //'happy' | 'shy' | 'dealWithIt' | 'reset';
+export type Backdrop = 'paris' | 'wixhq' | 'default';
 export type Size = 'small' | 'big';
 
 export interface NavBarProps {
