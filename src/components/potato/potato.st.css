@@ -27,7 +27,7 @@
 
 .eye {
   -st-extends: Eye;
-  -st-states: position( enum(left, right) );
+  -st-states: position( enum(left, right) );  
 }
 
 .mouth {

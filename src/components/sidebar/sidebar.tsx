@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavBarProps } from '../types';
 import style from "./sidebar.st.css";
 
-const NavBar = (props: NavBarProps) => {
+export const NavBar = (props: NavBarProps) => {
   const {
     handleMoodChange,
     handleSizeChange,
@@ -29,5 +29,3 @@ const NavBar = (props: NavBarProps) => {
     </div>
   </div>
 }
-
-export default NavBar;

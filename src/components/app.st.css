@@ -1,11 +1,11 @@
 :import {
   -st-from: "./colors.st.css";
-  -st-named: dark, navBg, tongueColor;
+  -st-named: dark, navBg, tongueColor, blueEyes;
 }
 
 :import {
-  -st-from: "./potato-bruce/potato-bruce.st.css";
-  -st-default: PotatoBruce;
+  -st-from: "./potato/potato.st.css";
+  -st-default: Potato;
 }
 
 :vars {
@@ -19,9 +19,8 @@
   display: flex;
   justify-content: center;
 }
-
 .potatoBruce {
-  -st-extends: PotatoBruce;
+  -st-extends: Potato;
   position: relative;
   display: flex;
   min-width: 500px;
@@ -34,20 +33,16 @@
   max-width: 700px;
   transition: 125ms ease-in-out;
 }
-
 .potatoBruce:size(small) {
   transform: scale(0.3);
 }
-
 .potatoBruce:size(big) {
   transform: scale(0.7);
 }
-
 .potatoBruce::eyes {
   width: 100%;
   text-align: center;
 }
-
 .potatoBruce::eye {
   display: inline-block;
   margin: 0 20px;
@@ -57,9 +52,9 @@
   HAPPY POTATO
 */
 .potatoBruce:mood(happy) {
-  border-color: transparent;
   background: url(../assets/potato-body.png) no-repeat center;
   background-size: cover;
+  border-color: transparent;
 }
 .potatoBruce:mood(happy)::top {
   position: relative;
@@ -92,52 +87,29 @@
 .potatoBruce:mood(happy)::eye::socket {
   background: none;
 }
-.potatoBruce:mood(happy)::mouth::upperLip {
-  display: none;
-}
-.potatoBruce:mood(happy)::mouth::lowerLip {
+.potatoBruce:mood(happy)::mouth {
+  position: relative;
   height: 180px;
   width: 200px;
   margin: 0 auto;
+  background: value(dark);
   border-top-left-radius: 0;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   overflow: hidden;
-  position: relative;
 }
-.potatoBruce:mood(happy)::mouth::lowerLip::after {
-  content: ' ';
-  margin: 0 auto;
-  background: value(tongueColor);
+.potatoBruce:mood(happy)::mouth::upperLip {
+  display: none;
+}
+.potatoBruce:mood(happy)::mouth::tongue {
   position: absolute;
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
   bottom: 0;
   right: 0;
-  width: 100%;
-  height: 100px;
+  background: value(tongueColor);
   border-top-left-radius: 50%;
-}
-
-/*
-  DEAL-WITH-IT POTATO
-*/
-.potatoBruce:mood(dealWithIt) {
-  background: url(../assets/potato-body.png) no-repeat center;
-  background-size: cover;
-  border-color: transparent;
-}
-.potatoBruce:mood(dealWithIt)::eyes {
-  position: relative;
-  background: url(../assets/glasses.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.potatoBruce:mood(dealWithIt)::eye::socket {
-  margin-top: 20px;
-  background: none;
-}
-.potatoBruce:mood(dealWithIt)::eye::pupil::after {
-  display: none;
 }
 
 /*
@@ -184,7 +156,7 @@
   content: '●';
   zoom: 1;
   text-shadow: none;
-  color: rgb(22, 38, 180);
+  color: value(blueEyes);
 }
 .potatoBruce:mood(shy)::eye:position(left)::pupil::after {
   position: absolute;
@@ -194,21 +166,21 @@
   position: absolute;
   right: 15px;
 }
-.potatoBruce:mood(shy)::mouth::upperLip {
-  display: none;
-}
-.potatoBruce:mood(shy)::mouth::lowerLip {
+.potatoBruce:mood(shy)::mouth {
   position: relative;
   height: 85px;
   width: 200px;
-  margin: 0 auto;
+  margin: 15px auto;
+  background: value(dark);
   border-top-left-radius: 0;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   overflow: hidden;
 }
-.potatoBruce:mood(shy)::mouth::lowerLip::after {
-  content: ' ';
+.potatoBruce:mood(shy)::mouth::upperLip {
+  display: none;
+}
+.potatoBruce:mood(shy)::mouth::tongue {
   position: absolute;
   width: 100%;
   height: 35px;
@@ -217,6 +189,29 @@
   margin: 0 auto;
   background: value(tongueColor);
   border-top-left-radius: 50%;
+}
+
+/*
+  DEAL-WITH-IT POTATO
+*/
+.potatoBruce:mood(dealWithIt) {
+  background: url(../assets/potato-body.png) no-repeat center;
+  background-size: cover;
+  border-color: transparent;
+}
+.potatoBruce:mood(dealWithIt)::eyes {
+  position: relative;
+  background: url(../assets/glasses.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.potatoBruce:mood(dealWithIt)::eye::socket {
+  margin-top: 20px;
+  background: none;
+}
+.potatoBruce:mood(dealWithIt)::eye::pupil::after {
+  display: none;
 }
 
 /* Backdrop Image */
@@ -232,7 +227,6 @@
   linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228));
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px;
-
 }
 .backdrop:in(paris) {
   background: url(../assets/paris4.jpg) no-repeat center;
@@ -241,21 +235,6 @@
 .backdrop:in(wixhq) {
   background: url(../assets/wixhq.jpg) no-repeat center;
 }
-
-/* .potatoBruce::eyes::eye::pupil::after {
-  position: absolute;
-  background: none;
-  animation: eyes 2500ms linear infinite alternate-reverse;
-} */
-/* Animations */
-/* @keyframes eyes {
-  from {
-    left: 0;
-  }
-  to {
-    left: 50px;
-  }
-} */
 
 @keyframes twitch1 {
   5% {
@@ -293,14 +272,12 @@
   background: value(tongueColor);
   color: #fff;
 }
-
 .siteTitle {
   font-size: 1rem;
   font-weight: 100;
   line-height: 40px;
   margin-left: 10px;
 }
-
 .siteFooter {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -313,7 +290,6 @@
   font-size: 0.8rem;
   background: rgba(255, 255, 255, 0.9);
 }
-
 .stylableLogo {
   margin: 0 0.5rem;
   vertical-align: middle;
@@ -323,7 +299,6 @@
   background: url(../assets/stylable-logo.png) no-repeat center;
   background-size: contain;
 }
-
 .githubLogo {
   margin: 0 0.5rem;
   vertical-align: middle;
@@ -340,3 +315,17 @@ button.smallSize {
 button.largeSize {
   font-size: 2rem;
 }
+
+/* .backdrop:in(paris) ~ .potatoBruce:mood(happy)::top {
+animation-name: background_change;
+  animation-duration: 2700ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.backdrop:in(paris) ~ .potatoBruce:mood(happy)::top {
+  animation-name: background_change;
+  animation-duration: 2700ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+} */

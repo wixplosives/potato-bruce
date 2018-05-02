@@ -7,9 +7,8 @@ export interface MouthProps {
 
 export const Mouth: React.SFC<MouthProps> = (props: MouthProps) => (
     <div {...style('root', {}, props)} >
-        <div {...style('mouthBox')} >
-            <div {...style('upperLip')} />
-            <div {...style('lowerLip')} />
-        </div>
+        <div {...style('upperLip')} />
+        <div {...style('tongue')} />  
+        <div {...style('lowerLip')} />
     </div>
 );

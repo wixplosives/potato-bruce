@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { PotatoBruce } from './potato-bruce/potato-bruce';
+import { Potato } from './potato/potato';
+import { NavBar } from '../components/sidebar/sidebar';
 import { Mood, Backdrop, Size } from './types';
 import style from './app.st.css';
-import NavBar from '../components/sidebar/sidebar';
 
 const moods = ["happy", "shy"];
 const sizes = ["big", "small"];
@@ -87,7 +87,7 @@ export class App extends React.Component<{}, AppState> {
                 resetAll={this.resetAll}
             />
 
-            <PotatoBruce
+            <Potato
                 {...style('potatoBruce')}
                 mood={this.state.mood}
                 size={this.state.size} />

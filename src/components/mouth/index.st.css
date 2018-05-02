@@ -9,10 +9,6 @@
   margin-top: 20px;
 }
 
-.mouthBox {
-  overflow: hidden;
-}
-
 .lip {
   background: value(dark);
   height: 2px;
@@ -21,6 +17,10 @@
 
 .upperLip {
   -st-extends: lip;
+}
+
+.tongue {
+
 }
 
 .lowerLip {
