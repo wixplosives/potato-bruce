@@ -1,11 +1,11 @@
 {
   "main.css": "static/css/main.stylable.css",
-  "main.js": "static/js/main.54c0de4a.js",
-  "main.js.map": "static/js/main.54c0de4a.js.map",
+  "main.js": "static/js/main.380ce2fd.js",
+  "main.js.map": "static/js/main.380ce2fd.js.map",
   "static/media/github-logo.png": "static/media/github-logo.9ac279f9.png",
   "static/media/mohawk.svg": "static/media/mohawk.7a226e2d.svg",
-  "static/media/paris4.jpg": "static/media/paris4.9aa0a42d.jpg",
-  "static/media/potato-body.png": "static/media/potato-body.036f5ecb.png",
+  "static/media/paris.jpg": "static/media/paris.9aa0a42d.jpg",
+  "static/media/potato-small.png": "static/media/potato-small.f1213de5.png",
   "static/media/stylable-logo.png": "static/media/stylable-logo.a2b412b5.png",
   "static/media/wixhq.jpg": "static/media/wixhq.0e636f07.jpg"
 }
