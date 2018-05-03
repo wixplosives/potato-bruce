@@ -18,19 +18,19 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .potatoBruce {
   -st-extends: Potato;
   position: relative;
   display: flex;
-  min-width: 500px;
-  min-height: 500px;
+  flex: 1;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
-  max-height: 600px;
-  max-width: 700px;
+  margin: 10% 0;
+  min-height: 500px;
+  max-width: 525px;
   transition: 125ms ease-in-out;
 }
 .potatoBruce:size(small) {
@@ -52,7 +52,7 @@
   HAPPY POTATO
 */
 .potatoBruce:mood(happy) {
-  background: url(../assets/potato-body.png) no-repeat center;
+  background: url(../assets/potato-small.png) no-repeat center;
   background-size: cover;
   border-color: transparent;
 }
@@ -116,7 +116,7 @@
   SHY POTATO
 */
 .potatoBruce:mood(shy) {
-  background: url(../assets/potato-body.png) no-repeat center;
+  background: url(../assets/potato-small.png) no-repeat center;
   background-size: cover;
   border-color: transparent;
 }
@@ -189,13 +189,13 @@
   margin: 0 auto;
   background: value(tongueColor);
   border-top-left-radius: 50%;
-}
+} 
 
 /*
   DEAL-WITH-IT POTATO
 */
 .potatoBruce:mood(dealWithIt) {
-  background: url(../assets/potato-body.png) no-repeat center;
+  background: url(../assets/potato-small.png) no-repeat center;
   background-size: cover;
   border-color: transparent;
 }
@@ -229,7 +229,7 @@
   background-position: 0 0, 15px 15px;
 }
 .backdrop:in(paris) {
-  background: url(../assets/paris4.jpg) no-repeat center;
+  background: url(../assets/paris.jpg) no-repeat center;
   background-size: cover;
 }
 .backdrop:in(wixhq) {
@@ -315,17 +315,3 @@ button.smallSize {
 button.largeSize {
   font-size: 2rem;
 }
-
-/* .backdrop:in(paris) ~ .potatoBruce:mood(happy)::top {
-animation-name: background_change;
-  animation-duration: 2700ms;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.backdrop:in(paris) ~ .potatoBruce:mood(happy)::top {
-  animation-name: background_change;
-  animation-duration: 2700ms;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-} */
