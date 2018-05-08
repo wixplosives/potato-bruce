@@ -60,10 +60,6 @@
   position: relative;
   top: -100px;
 }
-.potatoBruce:mood(happy)::eye::pupil::after {
-  content: '👁';
-  background: none;
-}
 .potatoBruce:mood(happy)::top::after {
   content: '🔥'; /* 👁🥔💰🍌🐸🤘🔥 */
   font-size: 120px;
@@ -85,6 +81,10 @@
   top: -20px;
 }
 .potatoBruce:mood(happy)::eye::socket {
+  background: none;
+}
+.potatoBruce:mood(happy)::eye::pupil::after {
+  content: '👁';
   background: none;
 }
 .potatoBruce:mood(happy)::mouth {
@@ -121,13 +121,13 @@
   border-color: transparent;
 }
 .potatoBruce:mood(shy)::top {
+  -webkit-mask: url(../assets/mohawk.svg) no-repeat center;
+  mask: url(../assets/mohawk.svg) no-repeat center;
   position: absolute;
   top: 122px;
   height: 250px;
   width: 200px;
   margin-top: -265px;
-  -webkit-mask: url(../assets/mohawk.svg) no-repeat center;
-  mask: url(../assets/mohawk.svg) no-repeat center;
   background-color: green;
 }
 .backdrop:in(paris) ~ .potatoBruce:mood(shy)::top {
@@ -268,16 +268,6 @@
   100% { text-shadow: 0 0 0 #9900FF; }; 
 }
 
-.nav button.resetAllButton:hover {
-  background: value(tongueColor);
-  color: #fff;
-}
-.siteTitle {
-  font-size: 1rem;
-  font-weight: 100;
-  line-height: 40px;
-  margin-left: 10px;
-}
 .siteFooter {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -309,9 +299,3 @@
   background-size: contain;
 }
 
-button.smallSize {
-  font-size: 1rem;
-}
-button.largeSize {
-  font-size: 2rem;
-}

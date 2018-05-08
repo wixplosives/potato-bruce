@@ -11,7 +11,7 @@ export const NavBar = (props: NavBarProps) => {
   } = props;
 
   return <div {...style('root', {mood: props.mood, backdrop: props.backdrop, size: props.size})}>
-    <div {...style('nav')}>
+    <div {...style('nav', {}, props)}>
       <div {...style('buttonGroup mood')}>
         <button className={style.resetAllButton} onClick={resetAll}>:|</button>
         <button className={style.isHappy} value="happy" onClick={handleMoodChange}>😀</button>
