@@ -71,7 +71,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-.potatoBruce:mood(happy)::eye:position(left) {
+.potatoBruce::eye:position(left) {
   transform: rotate(0deg);
   top: -20px;
 }

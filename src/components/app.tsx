@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Potato } from './potato/potato';
-import { NavBar } from '../components/sidebar/sidebar';
+import { NavBar } from '../components/nav-bar/nav-bar';
 import { Mood, Backdrop, Size } from './types';
 import style from './app.st.css';
 

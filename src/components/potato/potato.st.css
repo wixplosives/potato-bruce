@@ -1,15 +1,15 @@
 :import {
-  -st-from: "./../colors.st.css";
+  -st-from: "../colors.st.css";
   -st-named: color2, dark, bodyColor;
 }
 
 :import {
-  -st-from: "./../eye/index.st.css";
+  -st-from: "../eye/index.st.css";
   -st-default: Eye;
 }
 
 :import {
-  -st-from: "./../mouth/index.st.css";
+  -st-from: "../mouth/index.st.css";
   -st-default: Mouth;
 }
 
