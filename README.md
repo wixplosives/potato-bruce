@@ -37,6 +37,7 @@ For the purposes of a demo the Nav-bar serves the part of a component over whose
 
 We are able to tailor its API (props) exposing the various internal parts and behaviors to match the rest of our application.
 
+> Note: We still choose to customize most of this component's styling from our `app.st.css` stylesheet, creating one location to specify our entire application look and feel.
 
 ### Potato
 The Potato is the main graphical element in our applications allowing users to jump between its various states.
