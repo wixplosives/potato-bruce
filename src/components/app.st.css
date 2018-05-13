@@ -1,6 +1,6 @@
 :import {
   -st-from: "./colors.st.css";
-  -st-named: dark, navBg, tongueColor, blueEyes;
+  -st-named: dark, tongueColor, blueEyes;
 }
 
 :import {

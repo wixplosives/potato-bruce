@@ -1,8 +1,3 @@
-:import {
-  -st-from: "../colors.st.css";
-  -st-named: dark;
-}
-
 .root {
   position: relative;
   width: 50%;
@@ -10,7 +5,7 @@
 }
 
 .lip {
-  background: value(dark);
+  background: #000;
   height: 2px;
   transition: 225ms ease-in;
 }
