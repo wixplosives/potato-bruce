@@ -1,5 +1,5 @@
 # Mr. Potato Bruce
-Mr. Potato Bruce (MPB) is a demo application written to showcase a typed style API and feature capabilities for **[Stylable](https://stylable.io)**.
+Mr. Potato Bruce (MPB) is a demo application written to showcase the typed style API and feature capabilities of **[Stylable](https://stylable.io)**.
 
 ## Structure
 MPB is comprised of several components simulating the structure of a simple web application.
@@ -15,12 +15,12 @@ App
     ├── index.st.css
     |
     ├── Eye
-    |   ├── index.tsx
-    |   └── index.st.css
+    |  ├── index.tsx
+    |  └── index.st.css
     |
     └── Mouth
-        ├── index.tsx
-        └── index.st.css
+       ├── index.tsx
+       └── index.st.css
 ```
 
 In our case the main App component utilizes two components, Nav-bar and Potato.
@@ -45,7 +45,7 @@ The Potato component illustrates a usecase in which we have a **Stylable** compo
 
 While not having complete control over this component's API (props), its **Stylable** stylesheet exposes a typed interface declaring its internal parts and states. This allows us to customize it externally while keeping us assured of our actions.
 
-## Installing the roject
+## Installing the project
 1. Clone the repo
 2. run `yarn install`
 
