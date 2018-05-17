@@ -2,8 +2,8 @@ import * as React from 'react';
 import style from './potato.st.css';
 import { Mood, Size } from './../types';
 
-import { Eye } from './eye';
-import { Mouth } from './mouth';
+import { Eye } from './eye/eye';
+import { Mouth } from './mouth/mouth';
 
 interface PotatoBruceProps {
     mood: Mood;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import style from './index.st.css';
+import style from './eye.st.css';
 
 export interface EyeProps {
     className?: string;

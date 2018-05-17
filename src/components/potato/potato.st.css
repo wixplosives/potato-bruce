@@ -1,10 +1,10 @@
 :import {
-  -st-from: "./eye/index.st.css";
+  -st-from: "./eye/eye.st.css";
   -st-default: Eye;
 }
 
 :import {
-  -st-from: "./mouth/index.st.css";
+  -st-from: "./mouth/mouth.st.css";
   -st-default: Mouth;
 }
 
@@ -15,11 +15,11 @@
   background: #f0f0f0;
 }
 
+/* empty classes serve as an exposed interface that can be customized externally */
 .top {}
 .top::after {}
 
 .eyes {}
-
 .eye {
   -st-extends: Eye;
   -st-states: position( enum(left, right) );  

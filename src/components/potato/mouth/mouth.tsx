@@ -1,5 +1,5 @@
 import * as React from 'react';
-import style from './index.st.css';
+import style from './mouth.st.css';
 
 export interface MouthProps {
     className?: string;

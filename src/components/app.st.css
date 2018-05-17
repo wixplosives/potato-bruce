@@ -14,6 +14,9 @@
   navBarHeight: 60px;
 }
 
+/* 
+  default look 
+*/
 .root {
   height: 100vh;
   display: flex;
@@ -236,6 +239,9 @@
   background: url(../assets/wixhq.jpg) no-repeat center;
 }
 
+/* 
+  Keyframes
+*/
 @keyframes twitch1 {
   5% {
     left: -1px;
@@ -268,6 +274,10 @@
   100% { text-shadow: 0 0 0 #9900FF; }; 
 }
 
+
+/* 
+  Footer
+*/
 .siteFooter {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   position: fixed;
