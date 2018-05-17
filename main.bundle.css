@@ -8,7 +8,7 @@ body {
 
 
 
-.s20 {
+.s19 {
   top: 0;
   position: relative;
   height: 1px;
@@ -18,7 +18,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   transition: all 125ms ease-in-out
 }
-.s21 {
+.s20 {
   position: relative;
   border-radius: 50%;
   width: 100px;
@@ -27,17 +27,17 @@ body {
   overflow: hidden;
   background: rgba(255, 255, 255, 1)
 }
-.s22 {
+.s21 {
   color: #000
 }
-.s22::after {
+.s21::after {
   content: '\2022';
   display: block;
   text-align: center;
   transition: all 325ms ease-in;
   font-size: 150px
 }
-.s23 {
+.s22 {
   position: absolute;
   transition: all 125ms ease-in-out;  
   top: -100px;
@@ -46,12 +46,12 @@ body {
 }
 
 
-.s33 {
+.s32 {
   position: relative;
   width: 50%;
   margin-top: 20px
 }
-.s34 {
+.s33 {
   background: #000;
   height: 2px;
   transition: 225ms ease-in
@@ -75,7 +75,7 @@ body {
   width: 100%;
   display: flex
 }
-.s0 button {
+.s2 {
   user-select: none;
   text-transform: uppercase;
   height: 60px;
@@ -89,47 +89,50 @@ body {
   transition: all 125ms ease-in;
   font-size: 1.5rem
 }
-.s2 {
+.s3 {
   flex: 1;
   display: flex
 }
-.s1 button:hover {
+.s2:hover {
   background: rgba(184, 255, 189, 0.8)
 }
-.s2:hover {
+.s3:hover {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25)
 }
-.s3 {
+.s4.s2 {
+  font-size: 1em
+}
+.s5 {
   box-shadow: inset 0 -5px 0 0px rgba(255, 0, 0, 0.8)
 }
-.s4 {
+.s6 {
   box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0)
 }
-.s0[data-o6-mood="happy"] .s1 .s5,.s0[data-o6-mood="shy"] .s1 .s5,.s0[data-o6-mood="dealWithIt"] .s1 .s5 {
+.s0[data-o6-mood="happy"] .s1 .s7,.s0[data-o6-mood="shy"] .s1 .s7,.s0[data-o6-mood="dealWithIt"] .s1 .s7 {
   box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0)
 }
-.s0 .s1 .s5 {
+.s0 .s1 .s7 {
   box-shadow: inset 0 -5px 0 0px rgba(255, 0, 0, 0.8)
 }
-.s0[data-o6-mood="happy"] .s1 .s6,.s0[data-o6-mood="shy"] .s1 .s7,.s0[data-o6-mood="dealWithIt"] .s1 .s8,.s0[data-o6-backdrop="paris"] .s1 .s9,.s0[data-o6-backdrop="wixhq"] .s1 .s10,.s0[data-o6-size="small"] .s1 .s11,.s0[data-o6-size="big"] .s1 .s12 {
+.s0[data-o6-mood="happy"] .s1 .s8,.s0[data-o6-mood="shy"] .s1 .s9,.s0[data-o6-mood="dealWithIt"] .s1 .s10,.s0[data-o6-backdrop="paris"] .s1 .s11,.s0[data-o6-backdrop="wixhq"] .s1 .s12,.s0[data-o6-size="small"] .s1 .s4,.s0[data-o6-size="big"] .s1 .s13 {
   box-shadow: inset 0 -5px 0 0px rgba(255, 0, 0, 0.8)
 }
 
 
-.s15 {
+.s14 {
   border: 10px solid #000;
   border-radius: 50%;
   background: #f0f0f0
 }
 
 
-.s25 {
+.s24 {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center
 }
-.s26.s15 {
+.s25.s14 {
   position: relative;
   display: flex;
   flex: 1;
@@ -141,30 +144,30 @@ body {
   max-width: 525px;
   transition: 125ms ease-in-out
 }
-.s26.s15[data-o2-size="small"] {
+.s25.s14[data-o2-size="small"] {
   transform: scale(0.3)
 }
-.s26.s15[data-o2-size="big"] {
+.s25.s14[data-o2-size="big"] {
   transform: scale(0.7)
 }
-.s26.s15 .s17 {
+.s25.s14 .s16 {
   width: 100%;
   text-align: center
 }
-.s26.s15 .s18 {
+.s25.s14 .s17 {
   display: inline-block;
   margin: 0 20px
 }
-.s26.s15[data-o2-mood="happy"] {
+.s25.s14[data-o2-mood="happy"] {
   background: url("/static/media/potato-small.f1213de5.png") no-repeat center;
   background-size: cover;
   border-color: transparent
 }
-.s26.s15[data-o2-mood="happy"] .s16 {
+.s25.s14[data-o2-mood="happy"] .s15 {
   position: relative;
   top: -100px
 }
-.s26.s15[data-o2-mood="happy"] .s16::after {
+.s25.s14[data-o2-mood="happy"] .s15::after {
   content: '\1F525';
   font-size: 120px;
   text-shadow: 0 0 0 #000;
@@ -175,23 +178,23 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate
 }
-.s26.s15 .s18[data-o2-position="left"] {
+.s25.s14 .s17[data-o2-position="left"] {
   transform: rotate(0deg);
   top: -20px
 }
-.s26.s15[data-o2-mood="happy"] .s18[data-o2-position="right"] .s20 {
+.s25.s14[data-o2-mood="happy"] .s17[data-o2-position="right"] .s19 {
   animation: o1--twitch1 250ms infinite;
   transform: rotate(0deg);
   top: -20px
 }
-.s26.s15[data-o2-mood="happy"] .s18 .s21 {
+.s25.s14[data-o2-mood="happy"] .s17 .s20 {
   background: none
 }
-.s26.s15[data-o2-mood="happy"] .s18 .s22::after {
+.s25.s14[data-o2-mood="happy"] .s17 .s21::after {
   content: '\1F441';
   background: none
 }
-.s26.s15[data-o2-mood="happy"] .s19 {
+.s25.s14[data-o2-mood="happy"] .s18 {
   position: relative;
   height: 180px;
   width: 200px;
@@ -202,10 +205,10 @@ body {
   border-bottom-right-radius: 50%;
   overflow: hidden
 }
-.s26.s15[data-o2-mood="happy"] .s19 .s27 {
+.s25.s14[data-o2-mood="happy"] .s18 .s26 {
   display: none
 }
-.s26.s15[data-o2-mood="happy"] .s19 .s28 {
+.s25.s14[data-o2-mood="happy"] .s18 .s27 {
   position: absolute;
   height: 100px;
   width: 100%;
@@ -215,12 +218,12 @@ body {
   background: #c00;
   border-top-left-radius: 50%
 }
-.s26.s15[data-o2-mood="shy"] {
+.s25.s14[data-o2-mood="shy"] {
   background: url("/static/media/potato-small.f1213de5.png") no-repeat center;
   background-size: cover;
   border-color: transparent
 }
-.s26.s15[data-o2-mood="shy"] .s16 {
+.s25.s14[data-o2-mood="shy"] .s15 {
   -webkit-mask: url("/static/media/mohawk.7a226e2d.svg") no-repeat center;
   mask: url("/static/media/mohawk.7a226e2d.svg") no-repeat center;
   position: absolute;
@@ -230,43 +233,43 @@ body {
   margin-top: -265px;
   background-color: green
 }
-.s29[data-o1-in="paris"] ~ .s26.s15[data-o2-mood="shy"] .s16 {
+.s28[data-o1-in="paris"] ~ .s25.s14[data-o2-mood="shy"] .s15 {
   animation-name: o1--background_change;
   animation-duration: 2700ms;
   animation-iteration-count: infinite;
   animation-direction: alternate
 }
-.s26.s15[data-o2-mood="shy"] .s18[data-o2-position="left"] .s20 {
+.s25.s14[data-o2-mood="shy"] .s17[data-o2-position="left"] .s19 {
   animation: o1--twitch1 250ms infinite;
   transform: rotate(-15deg);
   top: -20px
 }
-.s26.s15[data-o2-mood="shy"] .s18[data-o2-position="right"] .s20 {
+.s25.s14[data-o2-mood="shy"] .s17[data-o2-position="right"] .s19 {
   transform: rotate(15deg);
   top: -5px
 }
-.s26.s15[data-o2-mood="shy"] .s18 .s21 {
+.s25.s14[data-o2-mood="shy"] .s17 .s20 {
   overflow: hidden
 }
-.s26.s15[data-o2-mood="shy"] .s18 .s22 {
+.s25.s14[data-o2-mood="shy"] .s17 .s21 {
   line-height: calc(75px * 2);
   font-size: 50px
 }
-.s26.s15[data-o2-mood="shy"] .s18 .s22::after {
+.s25.s14[data-o2-mood="shy"] .s17 .s21::after {
   content: '\25CF';
   zoom: 1;
   text-shadow: none;
   color: rgb(22, 38, 180)
 }
-.s26.s15[data-o2-mood="shy"] .s18[data-o2-position="left"] .s22::after {
+.s25.s14[data-o2-mood="shy"] .s17[data-o2-position="left"] .s21::after {
   position: absolute;
   left: 15px
 }
-.s26.s15[data-o2-mood="shy"] .s18[data-o2-position="right"] .s22::after {
+.s25.s14[data-o2-mood="shy"] .s17[data-o2-position="right"] .s21::after {
   position: absolute;
   right: 15px
 }
-.s26.s15[data-o2-mood="shy"] .s19 {
+.s25.s14[data-o2-mood="shy"] .s18 {
   position: relative;
   height: 85px;
   width: 200px;
@@ -277,10 +280,10 @@ body {
   border-bottom-right-radius: 50%;
   overflow: hidden
 }
-.s26.s15[data-o2-mood="shy"] .s19 .s27 {
+.s25.s14[data-o2-mood="shy"] .s18 .s26 {
   display: none
 }
-.s26.s15[data-o2-mood="shy"] .s19 .s28 {
+.s25.s14[data-o2-mood="shy"] .s18 .s27 {
   position: absolute;
   width: 100%;
   height: 35px;
@@ -290,26 +293,26 @@ body {
   background: #c00;
   border-top-left-radius: 50%
 }
-.s26.s15[data-o2-mood="dealWithIt"] {
+.s25.s14[data-o2-mood="dealWithIt"] {
   background: url("/static/media/potato-small.f1213de5.png") no-repeat center;
   background-size: cover;
   border-color: transparent
 }
-.s26.s15[data-o2-mood="dealWithIt"] .s17 {
+.s25.s14[data-o2-mood="dealWithIt"] .s16 {
   position: relative;
-  background: url("/static/media/deal-with-it-glasses.aa8d8d0f.png");
+  background: url("/static/media/glasses.aa8d8d0f.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover
 }
-.s26.s15[data-o2-mood="dealWithIt"] .s18 .s21 {
+.s25.s14[data-o2-mood="dealWithIt"] .s17 .s20 {
   margin-top: 20px;
   background: none
 }
-.s26.s15[data-o2-mood="dealWithIt"] .s18 .s22::after {
+.s25.s14[data-o2-mood="dealWithIt"] .s17 .s21::after {
   display: none
 }
-.s29 {
+.s28 {
   position: fixed;
   top: 60px;
   left: 0;
@@ -321,11 +324,11 @@ body {
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px
 }
-.s29[data-o1-in="paris"] {
+.s28[data-o1-in="paris"] {
   background: url("/static/media/paris.9aa0a42d.jpg") no-repeat center;
   background-size: cover
 }
-.s29[data-o1-in="wixhq"] {
+.s28[data-o1-in="wixhq"] {
   background: url("/static/media/wixhq.0e636f07.jpg") no-repeat center
 }
 @keyframes o1--twitch1 {
@@ -373,7 +376,7 @@ body {
   100% { text-shadow: 0 0 0 #9900FF
 } 
 }
-.s30 {
+.s29 {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   position: fixed;
   bottom: 0;
@@ -385,7 +388,7 @@ body {
   font-size: 0.8rem;
   background: rgba(255, 255, 255, 0.9)
 }
-.s31 {
+.s30 {
   margin: 0 0.5rem;
   vertical-align: middle;
   display: inline-block;
@@ -394,7 +397,7 @@ body {
   background: url("/static/media/stylable-logo.a2b412b5.png") no-repeat center;
   background-size: contain
 }
-.s32 {
+.s31 {
   margin: 0 0.5rem;
   vertical-align: middle;
   display: inline-block;
