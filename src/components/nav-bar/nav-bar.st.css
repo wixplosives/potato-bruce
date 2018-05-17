@@ -23,7 +23,7 @@
   display: flex;
 }
 
-.root button {
+.navButton {
   user-select: none;
   text-transform: uppercase;
   height: value(navBarHeight);
@@ -43,7 +43,7 @@
   display: flex;
 }
 
-.nav button:hover {
+.navButton:hover {
   background: rgba(184, 255, 189, 0.8);
 }
 
@@ -51,16 +51,31 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
 }
 
-.backdrop {}
-.size {}
-.isHappy {}
-.isShy {}
-.isGlasses{}
-.inParis{}
-.inWix {}
-.largeSize {}
-.smallSize {}
-.resetAllButton {}
+.resetAllButton {
+  -st-extends: navButton;
+}
+.isHappy {
+  -st-extends: navButton;
+}
+.isShy {
+  -st-extends: navButton;
+}
+.isGlasses {
+  -st-extends: navButton;
+}
+.smallSize {
+  -st-extends: navButton;
+  font-size: 1em;
+}
+.largeSize {
+  -st-extends: navButton;
+}
+.inParis {
+  -st-extends: navButton;
+}
+.inWix {
+  -st-extends: navButton;
+}
 
 .active {
   box-shadow: inset 0 -5px 0 0px rgba(255, 0, 0, 0.8);
