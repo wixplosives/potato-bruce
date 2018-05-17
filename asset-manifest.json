@@ -1,12 +1,13 @@
 {
-  "main.js": "/static/js/main.b2795470.js",
+  "main.js": "/static/js/main.65836baa.js",
   "main.css": "/main.bundle.css",
-  "main.js.map": "/static/js/main.b2795470.js.map",
+  "main.js.map": "/static/js/main.65836baa.js.map",
+  "static/media/paris.jpg": "/static/media/paris.9aa0a42d.jpg",
   "static/media/potato-small.png": "/static/media/potato-small.f1213de5.png",
-  "static/media/mohawk.svg": "/static/media/mohawk.7a226e2d.svg",
   "static/media/wixhq.jpg": "/static/media/wixhq.0e636f07.jpg",
   "static/media/github-logo.png": "/static/media/github-logo.9ac279f9.png",
   "static/media/stylable-logo.png": "/static/media/stylable-logo.a2b412b5.png",
-  "static/media/paris.jpg": "/static/media/paris.9aa0a42d.jpg",
+  "static/media/mohawk.svg": "/static/media/mohawk.7a226e2d.svg",
+  "static/media/deal-with-it-glasses.png": "/static/media/deal-with-it-glasses.aa8d8d0f.png",
   "index.html": "/index.html"
 }
