@@ -1,5 +1,5 @@
 # Mr. Potato Bruce
-Mr. Potato Bruce (MPB) is a demo application showcasing the features and typed style API of **[Stylable](https://stylable.io)**.
+Mr. Potato Bruce (MPB) is a demo application showcasing the features and typed style API of **[Stylable](https://stylable.io)**. You can see the working demo [here](https://potatobruce.io/).
 
 It is a full demo so you can play with the features and use the API.
 
@@ -29,7 +29,7 @@ App
 ```
 
 ### App
-The App component is the root level of our application. It's the only component that manages the states for the entire application.
+The App component is the root level of our application. It's the only component that manages the state for the entire application.
 
 In this demo we used the App component to compose both the `nav-bar` and `potato` components, and to apply our overrides to their styling.
 
@@ -43,11 +43,11 @@ We are able to tailor the 'nav-bar' component, exposing the various internal par
 > Note: We chose to customize most of this component's styling from our `app.st.css` stylesheet, creating one location to specify our entire application look and feel.
 
 ### Potato
-The 'potato' is the main graphical element in our application, enabling to select between its various states and inner parts.
+The 'potato' is the main graphical element in our application. You can select between its various states.
 
 The 'potato' component illustrates a use case in which we have a **Stylable** component with an API that this application does not control. This can simulate a component coming from a UI Library, another team in the company, or a 3rd party source (e.g. NPM).
 
-Although we don't have complete control over this component's API (props), its **Stylable** stylesheet exposes a typed interface declaring its internal parts and states. This enables us to customize it externally while ensuring that any actions we take for the purposes of this application to affect the component's states, internal parts or look and feel are valid and don't change the component itself.
+Although we don't have complete control over this component's API (props), its **Stylable** stylesheet exposes a typed interface declaring its internal parts and states. This enables us to customize it externally, ensuring that any actions we take for this application's component's states, internal parts or look and feel are both valid and don't change the component itself.
 
 ## Installing the project
 1. Clone the repo.
