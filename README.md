@@ -8,6 +8,9 @@ MPB has several components simulating the structure of a simple web application.
 
 ```
 App
+ ├── app.tsx
+ ├── app.st.css
+ |
  ├── nav-bar
  |  ├── nav-bar.tsx
  |  └── nav-bar.st.css
