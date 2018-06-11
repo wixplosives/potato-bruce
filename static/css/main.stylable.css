@@ -1,8 +1,6 @@
-.index2154125258--root {
-  -st-states: pos( enum(left, right) );
-}
+.eye3847936181--root {}
 
-.index2154125258--root .index2154125258--brow {
+.eye3847936181--brow {
   top: 0;
   position: relative;
   height: 1px;
@@ -13,7 +11,7 @@
   transition: all 125ms ease-in-out;
 }
 
-.index2154125258--root .index2154125258--socket {
+.eye3847936181--socket {
   position: relative;
   border-radius: 50%;
   width: 100px;
@@ -21,395 +19,77 @@
   line-height: 100px;
   overflow: hidden;
   background: rgba(255, 255, 255, 1);
-  /* box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7); */
 }
 
-.index2154125258--root .index2154125258--pupil {
+.eye3847936181--pupil {
   color: #000;
 }
 
-.index2154125258--root .index2154125258--pupil::after {
+.eye3847936181--pupil::after {
   content: '\2022'; /* 👁🥔💰🍌🐸🤘🔥 */
   display: block;
   text-align: center;
   transition: all 325ms ease-in;
-  /* font-size: calc(value(pupilSize)); */
   font-size: 150px;
 }
 
-.index2154125258--root .index2154125258--lid {
+.eye3847936181--lid {
   position: absolute;
-  border-top: 3px solid red;
   transition: all 125ms ease-in-out;  
   top: -100px;
   width: 100px;
   height: 100px;
 }
 
-.index2357306566--root {
+.mouth2009122231--root {
   position: relative;
   width: 50%;
   margin-top: 20px;
 }
 
-.index2357306566--root .index2357306566--mouthBox {
-  overflow: hidden;
-}
-
-.index2357306566--root .index2357306566--lip {
+.mouth2009122231--lip {
   background: #000;
   height: 2px;
   transition: 225ms ease-in;
 }
 
-.index2357306566--root .index2357306566--upperLip.index2357306566--lip {
+.mouth2009122231--upperLip.mouth2009122231--lip {
   -st-extends: lip;
 }
 
-.index2357306566--root .index2357306566--lowerLip.index2357306566--lip {
+.mouth2009122231--tongue {
+
+}
+
+.mouth2009122231--lowerLip.mouth2009122231--lip {
   -st-extends: lip;  
 }
 
-.potatobruce2461867678--root {
-  -st-states: mood( enum(happy, sad, glasses) ), size( enum(small, big) );
+.potato1983869502--root {
+  -st-states: mood( enum(happy, shy, dealWithIt) ), size( enum(small, big) );
   border: 10px solid #000;
   border-radius: 50%;
   background: #f0f0f0;
 }
 
-.potatobruce2461867678--root .potatobruce2461867678--top {}
-.potatobruce2461867678--root .potatobruce2461867678--top::after {}
+/* empty classes serve as an exposed interface that can be customized externally */
+.potato1983869502--top {}
+.potato1983869502--top::after {}
 
-.potatobruce2461867678--root .potatobruce2461867678--eyes {}
-
-.potatobruce2461867678--root .potatobruce2461867678--eye.index2154125258--root {
+.potato1983869502--eyes {}
+.potato1983869502--eye.eye3847936181--root {
   -st-extends: Eye;
+  -st-states: position( enum(left, right) );  
 }
 
-.potatobruce2461867678--root .potatobruce2461867678--mouth.index2357306566--root {
+.potato1983869502--mouth.mouth2009122231--root {
   -st-extends: Mouth;
 }
 
-.app220887333--root {
-  display: flex;
-  padding: 10vh 0;
-  justify-content: center;
-}
-
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root {
-  -st-extends: PotatoBruce;
-  position: relative;
-  display: flex;
-  flex: 1;
-  min-width: 500px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10px auto;
-  height: 70vh;
-  max-width: 80vh;
-  transition: 125ms ease-in-out;
-}
-
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-size="small"] {
-  transform: scale(0.3);
-}
-
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-size="big"] {
-  transform: scale(0.7);
-}
-
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root .potatobruce2461867678--eyes {
-  width: 100%;
-  text-align: center;
-}
-
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root .potatobruce2461867678--eye {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-/*
-  HAPPY POTATO BRUCE IN PARIS
-*/
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] {
-  border-color: transparent;
-  background: url(/static/media/potato-body.036f5ecb.png) no-repeat center;
-  background-size: cover;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--top {
-  position: relative;
-  top: -100px;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--eye .index2154125258--pupil::after {
-  content: '👁';
-  background: none;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--top::after {
-  content: '🔥'; /* 👁🥔💰🍌🐸🤘🔥 */
-  font-size: 120px;
-  text-shadow: 0 0 0 #000;
-  position: relative;
-  color: transparent;
-  animation-name: app220887333--emoji_color_change;
-  animation-duration: 700ms;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--eye[data-index2154125258-pos="left"] {
-  transform: rotate(0deg);
-  top: -20px;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--eye[data-index2154125258-pos="right"] .index2154125258--brow {
-  animation: twitch1 250ms infinite;
-  transform: rotate(0deg);
-  top: -20px;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--eye .index2154125258--lid {
-  top: calc(-100px + 25px);
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--eye .index2154125258--socket {
-  background: none;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--mouth .index2357306566--upperLip {
-  display: none;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--mouth .index2357306566--lowerLip {
-  height: 180px;
-  width: 200px;
-  margin: 0 auto;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  overflow: hidden;
-  position: relative;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="happy"] .potatobruce2461867678--mouth .index2357306566--lowerLip::after {
-  content: ' ';
-  height: 50px;
-  width: 100px;
-  margin: 0 auto;
-  background: #c00;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100px;
-  border-top-left-radius: 50%;
-}
-
-/*
-  GLASSES
-*/
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="glasses"] {
-  background: url(/static/media/potato-body.036f5ecb.png) no-repeat center;
-  background-size: cover;
-  border-color: transparent;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="glasses"] .potatobruce2461867678--eyes {
-  position: relative;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABkAAAAOECAYAAAD5Tf2iAAAABHNCSVQICAgIfAhkiAAAAF96VFh0UmF3IHByb2ZpbGUgdHlwZSBBUFAxAAAImeNKT81LLcpMVigoyk/LzEnlUgADYxMuE0sTS6NEAwMDCwMIMDQwMDYEkkZAtjlUKNEABZiYm6UBoblZspkpiM8FAE+6FWgbLdiMAAAcwklEQVR4nOzcT49ddR3H8e8551KZBTF2KguLuGEKLOSP0URcEeJTAHXJA5C4cs1DMPAAWKrwFKC4EhcmSrsAqSyolgX2TmJctDRzz3FBJSWCckenv/v7zOu16fYzk+bO9573nakCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABOAQxddtjOEZSAAAAAAElFTkSuQmCC);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="glasses"] .potatobruce2461867678--eye .index2154125258--socket {
-  margin-top: 20px;
-  background: none;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="glasses"] .potatobruce2461867678--eye .index2154125258--pupil::after {
-  display: none;
-}
-
-/*
-  SAD POTATO AT THE DMV
-*/
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] {
-  background: url(/static/media/potato-body.036f5ecb.png) no-repeat center;
-  background-size: cover;
-  border-color: transparent;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--eye .index2154125258--socket {
-  background: none;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--eye .index2154125258--pupil::after {
-  content: '^';
-  text-shadow: none;
-  zoom: 1;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--top {
-  height: 250px;
-  width: 200px;
-  margin-top: -265px;
-  -webkit-mask: url(/static/media/mohawk.871df20e.svg) no-repeat center;
-  mask: url(/static/media/mohawk.871df20e.svg) no-repeat center;
-  animation-name: app220887333--background_change;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--eye .index2154125258--lid {
-  top: calc(-100px + 75px);
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--eye .index2154125258--pupil {
-  line-height: calc(75px * 2);
-  font-size: 50px;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--eye .index2154125258--pupil::after {
-  background: none;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--eye .index2154125258--pupil::after {
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--eye[data-index2154125258-pos="left"] {
-  transform: rotate(-15deg);
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--eye[data-index2154125258-pos="left"] .index2154125258--brow {
-  animation: twitch1 250ms infinite;
-  transform: rotate(0deg);
-  top: -20px;
-}
-.app220887333--root .app220887333--potatoBruce.potatobruce2461867678--root[data-potatobruce2461867678-mood="sad"] .potatobruce2461867678--eye[data-index2154125258-pos="right"] .index2154125258--brow {
-  transform: rotate(15deg);
-}
-
-/* Backdrop Image */
-.app220887333--root .app220887333--backdrop {
-  -st-states: in( enum(paris, wixhq, perspective) );
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 60px);
-  background-color: #eee;
-  background-image: linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228)), 
-  linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228));
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
-
-}
-.app220887333--root .app220887333--backdrop[data-app220887333-in="paris"] {
-  background: url(/static/media/paris.61da2ea6.jpg) no-repeat center;
-}
-.app220887333--root .app220887333--backdrop[data-app220887333-in="wixhq"] {
-  background: url(/static/media/wixhq.0e636f07.jpg) no-repeat center;
-}
-.app220887333--root .app220887333--backdrop[data-app220887333-in="perspective"] {
-  background: white;
-  /* background-color: #eee;
-  background-image: linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228)), 
-  linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228));
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px; */
-}
-
-
-/* .potatoBruce::eyes::eye::pupil::after { */
-  /* position: relative; */ .app220887333--root */
-  
-  
-
-
-
-@keyframes twitch1 {
-  .app220887333--root 5% {
-    left: -1px;
-  }
-  .app220887333--root 50% {
-    left: 4px;
-  }
-  .app220887333--root 95% {
-    left: 0;
-  }
-}
-
-@keyframes app220887333--potatoBoogie {
-  0% {
-    transform: scale(0.4);
-  }
-  45% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(0.4);
-  }
-}
-
-@keyframes app220887333--background_change {
-  0% { background-color: #ff0000; }
-  15% { background-color: #ff6600; }
-  30% { background-color: #ffee00; }
-  45% { background-color: #00ff00; }
-  60% { background-color: #0000ff; }
-  75% { background-color: #4400FF; }
-  100% { background-color: #9900FF; }; 
-}
-
-@keyframes app220887333--emoji_color_change {
-  0% { text-shadow: 0 0 0 green; }
-  15% { text-shadow: 0 0 0 #ff6600; }
-  30% { text-shadow: 0 0 0 #ffee00; }
-  45% { text-shadow: 0 0 0 #00ff00; }
-  60% { text-shadow: 0 0 0 #0000ff; }
-  75% { text-shadow: 0 0 0 #4400FF; }
-  100% { text-shadow: 0 0 0 #9900FF; }; 
-}
-
-.app220887333--root .app220887333--nav button.app220887333--resetAllButton:hover {
-  background: #c00;
-  color: #fff;
-}
-
-.app220887333--root .app220887333--siteTitle {
-  font-size: 1rem;
-  font-weight: 100;
-  line-height: 40px;
-  margin-left: 10px;
-}
-
-.app220887333--root .app220887333--siteFooter {
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-  position: fixed;
-  bottom: 0;
-  height: 40px;
-  line-height: 40px;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  font-size: 0.8rem;
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.app220887333--root .app220887333--stylableLogo {
-  margin: 0 0.5rem;
-  vertical-align: middle;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: url(/static/media/stylable-logo.a2b412b5.png) no-repeat center;
-  background-size: contain;
-}
-
-.app220887333--root .app220887333--githubLogo {
-  margin: 0 0.5rem;
-  vertical-align: middle;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: url(/static/media/github-logo.9ac279f9.png) no-repeat center;
-  background-size: contain;
-}
-
-.app220887333--root button.app220887333--smallSize {
-  font-size: 1rem;
-}
-.app220887333--root button.app220887333--largeSize {
-  font-size: 2rem;
-}
-.sidebar2629110395--root {
-  -st-states: mood( enum(happy, sad, glasses) ),
+.navbar2391070439--root {
+  -st-states: mood( enum(happy, shy, dealWithIt) ),
               size( enum(small, big) ),
-              backdrop( enum(paris, wixhq, perspective) );
+              backdrop( enum(amsterdam, paris, wixhq) );
 
   position: fixed;
   top: 0;
@@ -422,22 +102,12 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   display: flex;
 }
-.sidebar2629110395--root .sidebar2629110395--nav {
+.navbar2391070439--nav {
   width: 100%;
   display: flex;
 }
-.sidebar2629110395--root .sidebar2629110395--demoTitle {
-  margin: 0;
-  font-size: 14px;
-  text-align: center;
-  letter-spacing: 0.1rem;
-  line-height: 60px;
-  font-weight: 100;
-  padding: 0 2rem;
-  text-transform: uppercase;
-}
 
-.sidebar2629110395--root button {
+.navbar2391070439--navButton {
   user-select: none;
   text-transform: uppercase;
   height: 60px;
@@ -452,49 +122,372 @@
   font-size: 1.5rem;
 }
 
-.sidebar2629110395--root .sidebar2629110395--smallSize {
-  font-size: 1rem;
-}
-
-.sidebar2629110395--root .sidebar2629110395--buttonGroup {
+.navbar2391070439--buttonGroup {
   flex: 1;
   display: flex;
 }
-.sidebar2629110395--root .sidebar2629110395--nav button:hover {
+
+.navbar2391070439--navButton:hover {
   background: rgba(184, 255, 189, 0.8);
 }
-.sidebar2629110395--root .sidebar2629110395--buttonGroup:hover {
+
+.navbar2391070439--buttonGroup:hover {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
 }
 
-.sidebar2629110395--root .sidebar2629110395--backdrop {}
-.sidebar2629110395--root .sidebar2629110395--size {}
-.sidebar2629110395--root .sidebar2629110395--isHappy {}
-.sidebar2629110395--root .sidebar2629110395--isSad {}
-.sidebar2629110395--root .sidebar2629110395--isGlasses{}
-.sidebar2629110395--root .sidebar2629110395--inParis{}
-.sidebar2629110395--root .sidebar2629110395--inWix {}
-.sidebar2629110395--root .sidebar2629110395--largeSize {}
-.sidebar2629110395--root .sidebar2629110395--smallSize {}
-.sidebar2629110395--root .sidebar2629110395--resetAllButton {}
+.navbar2391070439--resetAllButton.navbar2391070439--navButton {
+  -st-extends: navButton;
+}
+.navbar2391070439--isHappy.navbar2391070439--navButton {
+  -st-extends: navButton;
+}
+.navbar2391070439--isShy.navbar2391070439--navButton {
+  -st-extends: navButton;
+}
+.navbar2391070439--isGlasses.navbar2391070439--navButton {
+  -st-extends: navButton;
+}
+.navbar2391070439--smallSize.navbar2391070439--navButton {
+  -st-extends: navButton;
+  font-size: 1em;
+}
+.navbar2391070439--largeSize.navbar2391070439--navButton {
+  -st-extends: navButton;
+}
+.navbar2391070439--inParis.navbar2391070439--navButton {
+  -st-extends: navButton;
+}
+.navbar2391070439--inAmsterdam.navbar2391070439--navButton {
+  -st-extends: navButton;
+}
+.navbar2391070439--inWix.navbar2391070439--navButton {
+  -st-extends: navButton;
+}
 
-.sidebar2629110395--root .sidebar2629110395--active {
-  /* background: rgba(250, 0, 0, 0.5) ; */
+.navbar2391070439--active {
   box-shadow: inset 0 -5px 0 0px rgba(255, 0, 0, 0.8);
 }
-.sidebar2629110395--root .sidebar2629110395--inactive {
+.navbar2391070439--inactive {
   box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
 }
-.sidebar2629110395--root[data-sidebar2629110395-mood="happy"] .sidebar2629110395--nav .sidebar2629110395--resetAllButton,.sidebar2629110395--root[data-sidebar2629110395-mood="sad"] .sidebar2629110395--nav .sidebar2629110395--resetAllButton,.sidebar2629110395--root[data-sidebar2629110395-mood="glasses"] .sidebar2629110395--nav .sidebar2629110395--resetAllButton {
+
+.navbar2391070439--root[data-navbar2391070439-mood="happy"] .navbar2391070439--nav .navbar2391070439--resetAllButton,.navbar2391070439--root[data-navbar2391070439-mood="shy"] .navbar2391070439--nav .navbar2391070439--resetAllButton,.navbar2391070439--root[data-navbar2391070439-mood="dealWithIt"] .navbar2391070439--nav .navbar2391070439--resetAllButton {
   box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
 }
-.sidebar2629110395--root .sidebar2629110395--nav .sidebar2629110395--resetAllButton {
+
+.navbar2391070439--root .navbar2391070439--nav .navbar2391070439--resetAllButton {
   box-shadow: inset 0 -5px 0 0px rgba(255, 0, 0, 0.8);
 }
 
-.sidebar2629110395--root[data-sidebar2629110395-mood="happy"] .sidebar2629110395--nav .sidebar2629110395--isHappy,.sidebar2629110395--root[data-sidebar2629110395-mood="sad"] .sidebar2629110395--nav .sidebar2629110395--isSad,.sidebar2629110395--root[data-sidebar2629110395-mood="glasses"] .sidebar2629110395--nav .sidebar2629110395--isGlasses,.sidebar2629110395--root[data-sidebar2629110395-backdrop="paris"] .sidebar2629110395--nav .sidebar2629110395--inParis,.sidebar2629110395--root[data-sidebar2629110395-backdrop="wixhq"] .sidebar2629110395--nav .sidebar2629110395--inWix,.sidebar2629110395--root[data-sidebar2629110395-size="small"] .sidebar2629110395--nav .sidebar2629110395--smallSize,.sidebar2629110395--root[data-sidebar2629110395-size="big"] .sidebar2629110395--nav .sidebar2629110395--largeSize {
+.navbar2391070439--root[data-navbar2391070439-mood="happy"] .navbar2391070439--nav .navbar2391070439--isHappy,.navbar2391070439--root[data-navbar2391070439-mood="shy"] .navbar2391070439--nav .navbar2391070439--isShy,.navbar2391070439--root[data-navbar2391070439-mood="dealWithIt"] .navbar2391070439--nav .navbar2391070439--isGlasses,.navbar2391070439--root[data-navbar2391070439-backdrop="paris"] .navbar2391070439--nav .navbar2391070439--inParis,.navbar2391070439--root[data-navbar2391070439-backdrop="amsterdam"] .navbar2391070439--nav .navbar2391070439--inAmsterdam,.navbar2391070439--root[data-navbar2391070439-backdrop="wixhq"] .navbar2391070439--nav .navbar2391070439--inWix,.navbar2391070439--root[data-navbar2391070439-size="small"] .navbar2391070439--nav .navbar2391070439--smallSize,.navbar2391070439--root[data-navbar2391070439-size="big"] .navbar2391070439--nav .navbar2391070439--largeSize {
   box-shadow: inset 0 -5px 0 0px rgba(255, 0, 0, 0.8);
 }
+
+/* 
+  DEFAULT STYLE 
+*/
+.app220887333--root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app220887333--potatoBruce.potato1983869502--root {
+  -st-extends: Potato;
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10% 0;
+  min-height: 500px;
+  max-width: 525px;
+  transition: 125ms ease-in-out;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-size="small"] {
+  transform: scale(0.3);
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-size="big"] {
+  transform: scale(0.7);
+}
+.app220887333--potatoBruce.potato1983869502--root .potato1983869502--eyes {
+  width: 100%;
+  text-align: center;
+}
+.app220887333--potatoBruce.potato1983869502--root .potato1983869502--eye {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+/*
+  HAPPY POTATO
+*/
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="happy"] {
+  background: url(/static/media/potato-small.f1213de5.png) no-repeat center;
+  background-size: cover;
+  border-color: transparent;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="happy"] .potato1983869502--top {
+  position: relative;
+  top: -100px;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="happy"] .potato1983869502--top::after {
+  content: '🔥'; /* 👁🥔💰🍌🐸🤘🔥 */
+  font-size: 120px;
+  text-shadow: 0 0 0 #000;
+  position: relative;
+  color: transparent;
+  animation-name: app220887333--emoji_color_change;
+  animation-duration: 700ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.app220887333--potatoBruce.potato1983869502--root .potato1983869502--eye[data-potato1983869502-position="left"] {
+  transform: rotate(0deg);
+  top: -20px;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="happy"] .potato1983869502--eye[data-potato1983869502-position="right"] .eye3847936181--brow {
+  animation: app220887333--twitch1 250ms infinite;
+  transform: rotate(0deg);
+  top: -20px;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="happy"] .potato1983869502--eye .eye3847936181--socket {
+  background: none;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="happy"] .potato1983869502--eye .eye3847936181--pupil::after {
+  content: '👁';
+  background: none;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="happy"] .potato1983869502--mouth {
+  position: relative;
+  height: 180px;
+  width: 200px;
+  margin: 0 auto;
+  background: #000;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="happy"] .potato1983869502--mouth .mouth2009122231--upperLip {
+  display: none;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="happy"] .potato1983869502--mouth .mouth2009122231--tongue {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 0;
+  right: 0;
+  background: #c00;
+  border-top-left-radius: 50%;
+}
+
+/*
+  SHY POTATO
+*/
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] {
+  background: url(/static/media/potato-small.f1213de5.png) no-repeat center;
+  background-size: cover;
+  border-color: transparent;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--top {
+  -webkit-mask: url(/static/media/mohawk.871df20e.svg) no-repeat center;
+  mask: url(/static/media/mohawk.871df20e.svg) no-repeat center;
+  position: absolute;
+  top: 122px;
+  height: 250px;
+  width: 200px;
+  margin-top: -265px;
+  background-color: green;
+}
+.app220887333--backdrop[data-app220887333-in="paris"] ~ .app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--top {
+  animation-name: app220887333--background_change;
+  animation-duration: 2700ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.app220887333--backdrop[data-app220887333-in="amsterdam"] ~ .app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--top {
+  animation-name: app220887333--background_change;
+  animation-duration: 2700ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--eye[data-potato1983869502-position="left"] .eye3847936181--brow {
+  animation: app220887333--twitch1 250ms infinite;
+  transform: rotate(-15deg);
+  top: -20px;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--eye[data-potato1983869502-position="right"] .eye3847936181--brow {
+  transform: rotate(15deg);
+  top: -5px;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--eye .eye3847936181--socket {
+  overflow: hidden;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--eye .eye3847936181--pupil {
+  line-height: calc(75px * 2);
+  font-size: 50px;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--eye .eye3847936181--pupil::after {
+  content: '●';
+  zoom: 1;
+  text-shadow: none;
+  color: rgb(22, 38, 180);
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--eye[data-potato1983869502-position="left"] .eye3847936181--pupil::after {
+  position: absolute;
+  left: 15px;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--eye[data-potato1983869502-position="right"] .eye3847936181--pupil::after {
+  position: absolute;
+  right: 15px;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--mouth {
+  position: relative;
+  height: 85px;
+  width: 200px;
+  margin: 15px auto;
+  background: #000;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--mouth .mouth2009122231--upperLip {
+  display: none;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="shy"] .potato1983869502--mouth .mouth2009122231--tongue {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #c00;
+  border-top-left-radius: 50%;
+} 
+
+/*
+  DEAL-WITH-IT POTATO
+*/
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="dealWithIt"] {
+  background: url(/static/media/potato-small.f1213de5.png) no-repeat center;
+  background-size: cover;
+  border-color: transparent;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="dealWithIt"] .potato1983869502--eyes {
+  position: relative;
+  background: url(/static/media/glasses.f898d367.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="dealWithIt"] .potato1983869502--eye .eye3847936181--socket {
+  margin-top: 20px;
+  background: none;
+}
+.app220887333--potatoBruce.potato1983869502--root[data-potato1983869502-mood="dealWithIt"] .potato1983869502--eye .eye3847936181--pupil::after {
+  display: none;
+}
+
+/* Backdrop Image */
+.app220887333--backdrop {
+  -st-states: in( enum(amsterdam, paris, wixhq) );
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: #eee;
+  background-image: linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228)), 
+  linear-gradient(45deg, rgb(228, 228, 228) 25%, transparent 25%, transparent 75%, rgb(228, 228, 228) 75%, rgb(228, 228, 228));
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+.app220887333--backdrop[data-app220887333-in="paris"] {
+  background: url(/static/media/paris.9aa0a42d.jpg) no-repeat center;
+  background-size: cover;
+}
+.app220887333--backdrop[data-app220887333-in="amsterdam"] {
+  background: url(/static/media/amsterdam.616b69dd.jpg) no-repeat center;
+  background-size: cover;
+}
+.app220887333--backdrop[data-app220887333-in="wixhq"] {
+  background: url(/static/media/wixhq.0e636f07.jpg) no-repeat center;
+}
+
+/* 
+  Keyframes
+*/
+@keyframes app220887333--twitch1 {
+  5% {
+    left: -1px;
+  }
+  50% {
+    left: 4px;
+  }
+  95% {
+    left: 0;
+  }
+}
+
+@keyframes app220887333--background_change {
+  0%   { background-color: #ff0000; }
+  15%  { background-color: #ff6600; }
+  30%  { background-color: #ffee00; }
+  45%  { background-color: #00ff00; }
+  60%  { background-color: #0000ff; }
+  75%  { background-color: #4400ff; }
+  100% { background-color: #9900ff; }; 
+}
+
+@keyframes app220887333--emoji_color_change {
+  0%   { text-shadow: 0 0 0 green;   }
+  15%  { text-shadow: 0 0 0 #ff6600; }
+  30%  { text-shadow: 0 0 0 #ffee00; }
+  45%  { text-shadow: 0 0 0 #00ff00; }
+  60%  { text-shadow: 0 0 0 #0000ff; }
+  75%  { text-shadow: 0 0 0 #4400FF; }
+  100% { text-shadow: 0 0 0 #9900FF; }; 
+}
+
+
+/* 
+  Footer
+*/
+.app220887333--siteFooter {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+.app220887333--stylableLogo {
+  margin: 0 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(/static/media/stylable-logo.a2b412b5.png) no-repeat center;
+  background-size: contain;
+}
+.app220887333--githubLogo {
+  margin: 0 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(/static/media/github-logo.9ac279f9.png) no-repeat center;
+  background-size: contain;
+}
+
 
 body {
   margin: 0;
