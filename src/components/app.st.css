@@ -139,6 +139,12 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+.backdrop:in(amsterdam) ~ .potatoBruce:mood(shy)::top {
+  animation-name: background_change;
+  animation-duration: 2700ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 .potatoBruce:mood(shy)::eye:position(left)::brow {
   animation: twitch1 250ms infinite;
   transform: rotate(-15deg);
@@ -219,7 +225,7 @@
 
 /* Backdrop Image */
 .backdrop {
-  -st-states: in( enum(paris, wixhq) );
+  -st-states: in( enum(amsterdam, paris, wixhq) );
   position: fixed;
   top: value(navBarHeight);
   left: 0;
@@ -233,6 +239,10 @@
 }
 .backdrop:in(paris) {
   background: url(../assets/paris.jpg) no-repeat center;
+  background-size: cover;
+}
+.backdrop:in(amsterdam) {
+  background: url(../assets/amsterdam.jpg) no-repeat center;
   background-size: cover;
 }
 .backdrop:in(wixhq) {

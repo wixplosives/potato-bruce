@@ -5,7 +5,7 @@
 .root {
   -st-states: mood( enum(happy, shy, dealWithIt) ),
               size( enum(small, big) ),
-              backdrop( enum(paris, wixhq) );
+              backdrop( enum(amsterdam, paris, wixhq) );
 
   position: fixed;
   top: 0;
@@ -73,6 +73,9 @@
 .inParis {
   -st-extends: navButton;
 }
+.inAmsterdam {
+  -st-extends: navButton;
+}
 .inWix {
   -st-extends: navButton;
 }
@@ -98,6 +101,7 @@
 .root:mood(shy)::nav::isShy,
 .root:mood(dealWithIt)::nav::isGlasses,
 .root:backdrop(paris)::nav::inParis,
+.root:backdrop(amsterdam)::nav::inAmsterdam,
 .root:backdrop(wixhq)::nav::inWix,
 .root:size(small)::nav::smallSize,
 .root:size(big)::nav::largeSize {

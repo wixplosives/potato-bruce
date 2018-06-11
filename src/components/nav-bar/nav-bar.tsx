@@ -35,6 +35,7 @@ export const NavBar = (props: NavBarProps) => {
         </div>
         <div {...style('buttonGroup location')}>
           <button className={style.inParis} value="paris" onClick={handleBackdropChange}>🇫🇷</button>
+          <button className={style.inAmsterdam} value="amsterdam" onClick={handleBackdropChange}>🇳🇱</button>
           <button className={style.inWix} value="wixhq" onClick={handleBackdropChange}>🏙</button>
         </div>
       </div>
