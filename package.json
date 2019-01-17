@@ -6,7 +6,7 @@
   "dependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "@stylable/react-scripts": "0.1.7"
+    "@stylable/react-scripts": "^1.0.4"
   },
   "scripts": {
     "start": "stylable-scripts start",
@@ -19,6 +19,7 @@
     "@types/react-dom": "16",
     "gh-pages": "^1.1.0",
     "ncp": "^2.0.0",
-    "typescript-support": "^0.5.1"
+    "typescript": "~3.2.2",
+    "typescript-support": "^0.5.5"
   }
 }
