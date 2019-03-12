@@ -6,7 +6,7 @@
   "dependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "@stylable/react-scripts": "^1.0.4"
+    "@stylable/react-scripts": "next"
   },
   "scripts": {
     "start": "stylable-scripts start",
