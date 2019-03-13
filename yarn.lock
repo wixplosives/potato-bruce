@@ -31,10 +31,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@stylable/core@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@stylable/core/-/core-2.0.1.tgz#53adcc42a670d1a350c328cf0fccfd039cd54608"
-  integrity sha512-MfSYRo7etQU56c0d7XGJum3NNHfyffFmKNchi6LlpHZuBsj6FLbneIAcABjx3GtNSULLxdEm5BdH0554/Jgjdw==
+"@stylable/core@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@stylable/core/-/core-2.0.2.tgz#bd242daafb6ec897a22ad0a05134bda8cef9e3e5"
+  integrity sha512-gUydXAf4a8iLwnmaVOyBLhN+P4/UVJmRhHbDBA++/9sCW8Z0jXQClnTYZ1SUV0KXKstfuXbjjz+uu9Cz3JJ4wQ==
   dependencies:
     clean-css "^4.2.1"
     css-selector-tokenizer "^0.7.1"
@@ -51,38 +51,38 @@
     postcss-value-parser "^3.3.1"
     url-regex "^4.1.1"
 
-"@stylable/module-utils@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@stylable/module-utils/-/module-utils-2.0.2.tgz#52d3dc359c317d56ae48097edc1571dd4b132040"
-  integrity sha512-sES3MwqiS6CzYEhRAvIncxGafF0aVNBomAehG+fzDp3EUemhtrTJ4mlOSDNt9DRcuHY8sHBmLRGrMecS2dOXjw==
+"@stylable/module-utils@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@stylable/module-utils/-/module-utils-2.0.3.tgz#2ce17beb4fb670146e182fcb4a1e5d4ffb05868f"
+  integrity sha512-zIfm9OFvUf9rburOn5TSVewhgffsLIvGFOlFSr51b6p4S7Xv3Fs4n2t7ZQ4Cmok1w32gqqtkZ9/3pyI30mFUrg==
   dependencies:
-    "@stylable/core" "^2.0.1"
+    "@stylable/core" "^2.0.2"
 
-"@stylable/node@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@stylable/node/-/node-2.0.2.tgz#f820d25541dd2ca72bf458772e751b67b179d70c"
-  integrity sha512-Y0/dur8LHD4GGS92v/l1cEi1qvtq5LBfr6TMrsFgVc+G2yJ1Lo9deCwyYPoLfcIZdLmVKnq8lQja85CZIyYcUQ==
+"@stylable/node@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@stylable/node/-/node-2.0.3.tgz#fcc26d116e6485d24fe668b785660bc47be735f8"
+  integrity sha512-5+MZ0zz0YDX5LItmkRmFEGn3ANw130j3tQouzwVXJWtSX07tD7WxKE2JU7tJlpE+oAIYhX8aT+asD0aYzpq7GA==
   dependencies:
-    "@stylable/core" "^2.0.1"
-    "@stylable/module-utils" "^2.0.2"
+    "@stylable/core" "^2.0.2"
+    "@stylable/module-utils" "^2.0.3"
     find-config "^1.0.0"
     murmurhash "^0.0.2"
 
-"@stylable/optimizer@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@stylable/optimizer/-/optimizer-2.0.1.tgz#981e2372ca1b6ca0763e370a4a00586ef384d379"
-  integrity sha512-jB9rbjbhAaM73kDOZC9ZCK8KFQ7J6z5e4e7rlTyHEviGckf4reIPLqOXyMe6RoyaAvIpxXSbiXt0/c7l6R52Vg==
+"@stylable/optimizer@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@stylable/optimizer/-/optimizer-2.0.2.tgz#b9b821080a84b36949f784bdd6c6b74c219fd21e"
+  integrity sha512-PrWdBUQWi/EFGT+ACniWOI/xDdPCvZC2qqAv00JGpk5XAFaI5+kya8tF3MHOZ7bDZGI+Uum3K6ZHwlJgIhAMJg==
   dependencies:
-    "@stylable/core" "^2.0.1"
+    "@stylable/core" "^2.0.2"
     postcss "^7.0.14"
 
 "@stylable/react-scripts@next":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@stylable/react-scripts/-/react-scripts-2.0.3.tgz#f44ec09de7a7ddbf8dd1ab10aae42a8fac980d5d"
-  integrity sha512-63uxN1xeFFab7Rv8hcHSKa7UItotHmSUZ5fNbrS60FaWN3n2YiNTkWhDuFKxujYAJE+1X6X/ZVn4jJmWHwbGPg==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@stylable/react-scripts/-/react-scripts-2.0.4.tgz#7aaafcb42104da4053217e02f017677e0f501e5b"
+  integrity sha512-jUH1RdUmuaNvbjqyHmjtuviqxkY7SDtViGqJfia3IPBkd8DAXqeRnujRooJ7Bszxiusv6wniSsY3JSXSe0UxCg==
   dependencies:
-    "@stylable/core" "^2.0.1"
-    "@stylable/webpack-plugin" "^2.0.3"
+    "@stylable/core" "^2.0.2"
+    "@stylable/webpack-plugin" "^2.0.4"
     "@ts-tools/webpack-loader" "^0.8.8"
     bfj "^6.1.1"
     case-sensitive-paths-webpack-plugin "^2.2.0"
@@ -110,14 +110,14 @@
   resolved "https://registry.yarnpkg.com/@stylable/runtime/-/runtime-2.0.0.tgz#ca7779f668a220376a1f7591d88da2ffa4969318"
   integrity sha512-V5D7udwdV2fz6fP5NP7KATz+VVwpQFyt6FW2WBRCm3blfQuNt8q2jJlIHZdDSRrDWmliPbvi3xI+F4njFYEZvg==
 
-"@stylable/webpack-plugin@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@stylable/webpack-plugin/-/webpack-plugin-2.0.3.tgz#f46b0aa246f36385d519d1716a19d246f104f88f"
-  integrity sha512-KMaFmoPYlSLoeHlDRlDTAJykqYdztgXsv7o5ft0+gqjGhgVVEyI2LniIRgMWUR55k5by6WaAgFF10JifQvfavA==
+"@stylable/webpack-plugin@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@stylable/webpack-plugin/-/webpack-plugin-2.0.4.tgz#b6fdc703c58a274fb929cd980ea21eaefb8cd9fc"
+  integrity sha512-Yk/kjiOPqnPW3brEFjA//JT4BCV8k1FAZ+/vnFVyvflEEsSRJ/Z0ZrrP09PPupYIIQ4cFrM5QEbDLWpcjofl1Q==
   dependencies:
-    "@stylable/module-utils" "^2.0.2"
-    "@stylable/node" "^2.0.2"
-    "@stylable/optimizer" "^2.0.1"
+    "@stylable/module-utils" "^2.0.3"
+    "@stylable/node" "^2.0.3"
+    "@stylable/optimizer" "^2.0.2"
     "@stylable/runtime" "^2.0.0"
     find-config "^1.0.0"
     webpack-sources "^1.3.0"
@@ -154,9 +154,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@16":
-  version "16.8.7"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.7.tgz#7b1c0223dd5494f9b4501ad2a69aa6acb350a29b"
-  integrity sha512-0xbkIyrDNKUn4IJVf8JaCn+ucao/cq6ZB8O6kSzhrJub1cVSqgTArtG0qCfdERWKMEIvUbrwLXeQMqWEsyr9dA==
+  version "16.8.8"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.8.tgz#4b60a469fd2469f7aa6eaa0f8cfbc51f6d76e662"
+  integrity sha512-xwEvyet96u7WnB96kqY0yY7qxx/pEpU51QeACkKFtrgjjXITQn0oO1iwPEraXVgh10ZFPix7gs1R4OJXF7P5sg==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -842,9 +842,9 @@ camelcase@^4.1.0:
   integrity sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=
 
 caniuse-lite@^1.0.30000929:
-  version "1.0.30000945"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000945.tgz#d51e3750416dd05126d5ac94a9c57d1c26c6fd21"
-  integrity sha512-PSGwYChNIXJ4FZr9Z9mrVzBCB1TF3yyiRmIDRIdKDHZ6u+1jYH6xeR28XaquxnMwcZVX3f48S9zi7eswO/G1nQ==
+  version "1.0.30000946"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000946.tgz#ac50a3331bb805b483478bbc26a0ab71bb6d0509"
+  integrity sha512-ZVXtMoZ3Mfq69Ikv587Av+5lwGVJsG98QKUucVmtFBf0tl1kOCfLQ5o6Z2zBNis4Mx3iuH77WxEUpdP6t7f2CQ==
 
 case-sensitive-paths-webpack-plugin@^2.2.0:
   version "2.2.0"
@@ -2896,12 +2896,12 @@ media-typer@0.3.0:
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
 mem@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/mem/-/mem-4.1.0.tgz#aeb9be2d21f47e78af29e4ac5978e8afa2ca5b8a"
-  integrity sha512-I5u6Q1x7wxO0kdOpYBB28xueHADYps5uty/zg936CiG8NTe5sJL8EjrCuLneuDW3PlMdZBGDIn8BirEVdovZvg==
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/mem/-/mem-4.2.0.tgz#5ee057680ed9cb8dad8a78d820f9a8897a102025"
+  integrity sha512-5fJxa68urlY0Ir8ijatKa3eRz5lwXnRCTvo9+TbTGAuTFJOwpGcY0X05moBd0nW45965Njt4CDI2GFQoG8DvqA==
   dependencies:
     map-age-cleaner "^0.1.1"
-    mimic-fn "^1.0.0"
+    mimic-fn "^2.0.0"
     p-is-promise "^2.0.0"
 
 memory-fs@^0.4.0, memory-fs@^0.4.1, memory-fs@~0.4.1:
@@ -2980,6 +2980,11 @@ mimic-fn@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
   integrity sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==
+
+mimic-fn@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.0.0.tgz#0913ff0b121db44ef5848242c38bbb35d44cabde"
+  integrity sha512-jbex9Yd/3lmICXwYT6gA/j2mNQGU48wCh/VzRd+/Y/PjYQtlg1gLMdZqvu9s/xH7qKvngxRObl56XZR609IMbA==
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
