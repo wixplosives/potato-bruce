@@ -2,7 +2,7 @@ import * as React from 'react';
 import { style, classes } from './eye.st.css';
 
 export interface EyeProps {
-    className: string;
+    className?: string;
 }
 
 export const Eye: React.SFC<EyeProps> = (props: EyeProps) => (

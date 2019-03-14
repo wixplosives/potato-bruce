@@ -23,7 +23,7 @@ export const NavBar = (props: NavBarProps) => {
 
   return (
     <div className={style(classes.root, {mood: props.mood, backdrop: props.backdrop, size: props.size})} >
-      <div className={style(classes.nav, {}, props.className || '')} >
+      <div className={style(classes.nav, props.className)} >
         <div className={style(classes.buttonGroup, classes.mood)} >
           <button className={classes.resetAllButton} onClick={resetAll} >:|</button>
           <button className={classes.isHappy} value="happy" onClick={handleMoodChange} >😀</button>

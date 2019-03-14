@@ -2,7 +2,7 @@ import * as React from 'react';
 import { style, classes } from './mouth.st.css';
 
 export interface MouthProps {
-    className: string;
+    className?: string;
 }
 
 export const Mouth: React.SFC<MouthProps> = (props: MouthProps) => (
