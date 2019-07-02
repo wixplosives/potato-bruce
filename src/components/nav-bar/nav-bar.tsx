@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Backdrop, Mood, Size } from '../types';
-import style from "./nav-bar.st.css";
+import { style, classes } from "./nav-bar.st.css";
 
 export interface NavBarProps {
   size: Size;
@@ -10,6 +10,7 @@ export interface NavBarProps {
   handleSizeChange: any;
   handleBackdropChange: any;
   resetAll: any;
+  className?: string;
 }
 
 export const NavBar = (props: NavBarProps) => {
@@ -21,22 +22,22 @@ export const NavBar = (props: NavBarProps) => {
   } = props;
 
   return (
-    <div {...style('root', {mood: props.mood, backdrop: props.backdrop, size: props.size})}>
-      <div {...style('nav', {}, props)}>
-        <div {...style('buttonGroup mood')}>
-          <button className={style.resetAllButton} onClick={resetAll}>:|</button>
-          <button className={style.isHappy} value="happy" onClick={handleMoodChange}>😀</button>
-          <button className={style.isShy} value="shy" onClick={handleMoodChange}>☺️</button>
-          <button className={style.isGlasses} value="dealWithIt" onClick={handleMoodChange}>🕶</button>
+    <div className={style(classes.root, {mood: props.mood, backdrop: props.backdrop, size: props.size})} >
+      <div className={style(classes.nav, props.className)} >
+        <div className={style(classes.buttonGroup, classes.mood)} >
+          <button className={classes.resetAllButton} onClick={resetAll} >:|</button>
+          <button className={classes.isHappy} value="happy" onClick={handleMoodChange} >😀</button>
+          <button className={classes.isShy} value="shy" onClick={handleMoodChange} >☺️</button>
+          <button className={classes.isGlasses} value="dealWithIt" onClick={handleMoodChange} >🕶</button>
         </div>
-        <div {...style('buttonGroup size')}>
-          <button className={style.smallSize} value="small" onClick={handleSizeChange}>🥔</button>
-          <button className={style.largeSize} value="big" onClick={handleSizeChange}>🥔</button>
+        <div className={style(classes.buttonGroup, classes.size)} >
+          <button className={classes.smallSize} value="small" onClick={handleSizeChange} >🥔</button>
+          <button className={classes.largeSize} value="big" onClick={handleSizeChange} >🥔</button>
         </div>
-        <div {...style('buttonGroup location')}>
-          <button className={style.inParis} value="paris" onClick={handleBackdropChange}>🇫🇷</button>
-          <button className={style.inAmsterdam} value="amsterdam" onClick={handleBackdropChange}>🇳🇱</button>
-          <button className={style.inWix} value="wixhq" onClick={handleBackdropChange}>🏙</button>
+        <div className={style(classes.buttonGroup, classes.location)} >
+          <button className={classes.inParis} value="paris" onClick={handleBackdropChange} >🇫🇷</button>
+          <button className={classes.inAmsterdam} value="amsterdam" onClick={handleBackdropChange} >🇳🇱</button>
+          <button className={classes.inWix} value="wixhq" onClick={handleBackdropChange} >🏙</button>
         </div>
       </div>
     </div>);

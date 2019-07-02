@@ -1,14 +1,14 @@
 import * as React from 'react';
-import style from './mouth.st.css';
+import { style, classes } from './mouth.st.css';
 
 export interface MouthProps {
     className?: string;
 }
 
 export const Mouth: React.SFC<MouthProps> = (props: MouthProps) => (
-    <div {...style('root', {}, props)} >
-        <div {...style('upperLip')} />
-        <div {...style('tongue')} />  
-        <div {...style('lowerLip')} />
+    <div className={style(classes.root, props.className)} >
+        <div className={classes.upperLip} />
+        <div className={classes.tongue} />  
+        <div className={classes.lowerLip} />
     </div>
 );

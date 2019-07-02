@@ -1,5 +1,5 @@
 import * as React from 'react';
-import style from './potato.st.css';
+import { style, classes } from './potato.st.css';
 import { Mood, Size } from './../types';
 
 import { Eye } from './eye/eye';
@@ -12,12 +12,12 @@ interface PotatoBruceProps {
 }
 
 export const Potato: React.SFC<PotatoBruceProps> = (props: PotatoBruceProps) => (
-    <div {...style('root', { mood: props.mood, size: props.size }, props)}>
-        <div className={style.top} />
-        <div className={style.eyes}>
-            <Eye {...style('eye', { position: 'left'})} />
-            <Eye {...style('eye', { position: 'right'})} />
+    <div className={style(classes.root, { mood: props.mood, size: props.size }, props.className)}>
+        <div className={classes.top} />
+        <div className={classes.eyes}>
+            <Eye className={style(classes.eye, { position: 'left'})} />
+            <Eye className={style(classes.eye, { position: 'right'})} />
         </div>
-        <Mouth className={style.mouth} />
+        <Mouth className={classes.mouth} />
     </div>
 );
