@@ -271,7 +271,7 @@
   45%  { background-color: #00ff00; }
   60%  { background-color: #0000ff; }
   75%  { background-color: #4400ff; }
-  100% { background-color: #9900ff; }; 
+  100% { background-color: #9900ff; }
 }
 
 @keyframes emoji_color_change {
@@ -281,7 +281,7 @@
   45%  { text-shadow: 0 0 0 #00ff00; }
   60%  { text-shadow: 0 0 0 #0000ff; }
   75%  { text-shadow: 0 0 0 #4400FF; }
-  100% { text-shadow: 0 0 0 #9900FF; }; 
+  100% { text-shadow: 0 0 0 #9900FF; }
 }
 
 

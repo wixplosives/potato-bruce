@@ -4,9 +4,9 @@
   "private": true,
   "homepage": "https://potatobruce.io",
   "dependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "@stylable/react-scripts": "^2.1.1"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "@stylable/react-scripts": "^2.1.4"
   },
   "scripts": {
     "start": "stylable-scripts start",
@@ -17,9 +17,8 @@
   "devDependencies": {
     "@types/react": "16",
     "@types/react-dom": "16",
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^2.0.1",
     "ncp": "^2.0.0",
-    "typescript": "~3.2.2",
-    "typescript-support": "^0.5.5"
+    "typescript": "~3.5.3"
   }
 }
