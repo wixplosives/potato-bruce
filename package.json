@@ -19,6 +19,6 @@
     "@types/react-dom": "16",
     "gh-pages": "^2.0.1",
     "ncp": "^2.0.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.7.5"
   }
 }
