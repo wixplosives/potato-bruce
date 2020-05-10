@@ -1,106 +1,108 @@
-import * as React from "react";
-import { Potato } from "./potato/potato";
-import { NavBar } from "../components/nav-bar/nav-bar";
-import { Mood, Backdrop, Size } from "./types";
-import { style, classes } from "./app.st.css";
+import React from 'react';
+import { Potato } from './potato/potato';
+import { NavBar } from '../components/nav-bar/nav-bar';
+import { Mood, Backdrop, Size } from './types';
+import { style, classes } from './app.st.css';
 
-const moods = ["happy", "shy"];
-const sizes = ["big", "small"];
+const moods = ['happy', 'shy'];
+const sizes = ['big', 'small'];
 
 interface AppState {
-  mood: Mood;
-  backdrop: Backdrop;
-  size: Size;
+    mood: Mood;
+    backdrop: Backdrop;
+    size: Size;
 }
 
 export class App extends React.Component<{}, AppState> {
-  constructor(props: any) {
-    super(props);
+    constructor(props: any) {
+        super(props);
 
-    this.state = {
-      mood: "reset",
-      backdrop: "default",
-      size: "big"
-    };
+        this.state = {
+            mood: 'reset',
+            backdrop: 'default',
+            size: 'big',
+        };
 
-    this.handleMoodChange = this.handleMoodChange.bind(this);
-    this.handleBackdropChange = this.handleBackdropChange.bind(this);
-    this.handleSizeChange = this.handleSizeChange.bind(this);
-    this.resetAll = this.resetAll.bind(this);
-  }
-
-  private resetAll() {
-    this.setState({
-      mood: "reset",
-      backdrop: "default",
-      size: "big"
-    });
-  }
-
-  private handleMoodChange(evt: any) {
-    this.setState({
-      mood: evt.target.value
-    });
-  }
-
-  private handleBackdropChange(evt: any) {
-    this.setState({
-      backdrop: evt.target.value
-    });
-  }
-
-  private handleSizeChange(evt: any) {
-    this.setState({
-      size: evt.target.value
-    });
-  }
-
-  randomSize(size: string): Size {
-    const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
-    if (size === randomSize) {
-      return this.randomSize(size);
+        this.handleMoodChange = this.handleMoodChange.bind(this);
+        this.handleBackdropChange = this.handleBackdropChange.bind(this);
+        this.handleSizeChange = this.handleSizeChange.bind(this);
+        this.resetAll = this.resetAll.bind(this);
     }
-    return randomSize as Size;
-  }
 
-  randomMood(mood: string): Mood {
-    const randomMood = moods[Math.floor(Math.random() * moods.length)];
-    if (mood === randomMood) {
-      return this.randomMood(mood);
+    private resetAll() {
+        this.setState({
+            mood: 'reset',
+            backdrop: 'default',
+            size: 'big',
+        });
     }
-    return randomMood;
-  }
 
-  public render() {
-    return (
-      <div className={classes.root}>
-        <div className={style(classes.backdrop, { in: this.state.backdrop })} />
+    private handleMoodChange(evt: any) {
+        this.setState({
+            mood: evt.target.value,
+        });
+    }
 
-        <NavBar
-          mood={this.state.mood}
-          backdrop={this.state.backdrop}
-          size={this.state.size}
-          handleBackdropChange={this.handleBackdropChange}
-          handleMoodChange={this.handleMoodChange}
-          handleSizeChange={this.handleSizeChange}
-          resetAll={this.resetAll}
-        />
+    private handleBackdropChange(evt: any) {
+        this.setState({
+            backdrop: evt.target.value,
+        });
+    }
 
-        <Potato
-          className={classes.potatoBruce}
-          mood={this.state.mood}
-          size={this.state.size}
-        />
+    private handleSizeChange(evt: any) {
+        this.setState({
+            size: evt.target.value,
+        });
+    }
 
-        <footer className={classes.siteFooter}>
-          <a href="https://stylable.io/" target="_blank">
-            <span className={classes.stylableLogo} />Stylable
-          </a>{" "}
-          <a href="https://github.com/wix/potato-bruce" target="_blank">
-            <span className={classes.githubLogo} />Github
-          </a>
-        </footer>
-      </div>
-    );
-  }
+    randomSize(size: string): Size {
+        const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+        if (size === randomSize) {
+            return this.randomSize(size);
+        }
+        return randomSize as Size;
+    }
+
+    randomMood(mood: string): Mood {
+        const randomMood = moods[Math.floor(Math.random() * moods.length)];
+        if (mood === randomMood) {
+            return this.randomMood(mood);
+        }
+        return randomMood;
+    }
+
+    public render() {
+        return (
+            <div className={classes.root}>
+                <div className={style(classes.backdrop, { in: this.state.backdrop })} />
+
+                <NavBar
+                    mood={this.state.mood}
+                    backdrop={this.state.backdrop}
+                    size={this.state.size}
+                    handleBackdropChange={this.handleBackdropChange}
+                    handleMoodChange={this.handleMoodChange}
+                    handleSizeChange={this.handleSizeChange}
+                    resetAll={this.resetAll}
+                />
+
+                <Potato
+                    className={classes.potatoBruce}
+                    mood={this.state.mood}
+                    size={this.state.size}
+                />
+
+                <footer className={classes.siteFooter}>
+                    <a href="https://stylable.io/" target="_blank">
+                        <span className={classes.stylableLogo} />
+                        Stylable
+                    </a>{' '}
+                    <a href="https://github.com/wix/potato-bruce" target="_blank">
+                        <span className={classes.githubLogo} />
+                        Github
+                    </a>
+                </footer>
+            </div>
+        );
+    }
 }
