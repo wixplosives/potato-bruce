@@ -31,10 +31,10 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@stylable/core@^3.4.5":
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/@stylable/core/-/core-3.4.5.tgz#e7d3e9c35d5ff33d218e88704118d92c86429f22"
-  integrity sha512-PE+r6i8+xMzD7VaxLIDFFq2fOs93OgcQdO3kcM6huOtDyS5QrXG3JmCg1q+KovLwPGCs+uMSMdli+PWPUhflVQ==
+"@stylable/core@^3.4.5", "@stylable/core@^3.6.2":
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/@stylable/core/-/core-3.6.2.tgz#1d87f32ec2d42d9aa091d070afadbeb7f9359fd6"
+  integrity sha512-Yq+Grbw8aZh/2FlLLPzGlmiDHYvV1o9C1fbrof3ZuvQohP5PSCqlQDwfY644aJJMI1g3TqGNwJS8o8ZWtqHX3Q==
   dependencies:
     css-selector-tokenizer "^0.7.2"
     deindent "^0.1.0"
@@ -44,7 +44,7 @@
     lodash.clonedeep "^4.5.0"
     lodash.clonedeepwith "^4.5.0"
     murmurhash "^1.0.0"
-    postcss "^7.0.29"
+    postcss "^7.0.32"
     postcss-js "^2.0.3"
     postcss-nested "^4.2.1"
     postcss-safe-parser "^4.0.2"
@@ -4069,10 +4069,10 @@ postcss-value-parser@^4.1.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
   integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
 
-postcss@^7.0.18, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.29:
-  version "7.0.29"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.29.tgz#d3a903872bd52280b83bce38cdc83ce55c06129e"
-  integrity sha512-ba0ApvR3LxGvRMMiUa9n0WR4HjzcYm7tS+ht4/2Nd0NLtHpPIH77fuB9Xh1/yJVz9O/E/95Y/dn8ygWsyffXtw==
+postcss@^7.0.18, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.29, postcss@^7.0.32:
+  version "7.0.32"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.32.tgz#4310d6ee347053da3433db2be492883d62cec59d"
+  integrity sha512-03eXong5NLnNCD05xscnGKGDZ98CyzoqPSMjOe6SuoQY7Z2hIj0Ld1g/O/UQRuOle2aRtiIRDg9tDcTGAkLfKw==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
