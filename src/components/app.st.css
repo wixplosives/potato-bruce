@@ -163,7 +163,6 @@
 }
 .potatoBruce:mood(shy)::eye::pupil::after {
   content: '●';
-  zoom: 1;
   text-shadow: none;
   color: value(blueEyes);
 }
