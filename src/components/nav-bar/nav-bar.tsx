@@ -6,10 +6,10 @@ export interface NavBarProps {
     size: Size;
     backdrop: Backdrop;
     mood: Mood;
-    handleMoodChange: any;
-    handleSizeChange: any;
-    handleBackdropChange: any;
-    resetAll: any;
+    handleMoodChange: React.MouseEventHandler<HTMLButtonElement>;
+    handleSizeChange: React.MouseEventHandler<HTMLButtonElement>;
+    handleBackdropChange: React.MouseEventHandler<HTMLButtonElement>;
+    resetAll: React.MouseEventHandler<HTMLButtonElement>;
     className?: string;
 }
 
@@ -35,11 +35,7 @@ export const NavBar = (props: NavBarProps) => {
                     <button className={classes.isShy} value="shy" onClick={handleMoodChange}>
                         ☺️
                     </button>
-                    <button
-                        className={classes.isGlasses}
-                        value="dealWithIt"
-                        onClick={handleMoodChange}
-                    >
+                    <button className={classes.isGlasses} value="dealWithIt" onClick={handleMoodChange}>
                         🕶
                     </button>
                 </div>
@@ -52,18 +48,10 @@ export const NavBar = (props: NavBarProps) => {
                     </button>
                 </div>
                 <div className={style(classes.buttonGroup, classes.location)}>
-                    <button
-                        className={classes.inParis}
-                        value="paris"
-                        onClick={handleBackdropChange}
-                    >
+                    <button className={classes.inParis} value="paris" onClick={handleBackdropChange}>
                         🇫🇷
                     </button>
-                    <button
-                        className={classes.inAmsterdam}
-                        value="amsterdam"
-                        onClick={handleBackdropChange}
-                    >
+                    <button className={classes.inAmsterdam} value="amsterdam" onClick={handleBackdropChange}>
                         🇳🇱
                     </button>
                     <button className={classes.inWix} value="wixhq" onClick={handleBackdropChange}>

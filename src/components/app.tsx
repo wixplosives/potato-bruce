@@ -4,72 +4,44 @@ import { NavBar } from '../components/nav-bar/nav-bar';
 import { Mood, Backdrop, Size } from './types';
 import { style, classes } from './app.st.css';
 
-const moods = ['happy', 'shy'];
-const sizes = ['big', 'small'];
-
-interface AppState {
+export interface AppState {
     mood: Mood;
     backdrop: Backdrop;
     size: Size;
 }
 
 export class App extends React.Component<{}, AppState> {
-    constructor(props: any) {
-        super(props);
+    state: AppState = {
+        mood: 'reset',
+        backdrop: 'default',
+        size: 'big',
+    };
 
-        this.state = {
-            mood: 'reset',
-            backdrop: 'default',
-            size: 'big',
-        };
-
-        this.handleMoodChange = this.handleMoodChange.bind(this);
-        this.handleBackdropChange = this.handleBackdropChange.bind(this);
-        this.handleSizeChange = this.handleSizeChange.bind(this);
-        this.resetAll = this.resetAll.bind(this);
-    }
-
-    private resetAll() {
+    private resetAll: React.MouseEventHandler<HTMLButtonElement> = () => {
         this.setState({
             mood: 'reset',
             backdrop: 'default',
             size: 'big',
         });
-    }
+    };
 
-    private handleMoodChange(evt: any) {
+    private handleMoodChange: React.MouseEventHandler<HTMLButtonElement> = (evt) => {
         this.setState({
-            mood: evt.target.value,
+            mood: evt.currentTarget.value,
         });
-    }
+    };
 
-    private handleBackdropChange(evt: any) {
+    private handleBackdropChange: React.MouseEventHandler<HTMLButtonElement> = (evt) => {
         this.setState({
-            backdrop: evt.target.value,
+            backdrop: evt.currentTarget.value as Backdrop,
         });
-    }
+    };
 
-    private handleSizeChange(evt: any) {
+    private handleSizeChange: React.MouseEventHandler<HTMLButtonElement> = (evt) => {
         this.setState({
-            size: evt.target.value,
+            size: evt.currentTarget.value as Size,
         });
-    }
-
-    randomSize(size: string): Size {
-        const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
-        if (size === randomSize) {
-            return this.randomSize(size);
-        }
-        return randomSize as Size;
-    }
-
-    randomMood(mood: string): Mood {
-        const randomMood = moods[Math.floor(Math.random() * moods.length)];
-        if (mood === randomMood) {
-            return this.randomMood(mood);
-        }
-        return randomMood;
-    }
+    };
 
     public render() {
         return (
@@ -86,18 +58,14 @@ export class App extends React.Component<{}, AppState> {
                     resetAll={this.resetAll}
                 />
 
-                <Potato
-                    className={classes.potatoBruce}
-                    mood={this.state.mood}
-                    size={this.state.size}
-                />
+                <Potato className={classes.potatoBruce} mood={this.state.mood} size={this.state.size} />
 
                 <footer className={classes.siteFooter}>
-                    <a href="https://stylable.io/" target="_blank">
+                    <a href="https://stylable.io/" target="_blank" rel="noreferrer">
                         <span className={classes.stylableLogo} />
                         Stylable
                     </a>{' '}
-                    <a href="https://github.com/wix/potato-bruce" target="_blank">
+                    <a href="https://github.com/wix/potato-bruce" target="_blank" rel="noreferrer">
                         <span className={classes.githubLogo} />
                         Github
                     </a>
