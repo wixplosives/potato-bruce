@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@stylable/core": "^3.8.4",
-    "@stylable/webpack-plugin": "^3.8.4",
+    "@stylable/webpack-plugin": "^3.9.0",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^3.9.1",
