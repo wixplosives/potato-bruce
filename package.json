@@ -18,7 +18,7 @@
     "deploy": "ncp ./CNAME ./dist/CNAME && gh-pages -d ./dist"
   },
   "dependencies": {
-    "@stylable/runtime": "^3.9.0",
+    "@stylable/runtime": "^3.10.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
