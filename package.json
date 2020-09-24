@@ -18,20 +18,20 @@
     "deploy": "ncp ./CNAME ./dist/CNAME && gh-pages -d ./dist"
   },
   "dependencies": {
-    "@stylable/runtime": "^3.10.0",
+    "@stylable/runtime": "^3.11.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@stylable/core": "^3.10.1",
-    "@stylable/webpack-plugin": "^3.10.1",
+    "@stylable/core": "^3.11.1",
+    "@stylable/webpack-plugin": "^3.11.1",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react": "^7.21.1",
     "eslint-plugin-react-hooks": "^4.1.2",
     "file-loader": "^6.1.0",
     "gh-pages": "^3.1.0",
