@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@stylable/runtime": "^3.11.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
     "@stylable/core": "^3.11.2",
