@@ -81,47 +81,68 @@
     postcss-selector-matches "^4.0.0"
     postcss-value-parser "^4.1.0"
 
-"@stylable/module-utils@^3.11.5":
-  version "3.11.5"
-  resolved "https://registry.yarnpkg.com/@stylable/module-utils/-/module-utils-3.11.5.tgz#75bcd3abced5caa92de2363f3af41393cc680aaf"
-  integrity sha512-iI3UzswjL1LM3gr6MF0J0CebC5EoDOES5FuVlM2HXw/ChkM8fdq3nWJOyv2Cd/Lu3Wq7altbKBh5pWWVoB5IvQ==
+"@stylable/core@^3.11.7":
+  version "3.11.7"
+  resolved "https://registry.yarnpkg.com/@stylable/core/-/core-3.11.7.tgz#ccf7e83f95ca126b6fdb83a3697d8cf29034b541"
+  integrity sha512-klUzdAc9ikS39cgfuFZ1FXmjE2ZSp6vdurXz5J1DGCEVJWnV9l/MHGvOuF9pI6d9juZJvY2bAF6uboKgips4Hg==
   dependencies:
-    "@stylable/core" "^3.11.5"
+    css-selector-tokenizer "^0.7.3"
+    deindent "^0.1.0"
+    enhanced-resolve "^4.3.0"
+    is-url-superb "^4.0.0"
+    is-vendor-prefixed "^3.5.0"
+    jest-docblock "^26.0.0"
+    lodash.clonedeep "^4.5.0"
+    lodash.clonedeepwith "^4.5.0"
+    murmurhash "^1.0.0"
+    postcss "^8.1.9"
+    postcss-js "^3.0.3"
+    postcss-nested "^5.0.1"
+    postcss-safe-parser "^5.0.2"
+    postcss-selector-matches "^4.0.0"
+    postcss-value-parser "^4.1.0"
 
-"@stylable/node@^3.11.5":
-  version "3.11.5"
-  resolved "https://registry.yarnpkg.com/@stylable/node/-/node-3.11.5.tgz#df408474f446c91bcd0d5d98a9228ad7ba96db30"
-  integrity sha512-i66PS6k8e7NzVZfNbKBV27b2kScOdH0+F5A7Pwww6erWlqmiH1Nu0WDFNjOMBbgKxdlLnlXBn24EZ/1By/i9nw==
+"@stylable/module-utils@^3.11.7":
+  version "3.11.7"
+  resolved "https://registry.yarnpkg.com/@stylable/module-utils/-/module-utils-3.11.7.tgz#3408157fec1f0172101552239522f0ec69c37191"
+  integrity sha512-zfxQNFZ61MGpsdQ6F9RTlcddkOjQC3zT7kAfB9VaT4wNd/AM4At/O7zCgHMLNIk+6qBGbRQe2j2oe2yInJi1LQ==
   dependencies:
-    "@stylable/core" "^3.11.5"
-    "@stylable/module-utils" "^3.11.5"
+    "@stylable/core" "^3.11.7"
+
+"@stylable/node@^3.11.7":
+  version "3.11.7"
+  resolved "https://registry.yarnpkg.com/@stylable/node/-/node-3.11.7.tgz#8b7c74f790b64b4e11be48bf83706414ea391c28"
+  integrity sha512-HT78s8qKNWpRgLt9xadn42yBXGC3cV8T3rbzdE6SPBsI2iwyFMYxlqTXzbjrCGiFvYAvGs+kCP0GyQ41uSy5bA==
+  dependencies:
+    "@stylable/core" "^3.11.7"
+    "@stylable/module-utils" "^3.11.7"
     find-config "^1.0.0"
 
-"@stylable/optimizer@^3.11.5":
-  version "3.11.5"
-  resolved "https://registry.yarnpkg.com/@stylable/optimizer/-/optimizer-3.11.5.tgz#82b1988b892f2340512112e17e810c842cd3319f"
-  integrity sha512-UsAM/r35v/Gtr9Rjs7kLrTQZ+RfY2gdYiJqa4nHNGEuAdmZc/UcQoAo+YJ7EKUrOOA6XKKj3y6kB1kZYuelyMg==
+"@stylable/optimizer@^3.11.7":
+  version "3.11.7"
+  resolved "https://registry.yarnpkg.com/@stylable/optimizer/-/optimizer-3.11.7.tgz#2ca9dcb86ac683bf7d12918bcc644ef1fe1fa26a"
+  integrity sha512-l7STpSrWOxgFxJ0i5vK/LjrzJh826+KosUbuTr79PH9FCEElowRD/f5BI4ruFwQahuCT9CQgXj9GMMJP2IcXwQ==
   dependencies:
-    "@stylable/core" "^3.11.5"
-    csso "^4.0.3"
-    postcss "^8.1.2"
+    "@stylable/core" "^3.11.7"
+    csso "^4.1.1"
+    postcss "^8.1.9"
 
-"@stylable/runtime@^3.11.5":
-  version "3.11.5"
-  resolved "https://registry.yarnpkg.com/@stylable/runtime/-/runtime-3.11.5.tgz#1555d1eee7fd997a2ddc9942b4fded5c3ef1939b"
-  integrity sha512-tAgvW3Ox8Td8asMcxOMFeQ8b6VX/SI5jBn7gZhNf1Kxud5/ZgOo3yKvFML6dMQ7CVsAanFLeprWomwvelzE0vw==
+"@stylable/runtime@^3.11.5", "@stylable/runtime@^3.11.7":
+  version "3.11.7"
+  resolved "https://registry.yarnpkg.com/@stylable/runtime/-/runtime-3.11.7.tgz#04d5471da99f5f6eb6422fc3310238411b29bfbd"
+  integrity sha512-14U8ee0gOtazwgnt46IWwnrW+bSeyPGP0G2cIKGATOoCoqFzPNeIuSobhiYafdZtU9DCpDnUwzH0JwelTVnqLw==
 
-"@stylable/webpack-plugin@^3.11.5":
-  version "3.11.5"
-  resolved "https://registry.yarnpkg.com/@stylable/webpack-plugin/-/webpack-plugin-3.11.5.tgz#bf7371e9c9d04178b40ade2e73dd9fe29f88d830"
-  integrity sha512-xMLm+LpxHAv8ZIwytEpLqrPDdByKB2GXoZAe13yDIz+zJQ93TCzxEUS3hLbDXixnvG17VHGrwqoHlHVqI+Zxqg==
+"@stylable/webpack-plugin@^3.11.7":
+  version "3.11.7"
+  resolved "https://registry.yarnpkg.com/@stylable/webpack-plugin/-/webpack-plugin-3.11.7.tgz#126bfd84aeb4e7576c93c72eedc482cb1f25e7fd"
+  integrity sha512-2ZeizkMmpjcRa1s8V3oTXqTpKtr5IXvjbEgbFbGhd2pOKjlL50+jUSfvlotnafhCBiLHAlRSmyFWr3UzJHEsWQ==
   dependencies:
-    "@stylable/module-utils" "^3.11.5"
-    "@stylable/node" "^3.11.5"
-    "@stylable/optimizer" "^3.11.5"
-    "@stylable/runtime" "^3.11.5"
+    "@stylable/module-utils" "^3.11.7"
+    "@stylable/node" "^3.11.7"
+    "@stylable/optimizer" "^3.11.7"
+    "@stylable/runtime" "^3.11.7"
     find-config "^1.0.0"
-    webpack-sources "^2.0.1"
+    webpack-sources "^2.2.0"
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -1400,12 +1421,12 @@ css-selector-tokenizer@^0.7.3:
     cssesc "^3.0.0"
     fastparse "^1.1.2"
 
-css-tree@1.0.0-alpha.39:
-  version "1.0.0-alpha.39"
-  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.0.0-alpha.39.tgz#2bff3ffe1bb3f776cf7eefd91ee5cba77a149eeb"
-  integrity sha512-7UvkEYgBAHRG9Nt980lYxjsTrCyHFN53ky3wVsDkiMdVqylqRt+Zc+jm5qw7/qyOvN2dHSYtX0e4MbCCExSvnA==
+css-tree@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.1.1.tgz#30b8c0161d9fb4e9e2141d762589b6ec2faebd2e"
+  integrity sha512-NVN42M2fjszcUNpDbdkvutgQSlFYsr1z7kqeuCagHnNLBfYor6uP1WL1KrkmdYZ5Y1vTBCIOI/C/+8T98fJ71w==
   dependencies:
-    mdn-data "2.0.6"
+    mdn-data "2.0.14"
     source-map "^0.6.1"
 
 css-what@2.1:
@@ -1418,12 +1439,12 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-csso@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/csso/-/csso-4.0.3.tgz#0d9985dc852c7cc2b2cacfbbe1079014d1a8e903"
-  integrity sha512-NL3spysxUkcrOgnpsT4Xdl2aiEiBG6bXswAABQVHcMrfjjBisFOKwLDOmf4wf32aPdcJws1zds2B0Rg+jqMyHQ==
+csso@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/csso/-/csso-4.1.1.tgz#e0cb02d6eb3af1df719222048e4359efd662af13"
+  integrity sha512-Rvq+e1e0TFB8E8X+8MQjHSY6vtol45s5gxtLI/018UsAn2IBMmwNEZRM/h+HVnAJRHjasLIKKUO3uvoMM28LvA==
   dependencies:
-    css-tree "1.0.0-alpha.39"
+    css-tree "^1.0.0"
 
 csstype@^3.0.2:
   version "3.0.3"
@@ -3125,6 +3146,13 @@ is-vendor-prefixed@^3.3.1:
   dependencies:
     vendor-prefixes "1.0.0"
 
+is-vendor-prefixed@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/is-vendor-prefixed/-/is-vendor-prefixed-3.5.0.tgz#11c823e3abc9f3a7857bebbe8bb6e8fb26c0b35b"
+  integrity sha512-GR7WA90X9bIOxv0NiYGQZXDubruQOcDjvRXyU76uHpjwUo6kJMmai0ivJrwg5Fxxbq78OpnuMbaMkIVbAc2NBA==
+  dependencies:
+    vendor-prefixes "1.0.0"
+
 is-windows@^1.0.1, is-windows@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
@@ -3394,10 +3422,10 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
-mdn-data@2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.6.tgz#852dc60fcaa5daa2e8cf6c9189c440ed3e042978"
-  integrity sha512-rQvjv71olwNHgiTbfPZFkJtjNMciWgswYeciZhtvWLO8bmX3TnhyA62I6sTWOyZssWHJJjY6/KiWwqQsWWsqOA==
+mdn-data@2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
+  integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -3616,6 +3644,11 @@ nanoid@^3.1.12:
   version "3.1.12"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.12.tgz#6f7736c62e8d39421601e4a0c77623a97ea69654"
   integrity sha512-1qstj9z5+x491jfiC4Nelk+f8XBad7LN20PmyWINJEMRSf3wcAjAWysw1qaA8z6NSKe2sjq1hRSDpBH5paCb6A==
+
+nanoid@^3.1.18:
+  version "3.1.18"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.18.tgz#0680db22ab01c372e89209f5d18283d98de3e96d"
+  integrity sha512-rndlDjbbHbcV3xi+R2fpJ+PbGMdfBxz5v1fATIQFq0DP64FsicQdwnKLy47K4kZHdRpmQXtz24eGsxQqamzYTA==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -4130,6 +4163,14 @@ postcss-js@^3.0.1:
     camelcase-css "^2.0.1"
     postcss "^8.1.0"
 
+postcss-js@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-3.0.3.tgz#2f0bd370a2e8599d45439f6970403b5873abda33"
+  integrity sha512-gWnoWQXKFw65Hk/mi2+WTQTHdPD5UJdDXZmX073EY/B3BWnYjO4F4t0VneTCnCGQ5E5GsCdMkzPaTXwl3r5dJw==
+  dependencies:
+    camelcase-css "^2.0.1"
+    postcss "^8.1.6"
+
 postcss-nested@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-5.0.1.tgz#e7a77f7a806a09c8de0f2c163d8e3d09f00f3139"
@@ -4185,6 +4226,16 @@ postcss@^8.1.0, postcss@^8.1.2:
     line-column "^1.0.2"
     nanoid "^3.1.12"
     source-map "^0.6.1"
+
+postcss@^8.1.6, postcss@^8.1.9:
+  version "8.1.9"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.1.9.tgz#20ff4b598a6f5015c5f7fe524b8ed5313d7ecade"
+  integrity sha512-oWuBpEl1meaMKkQXn0ic78TUrgsMvrAZLE/6ZY0H3LTteq2O3L8PGWwMbPLctpksTJIHjQeossMUMNQW7qRIHQ==
+  dependencies:
+    colorette "^1.2.1"
+    nanoid "^3.1.18"
+    source-map "^0.6.1"
+    vfile-location "^3.2.0"
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -5518,6 +5569,11 @@ vendor-prefixes@1.0.0:
   resolved "https://registry.yarnpkg.com/vendor-prefixes/-/vendor-prefixes-1.0.0.tgz#1c7b92ece46e2f1a06c5a907613f5d50045df531"
   integrity sha1-HHuS7ORuLxoGxakHYT9dUARd9TE=
 
+vfile-location@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-3.2.0.tgz#d8e41fbcbd406063669ebf6c33d56ae8721d0f3c"
+  integrity sha512-aLEIZKv/oxuCDZ8lkJGhuhztf/BW4M+iHdCwglA/eWc+vtuRFJj8EtgceYFX4LRjOhCAAiNHsKGssC6onJ+jbA==
+
 vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
@@ -5631,10 +5687,10 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack-sources@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.0.1.tgz#1467f6e692ddce91e88b8044c44347b1087bbd4f"
-  integrity sha512-A9oYz7ANQBK5EN19rUXbvNgfdfZf5U2gP0769OXsj9CvYkCR6OHOsd6OKyEy4H38GGxpsQPKIL83NC64QY6Xmw==
+webpack-sources@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.2.0.tgz#058926f39e3d443193b6c31547229806ffd02bac"
+  integrity sha512-bQsA24JLwcnWGArOKUxYKhX3Mz/nK1Xf6hxullKERyktjNMC4x8koOeaDNTA2fEJ09BdWLbM/iTW0ithREUP0w==
   dependencies:
     source-list-map "^2.0.1"
     source-map "^0.6.1"
