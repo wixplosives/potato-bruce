@@ -5,7 +5,7 @@ export interface MouthProps {
     className?: string;
 }
 
-export const Mouth: React.SFC<MouthProps> = (props: MouthProps) => (
+export const Mouth: React.FC<MouthProps> = (props: MouthProps) => (
     <div className={style(classes.root, props.className)}>
         <div className={classes.upperLip} />
         <div className={classes.tongue} />

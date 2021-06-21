@@ -1,3 +1,3 @@
-export type Mood = string; //'happy' | 'shy' | 'dealWithIt' | 'reset';
-export type Backdrop = 'paris' | 'wixhq' | 'default' | 'amsterdam';
+export type Mood = 'happy' | 'shy' | 'dealWithIt';
+export type Backdrop = 'paris' | 'wixhq' | 'amsterdam' | undefined;
 export type Size = 'small' | 'big';

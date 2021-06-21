@@ -4,8 +4,8 @@ import { style, classes } from './nav-bar.st.css';
 
 export interface NavBarProps {
     size: Size;
-    backdrop: Backdrop;
-    mood: Mood;
+    backdrop?: Backdrop;
+    mood?: Mood;
     handleMoodChange: React.MouseEventHandler<HTMLButtonElement>;
     handleSizeChange: React.MouseEventHandler<HTMLButtonElement>;
     handleBackdropChange: React.MouseEventHandler<HTMLButtonElement>;
@@ -25,7 +25,7 @@ export const NavBar = (props: NavBarProps) => {
             })}
         >
             <div className={style(classes.nav, props.className)}>
-                <div className={style(classes.buttonGroup, classes.mood)}>
+                <div className={style(classes.buttonGroup)}>
                     <button className={classes.resetAllButton} onClick={resetAll}>
                         :|
                     </button>
@@ -39,7 +39,7 @@ export const NavBar = (props: NavBarProps) => {
                         🕶
                     </button>
                 </div>
-                <div className={style(classes.buttonGroup, classes.size)}>
+                <div className={style(classes.buttonGroup)}>
                     <button className={classes.smallSize} value="small" onClick={handleSizeChange}>
                         🥔
                     </button>
@@ -47,7 +47,7 @@ export const NavBar = (props: NavBarProps) => {
                         🥔
                     </button>
                 </div>
-                <div className={style(classes.buttonGroup, classes.location)}>
+                <div className={style(classes.buttonGroup)}>
                     <button className={classes.inParis} value="paris" onClick={handleBackdropChange}>
                         🇫🇷
                     </button>

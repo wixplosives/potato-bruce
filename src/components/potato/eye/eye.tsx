@@ -5,7 +5,7 @@ export interface EyeProps {
     className?: string;
 }
 
-export const Eye: React.SFC<EyeProps> = (props: EyeProps) => (
+export const Eye: React.FC<EyeProps> = (props: EyeProps) => (
     <div className={style(classes.root, props.className)}>
         <div className={classes.brow} />
         <div className={classes.socket}>

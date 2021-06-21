@@ -14,10 +14,8 @@
   -st-extends: lip;
 }
 
-.tongue {
-
-}
+.tongue {}
 
 .lowerLip {
-  -st-extends: lip;  
+  -st-extends: lip;
 }

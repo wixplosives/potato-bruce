@@ -5,29 +5,26 @@ import { Mood, Backdrop, Size } from './types';
 import { style, classes } from './app.st.css';
 
 export interface AppState {
-    mood: Mood;
-    backdrop: Backdrop;
+    mood?: Mood;
+    backdrop?: Backdrop;
     size: Size;
 }
 
+const defaultState: AppState = {
+    mood: undefined,
+    backdrop: undefined,
+    size: 'big',
+};
 export class App extends React.Component<{}, AppState> {
-    state: AppState = {
-        mood: 'reset',
-        backdrop: 'default',
-        size: 'big',
-    };
+    state: AppState = defaultState;
 
     private resetAll: React.MouseEventHandler<HTMLButtonElement> = () => {
-        this.setState({
-            mood: 'reset',
-            backdrop: 'default',
-            size: 'big',
-        });
+        this.setState(defaultState);
     };
 
     private handleMoodChange: React.MouseEventHandler<HTMLButtonElement> = (evt) => {
         this.setState({
-            mood: evt.currentTarget.value,
+            mood: evt.currentTarget.value as Mood,
         });
     };
 

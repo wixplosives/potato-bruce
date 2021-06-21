@@ -31,7 +31,7 @@
 }
 
 .pupil::after {
-  content: '\2022'; /* 👁🥔💰🍌🐸🤘🔥 */
+  content: '\2022';
   display: block;
   text-align: center;
   transition: all 325ms ease-in;
@@ -40,7 +40,7 @@
 
 .lid {
   position: absolute;
-  transition: all 125ms ease-in-out;  
+  transition: all 125ms ease-in-out;
   top: value(negativeRetinaSize);
   width: value(retinaSize);
   height: value(retinaSize);

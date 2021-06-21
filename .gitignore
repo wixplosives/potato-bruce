@@ -1,3 +1,6 @@
+*.st.css.d.ts
+*.st.css.d.ts.map
+
 # Logs
 logs
 *.log

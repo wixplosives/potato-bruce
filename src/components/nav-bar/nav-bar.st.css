@@ -3,9 +3,9 @@
 }
 
 .root {
-  -st-states: mood( enum(happy, shy, dealWithIt) ),
-              size( enum(small, big) ),
-              backdrop( enum(amsterdam, paris, wixhq) );
+  -st-states: mood(enum(happy, shy, dealWithIt)),
+    size(enum(small, big)),
+    backdrop(enum(amsterdam, paris, wixhq));
 
   position: fixed;
   top: 0;
@@ -18,6 +18,7 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   display: flex;
 }
+
 .nav {
   width: 100%;
   display: flex;
@@ -54,28 +55,36 @@
 .resetAllButton {
   -st-extends: navButton;
 }
+
 .isHappy {
   -st-extends: navButton;
 }
+
 .isShy {
   -st-extends: navButton;
 }
+
 .isGlasses {
   -st-extends: navButton;
 }
+
 .smallSize {
   -st-extends: navButton;
   font-size: 1em;
 }
+
 .largeSize {
   -st-extends: navButton;
 }
+
 .inParis {
   -st-extends: navButton;
 }
+
 .inAmsterdam {
   -st-extends: navButton;
 }
+
 .inWix {
   -st-extends: navButton;
 }
@@ -83,6 +92,7 @@
 .active {
   box-shadow: inset 0 -5px 0 0px rgba(255, 0, 0, 0.8);
 }
+
 .inactive {
   box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
 }

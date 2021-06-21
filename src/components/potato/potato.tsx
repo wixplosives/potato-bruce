@@ -6,12 +6,12 @@ import { Eye } from './eye/eye';
 import { Mouth } from './mouth/mouth';
 
 interface PotatoBruceProps {
-    mood: Mood;
+    mood?: Mood;
     size: Size;
     className?: string;
 }
 
-export const Potato: React.SFC<PotatoBruceProps> = (props: PotatoBruceProps) => (
+export const Potato: React.FC<PotatoBruceProps> = (props: PotatoBruceProps) => (
     <div className={style(classes.root, { mood: props.mood, size: props.size }, props.className)}>
         <div className={classes.top} />
         <div className={classes.eyes}>
