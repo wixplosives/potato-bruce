@@ -157,10 +157,10 @@
   resolved "https://registry.yarnpkg.com/@stylable/runtime/-/runtime-4.3.1.tgz#7c46b7c898f5c4c6adcf10c860f05ee14e36d28d"
   integrity sha512-9Gx62Xyv4xyoIE2TdbL51p2Z8J0YibczZSZxpZqY8HMCWehT+1ghltOD2u5jqjC42unNDXsE36qbhn1ZSZ/atA==
 
-"@stylable/webpack-plugin@^4.3.1":
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/@stylable/webpack-plugin/-/webpack-plugin-4.3.1.tgz#b0d804d3d4db7c27d3a78dd836158a414607c2d2"
-  integrity sha512-9mQODv4a6F1rNPEBMrcOKO4ekv+3jd5WY4uHyNH6PzUK9bhklyZAhAWYgKMqUnxLYAp1dQ1mGbGyAQ/TXdJ3Xg==
+"@stylable/webpack-plugin@^4.3.2":
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/@stylable/webpack-plugin/-/webpack-plugin-4.3.2.tgz#e659baba9c3aa2a008d6e16ab003be9c18471f8e"
+  integrity sha512-bFpj+RRdwtA4Ad1w0fTjsa2B2AOvf5f4LorKmxFxavRyp9YOdy1VavKLItBWgvOKXpI6qcjBDbUvYDv31ZVRfQ==
   dependencies:
     "@stylable/build-tools" "^4.3.1"
     "@stylable/module-utils" "^4.3.1"
