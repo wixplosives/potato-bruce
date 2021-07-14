@@ -129,10 +129,10 @@
     "@stylable/core" "^4.4.0"
     js-beautify "^1.14.0"
 
-"@stylable/core@^4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@stylable/core/-/core-4.4.0.tgz#7ddef831272083f2a3a53d4d059a35d2bb2ec160"
-  integrity sha512-e2vdd2rWh6X7sfyKg6k2j58/bp3ST8KmUmw8zjdAjAOZ/xRTcf3pCR70hPf0SKnRRqZFths9o+CH1rxGnzTgZg==
+"@stylable/core@^4.4.0", "@stylable/core@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@stylable/core/-/core-4.5.0.tgz#ef99264e9afa5c2a6ede80bc6d1985e6e14830bd"
+  integrity sha512-k7NXdcq5qVM4XiZptQpe3eQvYHVBZwl5J0UbiV0loHHDX+vcO66qwuiXppVg9/l9U9HQLukGt4MupMATw400Iw==
   dependencies:
     balanced-match "^2.0.0"
     css-selector-tokenizer "^0.8.0"
