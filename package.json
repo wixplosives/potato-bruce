@@ -27,7 +27,7 @@
     "@stylable/cli": "^4.6.0",
     "@stylable/core": "^4.6.0",
     "@stylable/webpack-plugin": "^4.6.0",
-    "@types/react": "^17.0.18",
+    "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
@@ -42,8 +42,8 @@
     "serve": "^12.0.0",
     "ts-loader": "^9.2.5",
     "typescript": "~4.3.5",
-    "webpack": "^5.50.0",
+    "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0-rc.1"
+    "webpack-dev-server": "^4.0.0"
   }
 }
