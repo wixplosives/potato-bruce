@@ -56,12 +56,8 @@ The 'potato' component illustrates a use case in which we have a **Stylable** co
 
 Although we don't have complete control over this component's API (props), its **Stylable** stylesheet exposes a typed interface declaring its internal parts and states. This enables us to customize it externally, ensuring that any actions we take for this application's component's states, internal parts or look and feel are both valid and don't change the component itself.
 
-## Installing the project
-
-1. Clone the repo.
-2. Run `yarn install`.
-
 ## Running the project
 
-1. Run `yarn start`.
-2. If the browser doesn't automatically open to `localhost:3000/`, open it.
+1. Clone the repo.
+2. Run `npm i`.
+3. Run `npm start`.
