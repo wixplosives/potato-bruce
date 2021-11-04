@@ -23,5 +23,6 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
     },
+    performance: { hints: false },
     plugins: [new StylableWebpackPlugin(), new HtmlWebpackPlugin({ title: 'Stylable App', favicon: './favicon.ico' })],
 };
