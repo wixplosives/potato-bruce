@@ -19,14 +19,14 @@
     "deploy": "ncp ./CNAME ./dist/CNAME && gh-pages -d ./dist"
   },
   "dependencies": {
-    "@stylable/runtime": "^4.7.4",
+    "@stylable/runtime": "^4.8.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@stylable/cli": "^4.7.4",
-    "@stylable/core": "^4.7.4",
-    "@stylable/webpack-plugin": "^4.7.4",
+    "@stylable/cli": "^4.8.1",
+    "@stylable/core": "^4.8.1",
+    "@stylable/webpack-plugin": "^4.8.1",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
@@ -42,7 +42,7 @@
     "serve": "^13.0.2",
     "ts-loader": "^9.2.6",
     "typescript": "~4.4.4",
-    "webpack": "^5.61.0",
+    "webpack": "^5.62.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0"
   }
