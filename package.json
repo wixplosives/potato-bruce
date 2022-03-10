@@ -27,7 +27,7 @@
     "@stylable/cli": "^4.10.4",
     "@stylable/core": "^4.10.4",
     "@stylable/webpack-plugin": "^4.10.4",
-    "@types/react": "^17.0.39",
+    "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.13",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
