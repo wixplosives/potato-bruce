@@ -1,12 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { App } from './components/app';
 import './index.st.css';
 
-const container = document.body.appendChild(document.createElement('div'));
-ReactDOM.render(
+createRoot(document.body.appendChild(document.createElement('div'))).render(
     <React.StrictMode>
         <App />
-    </React.StrictMode>,
-    container
+    </React.StrictMode>
 );
