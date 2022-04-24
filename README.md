@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/wix/potato-bruce/workflows/tests/badge.svg)](https://github.com/wix/potato-bruce/actions)
 
-Mr. Potato Bruce (MPB) is a demo application showcasing the features and typed style API of **[Stylable](https://stylable.io)**. You can see the [working demo here](https://potatobruce.io/).
+Mr. Potato Bruce (MPB) is a demo application showcasing the features and typed style API of **[Stylable](https://stylable.io)**. You can see the [working demo here](https://wix.github.io/potato-bruce/).
 
 It is a full demo so you can play with the features and use the API.
 
