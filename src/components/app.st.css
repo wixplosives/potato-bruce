@@ -1,12 +1,6 @@
-:import {
-  -st-from: "./colors.st.css";
-  -st-named: dark, tongueColor, blueEyes;
-}
+@st-import [dark, tongueColor, blueEyes] from "./colors.st.css";
 
-:import {
-  -st-from: "./potato/potato.st.css";
-  -st-default: Potato;
-}
+@st-import Potato from "./potato/potato.st.css";
 
 :vars {
   negativeRetinaSize: -100px;

@@ -1,12 +1,6 @@
-:import {
-  -st-from: "./eye/eye.st.css";
-  -st-default: Eye;
-}
+@st-import Eye from "./eye/eye.st.css";
 
-:import {
-  -st-from: "./mouth/mouth.st.css";
-  -st-default: Mouth;
-}
+@st-import Mouth from "./mouth/mouth.st.css";
 
 .root {
   -st-states: mood(enum(happy, shy, dealWithIt)), size(enum(small, big));
