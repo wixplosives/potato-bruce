@@ -1,5 +1,6 @@
-*.st.css.d.ts
-*.st.css.d.ts.map
+
+# Stylable generated definition files
+st-types
 
 # Logs
 logs
