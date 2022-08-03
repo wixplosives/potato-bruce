@@ -24,7 +24,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stylable/cli": "^5.0.1",
+    "@stylable/cli": "^5.1.0",
     "@stylable/core": "^5.0.1",
     "@stylable/webpack-plugin": "^5.0.1",
     "@types/react": "^18.0.15",
