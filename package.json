@@ -29,7 +29,7 @@
     "@stylable/webpack-plugin": "^5.2.1",
     "@types/react": "^18.0.19",
     "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.36.2",
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
