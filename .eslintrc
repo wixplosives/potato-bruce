@@ -5,6 +5,9 @@
     "node": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "plugins": ["react-hooks"],
   "settings": {
     "react": {
