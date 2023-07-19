@@ -19,19 +19,19 @@
     "deploy": "ncp ./CNAME ./dist/CNAME && gh-pages -d ./dist"
   },
   "dependencies": {
-    "@stylable/runtime": "^5.14.0",
+    "@stylable/runtime": "^5.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@stylable/cli": "^5.14.0",
-    "@stylable/core": "^5.14.0",
-    "@stylable/webpack-plugin": "^5.14.0",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.44.0",
+    "@stylable/cli": "^5.15.0",
+    "@stylable/core": "^5.15.0",
+    "@stylable/webpack-plugin": "^5.15.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -42,7 +42,7 @@
     "serve": "^14.2.0",
     "ts-loader": "^9.4.4",
     "typescript": "~5.1.6",
-    "webpack": "^5.88.1",
+    "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   }
