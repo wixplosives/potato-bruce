@@ -1,3 +1,5 @@
+// @ts-check
+
 const { StylableWebpackPlugin } = require('@stylable/webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -16,7 +18,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/,
-                type: 'asset',
+                type: 'asset/resource',
             },
         ],
     },
